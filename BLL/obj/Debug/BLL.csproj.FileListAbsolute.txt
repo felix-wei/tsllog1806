@@ -1,0 +1,12 @@
+D:\GitHub\tsllog1806\BLL\bin\Debug\BLL.dll
+D:\GitHub\tsllog1806\BLL\bin\Debug\BLL.pdb
+D:\GitHub\tsllog1806\BLL\bin\Debug\DAL.dll
+D:\GitHub\tsllog1806\BLL\bin\Debug\EntityFramework.dll
+D:\GitHub\tsllog1806\BLL\bin\Debug\Model.dll
+D:\GitHub\tsllog1806\BLL\bin\Debug\DAL.pdb
+D:\GitHub\tsllog1806\BLL\bin\Debug\Model.pdb
+D:\GitHub\tsllog1806\BLL\bin\Debug\EntityFramework.xml
+D:\GitHub\tsllog1806\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.dll
+D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.pdb

@@ -8,9 +8,11 @@ namespace BLL
 {
     public class Class1
     {
-        public void show()
+        public void show(Model.CTM_JobEventLog par)
         {
-            
+            DAL.CTM_JobEventLog ev = DAL.Tool.Convert.To<DAL.CTM_JobEventLog>(par);
+            DAL.ConnectDb.Instance.CTM_JobEventLog.Add(ev);
+            DAL.ConnectDb.Instance.SaveChanges();
         }
     }
 }

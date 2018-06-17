@@ -1,0 +1,13 @@
+D:\GitHub\tsllog1806\DAL\bin\Debug\DAL.dll.config
+D:\GitHub\tsllog1806\DAL\bin\Debug\DAL.dll
+D:\GitHub\tsllog1806\DAL\bin\Debug\DAL.pdb
+D:\GitHub\tsllog1806\DAL\bin\Debug\EntityFramework.dll
+D:\GitHub\tsllog1806\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\tsllog1806\DAL\bin\Debug\Model.dll
+D:\GitHub\tsllog1806\DAL\bin\Debug\Model.pdb
+D:\GitHub\tsllog1806\DAL\bin\Debug\EntityFramework.xml
+D:\GitHub\tsllog1806\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\tsllog1806\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.dll
+D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.pdb
