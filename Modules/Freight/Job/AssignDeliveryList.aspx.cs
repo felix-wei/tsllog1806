@@ -201,11 +201,11 @@ left join(select  sum(case when CargoType='IN' then QtyOrig else -QtyOrig end) a
         if (house != null)
         {
             #region
-            house.DeliveryDate = deliveryDate;
+            //house.DeliveryDate = deliveryDate;
             house.QtyOrig = SafeValue.SafeDecimal(qty);
             house.WeightOrig = SafeValue.SafeDecimal(weight);
             house.VolumeOrig = SafeValue.SafeDecimal(volume);
-            house.SendMode = SafeValue.SafeString(sendMode);
+            //house.SendMode = SafeValue.SafeString(sendMode);
             C2.Manager.ORManager.StartTracking(house, Wilson.ORMapper.InitialState.Updated);
             C2.Manager.ORManager.PersistChanges(house);
             result = "Success";
@@ -333,10 +333,10 @@ left join(select  sum(case when CargoType='IN' then QtyOrig else -QtyOrig end) a
             house.QtyOrig = qty;
             house.WeightOrig = weight;
             house.VolumeOrig = volume;
-            house.ShipDate = now;
-            house.ShipIndex = shipIndex;
-            house.DeliveryDate = deliveryDate;
-            house.SendMode = sendMode;
+            //house.ShipDate = now;
+            //house.ShipIndex = shipIndex;
+            //house.DeliveryDate = deliveryDate;
+            //house.SendMode = sendMode;
             C2.Manager.ORManager.StartTracking(house, Wilson.ORMapper.InitialState.Inserted);
             C2.Manager.ORManager.PersistChanges(house);
 

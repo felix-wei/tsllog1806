@@ -171,7 +171,7 @@ public partial class Modules_Freight_Job_AssignContainerList : System.Web.UI.Pag
                 ASPxComboBox cmb_CustomsVerifyInd = this.grid.FindRowCellTemplateControl(rowIndex, null, "cmb_CustomsVerifyInd") as ASPxComboBox;
                 if (SafeValue.SafeString(cmb_CustomsClearStatus.Value) == "Y")
                 {
-                    e.Result = C2.Edi_Freight.DoOne(lbl_JobId.Text);
+                    //e.Result = C2.Edi_Freight.DoOne(lbl_JobId.Text);
                     DateTime now = DateTime.Now;
                     string userId = HttpContext.Current.User.Identity.Name;
                     Session["Export_" + now.ToString("yyyyMMdd") + userId] = null;
