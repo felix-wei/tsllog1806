@@ -1,0 +1,204 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>C:\Users\cargonet\AppData\Local\Apps\2.0\3CNM27JG.4HR\5WN7ZKG5.PT6\repo..tion_9a748adf23cfd20d_0001.0000_e5713134f948ac96\DevExpress.XtraReports.v12.2.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>en-US</Localization>
+///   <Version>12.2</Version>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class rptDn : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel lab_company_address1;
+        private DevExpress.XtraReports.UI.XRLabel lab_company_name;
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private DevExpress.XtraReports.UI.XRControlStyle Title;
+        private DevExpress.XtraReports.UI.XRControlStyle FieldCaption;
+        private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
+        private DevExpress.XtraReports.UI.XRControlStyle DataField;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
+        private System.Resources.ResourceManager _resources;
+        public rptDn() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
+                        "W9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
+                        "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFBIXnLBA" +
+                        "AAAAOcAAAAmJAB0AGgAaQBzAC4AUwBjAHIAaQBwAHQAcwBTAG8AdQByAGMAZQAAAAAAAYQKDQpwcml2Y" +
+                        "XRlIHZvaWQgcGljX2NvbXBhbnlMb2dvX0JlZm9yZVByaW50KG9iamVjdCBzZW5kZXIsIFN5c3RlbS5Ec" +
+                        "mF3aW5nLlByaW50aW5nLlByaW50RXZlbnRBcmdzIGUpIHsNCihzZW5kZXIgYXMgWFJQaWN0dXJlQm94K" +
+                        "S5JbWFnZVVybD1TeXN0ZW0uQ29uZmlndXJhdGlvbi5Db25maWd1cmF0aW9uU2V0dGluZ3MuQXBwU2V0d" +
+                        "GluZ3NbIkNvbXBhbnlMb2dvIl07DQp9DQoNCiANCg0KDQpwcml2YXRlIHZvaWQgbGFiX2NvbXBhbnlBZ" +
+                        "GRfQmVmb3JlUHJpbnQob2JqZWN0IHNlbmRlciwgU3lzdGVtLkRyYXdpbmcuUHJpbnRpbmcuUHJpbnRFd" +
+                        "mVudEFyZ3MgZSkgew0KKHNlbmRlciBhcyBYUkxhYmVsKS5UZXh0PVN5c3RlbS5Db25maWd1cmF0aW9uL" +
+                        "kNvbmZpZ3VyYXRpb25TZXR0aW5ncy5BcHBTZXR0aW5nc1siQ29tcGFueUFkZHJlc3MxIl07DQooc2VuZ" +
+                        "GVyIGFzIFhSTGFiZWwpLlRleHQrPSJcclxuIiArIFN5c3RlbS5Db25maWd1cmF0aW9uLkNvbmZpZ3VyY" +
+                        "XRpb25TZXR0aW5ncy5BcHBTZXR0aW5nc1siQ29tcGFueUFkZHJlc3MyIl07DQooc2VuZGVyIGFzIFhST" +
+                        "GFiZWwpLlRleHQrPSJcclxuIiArIFN5c3RlbS5Db25maWd1cmF0aW9uLkNvbmZpZ3VyYXRpb25TZXR0a" +
+                        "W5ncy5BcHBTZXR0aW5nc1siQ29tcGFueUFkZHJlc3MzIl07DQoNCihzZW5kZXIgYXMgWFJMYWJlbCkuV" +
+                        "GV4dCs9DQpTeXN0ZW0uQ29uZmlndXJhdGlvbi5Db25maWd1cmF0aW9uU2V0dGluZ3MuQXBwU2V0dGluZ" +
+                        "3NbIkNvbXBhbnlBZGRyZXNzNCJdLlRyaW0oKS5MZW5ndGggPT0gMCA/ICIiIDoNCiJcclxuIiArIFN5c" +
+                        "3RlbS5Db25maWd1cmF0aW9uLkNvbmZpZ3VyYXRpb25TZXR0aW5ncy5BcHBTZXR0aW5nc1siQ29tcGFue" +
+                        "UFkZHJlc3M0Il07DQoNCihzZW5kZXIgYXMgWFJMYWJlbCkuVGV4dCs9DQpTeXN0ZW0uQ29uZmlndXJhd" +
+                        "Glvbi5Db25maWd1cmF0aW9uU2V0dGluZ3MuQXBwU2V0dGluZ3NbIkNvbXBhbnlBZGRyZXNzNSJdLlRya" +
+                        "W0oKS5MZW5ndGggPT0gMCA/ICIiIDoNCiJcclxuIiArIFN5c3RlbS5Db25maWd1cmF0aW9uLkNvbmZpZ" +
+                        "3VyYXRpb25TZXR0aW5ncy5BcHBTZXR0aW5nc1siQ29tcGFueUFkZHJlc3M1Il07DQoNCn0NCg0KcHJpd" +
+                        "mF0ZSB2b2lkIGxhYl9jb21wYW55TmFtZV9CZWZvcmVQcmludChvYmplY3Qgc2VuZGVyLCBTeXN0ZW0uR" +
+                        "HJhd2luZy5QcmludGluZy5QcmludEV2ZW50QXJncyBlKSB7DQooc2VuZGVyIGFzIFhSTGFiZWwpLlRle" +
+                        "HQ9U3lzdGVtLkNvbmZpZ3VyYXRpb24uQ29uZmlndXJhdGlvblNldHRpbmdzLkFwcFNldHRpbmdzWyJDb" +
+                        "21wYW55TmFtZSJdOw0KfQ0K";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.lab_company_address1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lab_company_name = new DevExpress.XtraReports.UI.XRLabel();
+            this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.HeightF = 0F;
+            this.Detail.Name = "Detail";
+            this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // PageHeader
+            // 
+            this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.pictureBox1,
+                        this.lab_company_address1,
+                        this.lab_company_name});
+            this.PageHeader.HeightF = 105.3334F;
+            this.PageHeader.Name = "PageHeader";
+            // 
+            // topMarginBand1
+            // 
+            this.topMarginBand1.HeightF = 13F;
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            this.bottomMarginBand1.HeightF = 0F;
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.000005F);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Scripts.OnBeforePrint = "pic_companyLogo_BeforePrint";
+            this.pictureBox1.SizeF = new System.Drawing.SizeF(90.66667F, 92.3334F);
+            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            // 
+            // lab_company_address1
+            // 
+            this.lab_company_address1.Font = new System.Drawing.Font("Arial", 9F);
+            this.lab_company_address1.LocationFloat = new DevExpress.Utils.PointFloat(101.0834F, 37.41668F);
+            this.lab_company_address1.Multiline = true;
+            this.lab_company_address1.Name = "lab_company_address1";
+            this.lab_company_address1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lab_company_address1.Scripts.OnBeforePrint = "lab_companyAdd_BeforePrint";
+            this.lab_company_address1.SizeF = new System.Drawing.SizeF(659.9166F, 57.91673F);
+            this.lab_company_address1.StylePriority.UseFont = false;
+            this.lab_company_address1.StylePriority.UseTextAlignment = false;
+            this.lab_company_address1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // lab_company_name
+            // 
+            this.lab_company_name.Font = new System.Drawing.Font("Arial", 14F);
+            this.lab_company_name.LocationFloat = new DevExpress.Utils.PointFloat(101.0833F, 10.00001F);
+            this.lab_company_name.Name = "lab_company_name";
+            this.lab_company_name.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lab_company_name.Scripts.OnBeforePrint = "lab_companyName_BeforePrint";
+            this.lab_company_name.SizeF = new System.Drawing.SizeF(655.9166F, 27.41668F);
+            this.lab_company_name.StylePriority.UseFont = false;
+            this.lab_company_name.StylePriority.UseTextAlignment = false;
+            this.lab_company_name.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Title
+            // 
+            this.Title.BackColor = System.Drawing.Color.White;
+            this.Title.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.Title.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Title.BorderWidth = 1;
+            this.Title.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
+            this.Title.ForeColor = System.Drawing.Color.Maroon;
+            this.Title.Name = "Title";
+            // 
+            // FieldCaption
+            // 
+            this.FieldCaption.BackColor = System.Drawing.Color.White;
+            this.FieldCaption.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.FieldCaption.BorderWidth = 1;
+            this.FieldCaption.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.FieldCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.FieldCaption.Name = "FieldCaption";
+            // 
+            // PageInfo
+            // 
+            this.PageInfo.BackColor = System.Drawing.Color.White;
+            this.PageInfo.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.PageInfo.BorderWidth = 1;
+            this.PageInfo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.PageInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Name = "PageInfo";
+            // 
+            // DataField
+            // 
+            this.DataField.BackColor = System.Drawing.Color.White;
+            this.DataField.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.DataField.BorderWidth = 1;
+            this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.DataField.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Name = "DataField";
+            this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            // 
+            // rptDn
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail,
+                        this.PageHeader,
+                        this.topMarginBand1,
+                        this.bottomMarginBand1});
+            this.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margins = new System.Drawing.Printing.Margins(30, 30, 13, 0);
+            this.Name = "rptDn";
+            this.PageHeight = 1169;
+            this.PageWidth = 827;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.ScriptsSource = resources.GetString("$this.ScriptsSource");
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+                        this.Title,
+                        this.FieldCaption,
+                        this.PageInfo,
+                        this.DataField,
+                        this.xrControlStyle1});
+            this.Version = "12.2";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
