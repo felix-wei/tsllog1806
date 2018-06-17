@@ -1,0 +1,222 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MatOut.aspx.cs" Inherits="WareHouse_Job_MatOut" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+           <script type="text/javascript" src="/Script/pages.js"></script>
+    <script type="text/javascript">
+        function ShowJob(masterId) {
+            parent.navTab.openTab(masterId, "/Modules/WareHouse/Job/JobEdit.aspx?refN=" + masterId, { title: masterId, fresh: false, external: true });
+        }
+        function PrintSchedule() {
+            window.open("/ReportJob/PrintJobSchedule.aspx?DateFrom=" + txt_from.GetText() + "&DateTo=" + txt_end.GetText());
+        }
+        function PopubCrews(jobNo, date, type) {
+            popubCtr.SetHeaderText('Crews List');
+            popubCtr.SetContentUrl('/Modules/WareHouse/SelectPage/SelectCrewsList.aspx?no=' + jobNo + '&date=' + date + "&type=" + type);
+            popubCtr.Show();
+        }
+        function PopubMaterials(jobNo) {
+            popubCtr.SetHeaderText('Materials List');
+            popubCtr.SetContentUrl('/Modules/WareHouse/SelectPage/SelectMaterialsList.aspx?no=' + jobNo + '&type=OUT&company=CM');
+            popubCtr.Show();
+        }
+        function AfterPopubMultiInv() {
+            popubCtr.Hide();
+            popubCtr.SetContentUrl('about:blank');
+            if (grid != null) {
+                grid.Refresh();
+            }
+            //document.location.reload();
+        }
+        function AfterPopubMultiInv1() {
+            popubCtr1.Hide();
+            popubCtr1.SetContentUrl('about:blank');
+            grid.Refresh();
+
+            //document.location.reload();
+        }
+        function OnScheduleCallback() {
+            document.location.reload();
+        }
+    </script>
+		 <style media="print">
+	.noprint {display:none;}
+	.doprint {font-size:10pt;}
+	.onlyprint {font-size:10pt;}
+
+	</style>	
+</head>
+<body>
+   <form id="form1" runat="server">
+                    <wilson:DataSource ID="dsJobSchedule" runat="server" ObjectSpace="C2.Manager.ORManager" TypeName="C2.JobSchedule"
+                KeyMember="Id" FilterExpression="1=0" />
+        <div>
+            <table class="noprint">
+                <tr>
+                    <td>
+                        <dxe:ASPxLabel ID="Label1" runat="server" Text=" Date :">
+                        </dxe:ASPxLabel>
+                    </td>
+                    <td>
+                        <dxe:ASPxDateEdit ID="txt_from" Width="100" runat="server" EditFormat="Custom" EditFormatString="dd/MM/yyyy">
+                        </dxe:ASPxDateEdit>
+                        <div style="display: none">
+                            <dxe:ASPxDateEdit ID="txt_date" ClientInstanceName="txt_date" Width="100" runat="server" EditFormat="Custom" EditFormatString="dd/MM/yyyy">
+                            </dxe:ASPxDateEdit>
+                        </div>
+                    </td>
+                    <td>
+                        <dxe:ASPxLabel ID="Label2" runat="server" Text="To">
+                        </dxe:ASPxLabel>
+                    </td>
+                    <td>
+                        <dxe:ASPxDateEdit ID="txt_end" Width="100" runat="server" EditFormat="Custom" EditFormatString="dd/MM/yyyy">
+                        </dxe:ASPxDateEdit>
+                        <div style="display: none">
+                            <dxe:ASPxDateEdit ID="txt_date2" ClientInstanceName="txt_date2" Width="100" runat="server" EditFormat="Custom" EditFormatString="dd/MM/yyyy">
+                            </dxe:ASPxDateEdit>
+                        </div>
+                    </td>
+                      <td>
+                        <dxe:ASPxButton ID="btn_search" Width="120" ClientInstanceName="btn_search" runat="server" Text="Search" OnClick="btn_search_Click">
+                        </dxe:ASPxButton>
+                    </td>
+                     <td>
+                        <dxe:ASPxButton ID="btn_Add" Width="120px" runat="server" Text="Add New" Visible="false"
+                            AutoPostBack="False" UseSubmitBehavior="False">
+                            <ClientSideEvents Click="function(s, e) {
+                                 grid.AddNewRow();
+                                    }" />
+                        </dxe:ASPxButton>
+                    </td>
+                </tr>
+            </table>
+             <dxwgv:ASPxGridView ID="grid" ClientInstanceName="grid" runat="server" DataSourceID="dsJobSchedule" OnRowUpdating="grid_RowUpdating" OnRowInserting="grid_RowInserting" OnInitNewRow="grid_InitNewRow"
+                KeyFieldName="Id" Width="100%" AutoGenerateColumns="False" OnRowDeleting="grid_RowDeleting" OnCustomDataCallback="grid_CustomDataCallback" OnInit="grid_Init" OnHtmlDataCellPrepared="grid_HtmlDataCellPrepared">
+                <SettingsEditing Mode="Inline" />
+				<SettingsBehavior AllowSort="false" AllowGroup="false" />
+                <SettingsPager Mode="ShowAllRecords"></SettingsPager>
+                <Columns>
+                     <dxwgv:GridViewCommandColumn Caption="#" VisibleIndex="0" Width="40" >
+                        <EditButton Visible="true" Text="Edit"></EditButton>
+                    </dxwgv:GridViewCommandColumn>
+                    <dxwgv:GridViewDataTextColumn Caption="#" VisibleIndex="0" Width="20">
+                        <DataItemTemplate>
+                            <a onclick="ShowJob('<%# Eval("RefNo") %>');">Open</a>
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn Caption="No" FieldName="RefNo" VisibleIndex="1" Width="130" ReadOnly="true">
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataDateColumn Caption="Schedule Date" FieldName="JobDate" VisibleIndex="2" Width="80">
+                       <PropertiesDateEdit Width="100" DisplayFormatString="dd/MM/yyyy" EditFormat="DateTime" EditFormatString="dd/MM/yyyy"></PropertiesDateEdit>
+                    </dxwgv:GridViewDataDateColumn>
+                    <dxwgv:GridViewDataDateColumn Caption="Time" FieldName="MoveDate" VisibleIndex="2" Width="120">
+                        <DataItemTemplate>
+                            <%# SafeValue.SafeDate(Eval("MoveDate"),DateTime.Today).ToString("HH:mm")%>
+                        </DataItemTemplate>
+                        <EditItemTemplate>
+                            <dxe:ASPxTimeEdit ID="date_Time" Width="80" runat="server" Value='<%# Bind("MoveDate") %>'
+                                EditFormat="Time" EditFormatString="HH:mm" DisplayFormatString="HH:mm">
+                            </dxe:ASPxTimeEdit>
+                        </EditItemTemplate>
+                        <PropertiesDateEdit Width="60" DisplayFormatString="HH:mm" EditFormat="Time" EditFormatString="HH:mm"></PropertiesDateEdit>
+                    </dxwgv:GridViewDataDateColumn>
+
+                    <dxwgv:GridViewDataMemoColumn Caption="Materials" FieldName="Note2" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# SafeValue.SafeString(Eval("Note2"),"NO MAT") %>
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                    <dxwgv:GridViewDataMemoColumn Caption="Additional New" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetAdditionalNew(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                     <dxwgv:GridViewDataMemoColumn Caption="Additional Used" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetAdditionalUsed(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                    <dxwgv:GridViewDataMemoColumn Caption="Returned New" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetReturnedNew(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                    <dxwgv:GridViewDataMemoColumn Caption="Returned Used" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetReturnedUsed(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                    <dxwgv:GridViewDataMemoColumn Caption="Total New" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetTotalNew(SafeValue.SafeString(Eval("JobNo"))) %>
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+                    <dxwgv:GridViewDataMemoColumn Caption="Total Used" VisibleIndex="4" Width="150" PropertiesMemoEdit-Rows="3" PropertiesMemoEdit-Width="150">
+                        <DataItemTemplate>
+                            <%# GetTotalUsed(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataMemoColumn>
+<%--                    <dxwgv:GridViewDataTextColumn Caption="Materials" VisibleIndex="4" Width="40" Visible="false">
+					 <DataItemTemplate>
+                          <%# GetMaterials(SafeValue.SafeString(Eval("JobNo"))) %> 
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataTextColumn>--%>
+                    <dxwgv:GridViewDataTextColumn Caption="#" VisibleIndex="4" Width="40">
+					 <DataItemTemplate>
+                         <a onclick='javascript:PopubMaterials("<%# Eval("JobNo") %>");' href="#">Materials</a>
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataComboBoxColumn Caption="Schedule Status" FieldName="WorkStatus" VisibleIndex="2" Width="100">
+                        <PropertiesComboBox Width="100">
+                            <Items>
+                                <dxe:ListEditItem Text="Pending" Value="Pending" />
+                                <dxe:ListEditItem Text="Working" Value="Working" />
+                                <dxe:ListEditItem Text="Complete" Value="Complete" />
+                                <dxe:ListEditItem Text="Cancel" Value="Cancel" />
+                                <dxe:ListEditItem Text="Unsuccess" Value="Unsuccess" />
+                            </Items>
+                        </PropertiesComboBox>
+                    </dxwgv:GridViewDataComboBoxColumn>
+                    <dxwgv:GridViewDataComboBoxColumn Caption="Whs Status" FieldName="Value4" VisibleIndex="4" Width="100">
+                        <PropertiesComboBox Width="100">
+                            <Items>
+                                <dxe:ListEditItem Text="Pending" Value="Pending" />
+                                <dxe:ListEditItem Text="Complete" Value="Complete" />
+                            </Items>
+                        </PropertiesComboBox>
+                    </dxwgv:GridViewDataComboBoxColumn>
+                    <dxwgv:GridViewDataTextColumn Caption="WareHouse Note" FieldName="Value3" VisibleIndex="4" Width="100">
+                        <DataItemTemplate>
+                            <%# Eval("Value3") %>
+                        </DataItemTemplate>
+                        <EditItemTemplate>
+                            <dxe:ASPxMemo ID="memo_Value3" runat="server" Text='<%# Bind("Value3") %>' Rows="2" Width="120"></dxe:ASPxMemo>
+                        </EditItemTemplate>
+                    </dxwgv:GridViewDataTextColumn>
+                </Columns>
+                <Settings ShowFooter="True" />
+                 <TotalSummary>
+                     <dxwgv:ASPxSummaryItem  FieldName="RefNo" DisplayFormat="{0}" SummaryType="Count"/>
+                 </TotalSummary>
+            </dxwgv:ASPxGridView>
+            <dxwgv:ASPxGridViewExporter ID="gridExport" runat="server" GridViewID="grid">
+            </dxwgv:ASPxGridViewExporter>
+            <dxpc:ASPxPopupControl ID="popubCtr" runat="server" CloseAction="CloseButton" Modal="True"
+                PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ClientInstanceName="popubCtr"
+                HeaderText="Customer" AllowDragging="True" EnableAnimation="False" Height="500px"
+                AllowResize="True" Width="900px" EnableViewState="False">
+            </dxpc:ASPxPopupControl>
+            <dxpc:ASPxPopupControl ID="popubCtr1" runat="server" CloseAction="CloseButton" Modal="True"
+                PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ClientInstanceName="popubCtr1"
+                HeaderText="Customer" AllowDragging="True" EnableAnimation="False" Height="500px"
+                AllowResize="True" Width="800px" EnableViewState="False">
+            </dxpc:ASPxPopupControl>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1 @@
+ <add key="Logo" value="/Custom/logo.png"/>

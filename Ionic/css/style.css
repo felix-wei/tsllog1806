@@ -1,0 +1,526 @@
+/* Empty. Add your own CSS if you like */
+.f-menu_leftmenu_user {
+    text-align: center;
+    /*vertical-align:bottom;*/
+}
+
+    .f-menu_leftmenu_user .f-menu_leftmenu_user_img {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+
+/*================================ user  ================*/
+.f-menu_user_div {
+    text-align: center;
+    background-image: url(../img/back_water_wave.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+    .f-menu_user_div .f-menu_user_img {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+
+/*=========   schedule   =========*/
+.schedule_calendar {
+    position: fixed;
+    top: 44px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+    .schedule_calendar .calendar_title {
+        padding-right: 10px;
+        padding-left: 5px;
+        padding-top: 2px;
+        min-height: 50px;
+        background-color: #eeeeee;
+    }
+
+        .schedule_calendar .calendar_title button {
+            float: right;
+            font: bold;
+        }
+
+        .schedule_calendar .calendar_title label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    .schedule_calendar .calendar_content {
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: #eeeeee;
+    }
+
+        .schedule_calendar .calendar_content table {
+            width: 100%;
+        }
+
+            .schedule_calendar .calendar_content table td {
+                width: 14%;
+                /*border-bottom: 1px solid #d1cfcf;*/
+                border-top: 1px solid #d1cfcf;
+                padding: 3px;
+            }
+
+            .schedule_calendar .calendar_content table .span_today {
+                border: 1px #d1cfcf solid;
+                border-radius: 14px;
+                padding-left: 7px;
+                padding-right: 7px;
+                padding-bottom: 2px;
+                padding-top: 2px;
+            }
+
+            .schedule_calendar .calendar_content table .td_select {
+                background-color: #4a87ee;
+            }
+
+.schedule_calendar_seat {
+    height: 105px;
+}
+
+
+/*===============   common  ================*/
+.f-margin-top-8 {
+    margin-top: -8px;
+}
+
+.f-margin-bottom2 {
+    margin-bottom: 2px;
+}
+
+.f-margin-bottom0 {
+    margin-bottom: 0px;
+}
+
+.f-item-image-center {
+    text-align: center;
+}
+
+.f-padding-0 {
+    padding: 0;
+}
+
+.f-padding-3 {
+    padding: 3px;
+}
+
+.f-padding-right-80{
+    padding-right:80px;
+}
+
+.f-map-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.f-top-auto{
+    top:auto;
+}
+
+.f-full-row {
+    width: 100%;
+}
+
+.f-item-noborder {
+    border: 0px;
+}
+
+    .f-item-noborder .f-icon-small {
+        font-size: 16px;
+    }
+
+.item-button-right-2 .item-content {
+    padding-right: 80px;
+}
+
+    .item-button-right-2 .item-content .item-button-right-button2 {
+        right: 45px;
+    }
+
+.item-button-right-2 .item-button-right-button2 {
+    right: 45px;
+}
+
+
+
+.f-basetab-fullscreen-map .scroll {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.map-canvas {
+    width: 100%;
+    height: 100%; /*400px;*/
+    /*min-height:200px;*/
+    /*border: solid 2px;*/
+}
+
+.bar-tilte-left .title {
+    text-align: left;
+    padding-left: 40px;
+}
+
+
+
+/*=========================  schedule  ========================*/
+.f-schedule-time-date {
+    color: #666;
+    font-size: 14px;
+    margin: 3px;
+}
+
+/*=========================  dashboard  ==============================*/
+
+.f-menu_dashboard_div {
+    text-align: center;
+    padding: 0px;
+    height: 150px;
+}
+
+    .f-menu_dashboard_div .f-menu_dashboard_img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        overflow: hidden;
+        position: absolute;
+        top: 26px;
+        left: 20px;
+        box-shadow: #ccc 0px 3px 25px;
+    }
+
+    .f-menu_dashboard_div .f-menu_dashboard_title {
+        font-size: 32px;
+        font-weight: 500;
+        position: absolute;
+        top: 110px;
+        left: 120px;
+        text-shadow: #ccc 0px 3px 25px;
+        white-space:nowrap;
+    }
+
+.f-menu_dashboard_background_div {
+    background-image: url(../img/back_container.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100px;
+    box-shadow: #ccc 0px 3px 25px;
+}
+
+
+/*========================  message  ===========================*/
+.f-messagechat_to_view_more {
+    text-align: center;
+    color: #ffd800;
+    font-weight: 500;
+}
+
+.f-message_text_center {
+    text-align: center;
+}
+
+/*========================  schedule search  ====================================*/
+.f-modal_schedule_search {
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    width: 100%;
+}
+
+.f-modal_schedule_search_content {
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    max-height: 100%;
+}
+
+.f-modal_schedule_search_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.f-modal_schedule_search_title_seat {
+    padding-top: 45px;
+}
+.f-modal_schedule_search_title_seat_141 {
+    padding-top: 141px;
+}
+
+.f-modal_schedule_search_title {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 45px;
+}
+
+.tab-item-active {
+    opacity: 4;
+}
+
+.badge {
+    line-height: 30px;
+}
+.f-badge-height-0 {
+    line-height: normal;
+}
+
+/*=====================   history tab   =====================*/
+
+.f-historylog-item {
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.f-historylog-item-right {
+    padding-left: 90px;
+    padding-right:24px;
+}
+
+.f-historylog-item-left {
+    padding-right: 50%;
+}
+
+.f-historylog-item p {
+    white-space: pre-wrap;
+    margin-bottom: 0px;
+}
+
+
+.f-historylog-item-right .f-historylog-part {
+    position: absolute;
+    top: 30%;
+    left: 16px;
+    width: 60px;
+    font-size: 14px;
+    color: #aaa;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+
+.f-historylog-item-left .f-historylog-part {
+    position: absolute;
+    top: 40%;
+    right: 16px;
+    width: 35%;
+    font-size: 14px;
+    color: #aaa;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+
+
+
+.f-historylog-item-right .f-historylog-verticalbox {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 13px;
+    left: 70px;
+    text-align: center;
+}
+
+.f-historylog-item-left .f-historylog-verticalbox {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 13px;
+    right: 45%;
+    text-align: center;
+}
+
+.f-historylog-item .f-historylog-verticalbox hr {
+    border: 0px;
+    width: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.f-historylog-item .f-historylog-verticalbox .f-historylog-icon {
+    position: relative;
+    font-size: 16px;
+    top: 2px;
+}
+
+.f-verticalbar0 {
+    position: relative;
+    top: 0%;
+    height: 40%;
+}
+
+.f-verticalbar1 {
+    position: relative;
+    top: 2px;
+    height: 60%;
+}
+
+.f-verticalbar-show {
+    background-color: #ddd;
+}
+
+/*======================  message box  =========================*/
+
+.f-message-textbox {
+    position: relative;
+    padding: 8px;
+    margin: 8px;
+    background-color: #aaa;
+    /*border: 2px solid #aaa;*/
+    border-radius: 3px;
+}
+
+.f-message-textbox-full{
+    width:100%;
+}
+
+.f-message-textbox-right {
+    float: right;
+    text-align: left;
+}
+
+.f-message-textbox-left {
+    float: left;
+    text-align: left;
+}
+
+.f-message-textbox p {
+    white-space: normal;
+    /*word-break:break-all;*/
+    margin: 0px;
+    color: #fff;
+}
+
+.f-message-textbox img {
+    max-width: 80px;
+    max-height: 80px;
+    min-width:80px;
+    min-height: 80px;
+    width: 100%;
+}
+
+.f-message-textbox .f-message-textbox-fromright {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: -8px;
+    top: 40%;
+}
+
+.f-message-textbox .f-message-textbox-fromleft {
+    width: 0px;
+    height: 0px;
+    border-right: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: -8px;
+    top: 40%;
+}
+
+/***********************    message 20150211  *****************************/
+
+.f-item-message {
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.f-message-usericon {
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    width: 100%;
+    border-radius:5px;
+}
+
+.f-item-message-left {
+    padding-left:68px;
+}
+.f-item-message-left .f-message-usericon-side{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+.f-item-message-left .f-message-textbox-side {
+    float: left;
+    text-align: left;
+}
+
+.f-item-message-left .f-message-textbox-from-side {
+    width: 0px;
+    height: 0px;
+    border-right: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: -8px;
+    top: 10%;
+}
+
+
+.f-item-message-right {
+    padding-right:68px;
+}
+
+.f-item-message-right .f-message-usericon-side{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.f-item-message-right .f-message-textbox-side {
+    float: right;
+    text-align: left;
+}
+
+.f-item-message-right .f-message-textbox-from-side {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: -8px;
+    top: 10%;
+}
+
+
+
+/*//=================  full image   ================*/
+.modal_fullimage_scroll{
+    position:absolute;
+    top:54px;
+    bottom:10px;
+    left:10px;
+    right:10px;
+}

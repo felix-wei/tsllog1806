@@ -1,0 +1,78 @@
+﻿body {font-family: Verdana;font-size:10px; margin:0 auto;}
+td {font-family: Verdana;font-size:10px;}
+a {cursor:pointer}
+.mytext {font-family: Verdana;font-size:10px;}
+.dxb span {font-family: Verdana;font-size:10px;}
+
+.dxeEditArea {font-family: Verdana;font-size:10px;}
+.dxeBase {font-family: Verdana;font-size:10px;}
+.dxeMemoEditArea {font-family: Verdana;font-size:10px;}
+
+div.box {padding:2px;}
+div.lbl {float:left;width:80px;}
+div.ctl{float:left;width:120px;}
+td.lbl3 {font-weight:bold;border-bottom:solid #cccccc 1px;}
+td.lbl {width:100px;font-weight:bold;border-bottom:solid #cccccc 1px;}
+td.lbl1 {width:180px;font-weight:bold;border-bottom:solid #cccccc 1px;}
+td.lbl2{width:60px;font-weight:bold;border-bottom:solid #cccccc 1px;}
+
+td.ctl {width:140px;}
+td.ctl2 {width:100px;}
+td.ctl3 {width:130px;}
+.A4 {
+    width: 210mm;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+}
+.Text {
+        font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.head {
+        border-spacing: 0px;
+    width: 210mm;
+    background-color: white;
+    height:auto;
+    font-family:Arial;
+    font-size:12px;
+}
+.table_A4 {
+    border: solid 1px #000000;
+    border-spacing: 0px;
+    width: 210mm;
+    background-color: white;
+    height:auto;
+        font-family:Arial;
+    font-size:12px;
+}
+.table_Detail {
+    border-spacing: 0px;
+    width:100%;
+    background-color: white;
+    height:auto;
+        font-family:Arial;
+    font-size:12px;
+}
+.tr {
+    height:25px;
+}
+.td_bottom_right {
+    border-bottom: solid 1px #000000;
+    border-right: solid 1px #000000;
+    padding-left:5px;
+}
+.td_bottom {
+    border-bottom: solid 1px #000000;
+     padding-left:5px;
+}
+.td_right {
+    border-right: solid 1px #000000;
+     padding-left:5px;
+}
+.hidden {
+  display:none;
+}

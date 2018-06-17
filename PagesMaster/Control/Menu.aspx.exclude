@@ -1,0 +1,94 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Menu.aspx.cs" Inherits="PagesMaster_Control_Menu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function ShowSubMenu(v) {
+            popubCtr1.SetContentUrl('MenuSub.aspx?masterId=' + v);
+            popubCtr1.SetHeaderText('Sub Menu');
+            popubCtr1.Show();
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <dxe:ASPxButton ID="ASPxButton1" Width="100" runat="server" Text="Add New" AutoPostBack="false">
+                <ClientSideEvents Click="function(s,e){
+                                grid.AddNewRow();
+                                }" />
+            </dxe:ASPxButton>
+            <dxwgv:ASPxGridView ID="grid" ClientInstanceName="grid" runat="server" DataSourceID="dsMenuMast" KeyFieldName="SequenceId" Width="100%" EnableRowsCache="False" AutoGenerateColumns="false" OnRowDeleted="grid_RowDeleted">
+                <SettingsPager Mode="ShowAllRecords"></SettingsPager>
+                <SettingsBehavior ConfirmDelete="true" />
+                <SettingsEditing Mode="Inline" />
+                <Columns>
+                    <dxwgv:GridViewCommandColumn VisibleIndex="0">
+                        <EditButton Visible="true" />
+                        <DeleteButton Visible="true" />
+                    </dxwgv:GridViewCommandColumn>
+                    <dxwgv:GridViewDataColumn FieldName="MasterId" VisibleIndex="1" >
+                        </dxwgv:GridViewDataColumn>
+
+                    <dxwgv:GridViewDataColumn FieldName="Name" VisibleIndex="2" />
+                    <dxwgv:GridViewDataColumn FieldName="Color" VisibleIndex="3" />
+                    <dxwgv:GridViewDataColumn FieldName="IsActive" VisibleIndex="4" />
+                    <dxwgv:GridViewDataSpinEditColumn FieldName="SortIndex" VisibleIndex="5">
+                        <PropertiesSpinEdit Increment="0" SpinButtons-ShowIncrementButtons="false"></PropertiesSpinEdit>
+                    </dxwgv:GridViewDataSpinEditColumn>
+                    <dxwgv:GridViewDataComboBoxColumn FieldName="RoleName" VisibleIndex="6">
+                        <PropertiesComboBox DataSourceID="dsRole" ValueField="Code" TextField="Code"></PropertiesComboBox>
+                    </dxwgv:GridViewDataComboBoxColumn>
+                    <dxwgv:GridViewDataColumn VisibleIndex="100">
+                        <EditItemTemplate></EditItemTemplate>
+                        <DataItemTemplate><a href="#" onclick='ShowSubMenu("<%# Eval("MasterId") %>")'>Sub Menu</a></DataItemTemplate>
+                    </dxwgv:GridViewDataColumn>
+                </Columns>
+            </dxwgv:ASPxGridView>
+            <asp:SqlDataSource ID="dsMenuMast" runat="server" ConnectionString="<%$ ConnectionStrings:local %>"
+                SelectCommand="SELECT SequenceId,MasterId, Name, Color, IsActive, SortIndex, RoleName  FROM [MenuMast]"
+                UpdateCommand="Update MenuMast set  MasterId=@MasterId, Name=@Name, Color=@Color, IsActive=@IsActive, SortIndex=@SortIndex, RoleName=@RoleName
+                where SequenceId=@SequenceId"
+                InsertCommand="Insert Into MenuMast (MasterId, Name, Color, IsActive, SortIndex, RoleName) 
+                Values(@MasterId, @Name, @Color, @IsActive, @SortIndex, @RoleName)"
+                DeleteCommand="Delete from MenuMast where SequenceId=@SequenceId">
+                <DeleteParameters>
+                    <asp:Parameter Name="SequenceId" Type="Int32" />
+                </DeleteParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="MasterId" Type="String" />
+                    <asp:Parameter Name="Name" Type="String" />
+                    <asp:Parameter Name="Color" Type="String" />
+                    <asp:Parameter Name="IsActive" Type="Boolean" />
+                    <asp:Parameter Name="SortIndex" Type="Int32" />
+                    <asp:Parameter Name="RoleName" Type="String" />
+                </UpdateParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="MasterId" Type="String" />
+                    <asp:Parameter Name="Name" Type="String" />
+                    <asp:Parameter Name="Color" Type="String" />
+                    <asp:Parameter Name="IsActive" Type="Boolean" />
+                    <asp:Parameter Name="SortIndex" Type="Int32" />
+                    <asp:Parameter Name="RoleName" Type="String" />
+                </InsertParameters>
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="dsRole" runat="server" ConnectionString="<%$ ConnectionStrings:local %>"
+                SelectCommand="SELECT Code  FROM [Role]"
+                ></asp:SqlDataSource>
+
+        <dxpc:ASPxPopupControl ID="popubCtr1" runat="server" CloseAction="CloseButton" Modal="True"
+            PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" ClientInstanceName="popubCtr1"
+            HeaderText="Customer" AllowDragging="True" EnableAnimation="False" Height="500"
+            AllowResize="True" Width="920" EnableViewState="False">
+            <ContentCollection>
+                <dxpc:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
+                </dxpc:PopupControlContentControl>
+            </ContentCollection>
+        </dxpc:ASPxPopupControl>
+        </div>
+    </form>
+</body>
+</html>

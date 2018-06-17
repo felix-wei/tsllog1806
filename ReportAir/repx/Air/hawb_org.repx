@@ -1,0 +1,1042 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>C:\windows\assembly\GAC_MSIL\DevExpress.XtraReports.v9.2\9.2.6.0__b88d1754d700e49a\DevExpress.XtraReports.v9.2.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>en-US</Localization>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRLabel ShipperName1;
+        private DevExpress.XtraReports.UI.XRLabel ConsigneeName1;
+        private DevExpress.XtraReports.UI.XRLabel CarrierAgent1;
+        private DevExpress.XtraReports.UI.XRLabel AccountInfo1;
+        private DevExpress.XtraReports.UI.XRLabel AgentIATACode1;
+        private DevExpress.XtraReports.UI.XRLabel AgentAccountNo1;
+        private DevExpress.XtraReports.UI.XRLabel AirportDeparture1;
+        private DevExpress.XtraReports.UI.XRLabel ConnDest11;
+        private DevExpress.XtraReports.UI.XRLabel ConnCarrier11;
+        private DevExpress.XtraReports.UI.XRLabel ConnDest21;
+        private DevExpress.XtraReports.UI.XRLabel ConnCarrier21;
+        private DevExpress.XtraReports.UI.XRLabel ConnDest31;
+        private DevExpress.XtraReports.UI.XRLabel ConnCarrier31;
+        private DevExpress.XtraReports.UI.XRLabel AirportDestination1;
+        private DevExpress.XtraReports.UI.XRLabel HandlingInfo1;
+        private DevExpress.XtraReports.UI.XRLabel Currency1;
+        private DevExpress.XtraReports.UI.XRLabel ChgsCode1;
+        private DevExpress.XtraReports.UI.XRLabel PPD11;
+        private DevExpress.XtraReports.UI.XRLabel COLL11;
+        private DevExpress.XtraReports.UI.XRLabel PPD21;
+        private DevExpress.XtraReports.UI.XRLabel COLL21;
+        private DevExpress.XtraReports.UI.XRLabel CarriageValue1;
+        private DevExpress.XtraReports.UI.XRLabel CustomValue1;
+        private DevExpress.XtraReports.UI.XRLabel AmountInsurance1;
+        private DevExpress.XtraReports.UI.XRLabel ShippingTerm1;
+        private DevExpress.XtraReports.UI.XRLabel IssuedBy2;
+        private DevExpress.XtraReports.UI.XRLabel Piece1;
+        private DevExpress.XtraReports.UI.XRLabel GrossWeight1;
+        private DevExpress.XtraReports.UI.XRLabel Unit1;
+        private DevExpress.XtraReports.UI.XRLabel ChargeableWeight1;
+        private DevExpress.XtraReports.UI.XRLabel Unit2;
+        private DevExpress.XtraReports.UI.XRLabel RateCharge1;
+        private DevExpress.XtraReports.UI.XRLabel Total1;
+        private DevExpress.XtraReports.UI.XRLabel GoodsNature1;
+        private DevExpress.XtraReports.UI.XRLabel WeightChargeP1;
+        private DevExpress.XtraReports.UI.XRLabel WeightChargeC1;
+        private DevExpress.XtraReports.UI.XRLabel ValuationChargeP1;
+        private DevExpress.XtraReports.UI.XRLabel ValuationChargeC1;
+        private DevExpress.XtraReports.UI.XRLabel TaxP1;
+        private DevExpress.XtraReports.UI.XRLabel TaxC1;
+        private DevExpress.XtraReports.UI.XRLabel OtherAgentChargeP1;
+        private DevExpress.XtraReports.UI.XRLabel OtherAgentChargeC1;
+        private DevExpress.XtraReports.UI.XRLabel OtherCarrierChargeP1;
+        private DevExpress.XtraReports.UI.XRLabel OtherCarrierChargeC1;
+        private DevExpress.XtraReports.UI.XRLabel TotalPrepaid1;
+        private DevExpress.XtraReports.UI.XRLabel TotalCollect1;
+        private DevExpress.XtraReports.UI.XRLabel OtherCharge11;
+        private DevExpress.XtraReports.UI.XRLabel OtherCharge21;
+        private DevExpress.XtraReports.UI.XRLabel OtherCharge31;
+        private DevExpress.XtraReports.UI.XRLabel SignatureShipper1;
+        private DevExpress.XtraReports.UI.XRLabel ExecuteDate1;
+        private DevExpress.XtraReports.UI.XRLabel ExecutePlace1;
+        private DevExpress.XtraReports.UI.XRLabel SignatureIssuing1;
+        private DevExpress.XtraReports.UI.XRLabel HAWB1;
+        private DevExpress.XtraReports.UI.XRLabel Text1;
+        private DevExpress.XtraReports.UI.XRLabel MAWB1;
+        private DevExpress.XtraReports.UI.XRLabel HAWB2;
+        private DevExpress.XtraReports.UI.XRLabel Text2;
+        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRControlStyle Title;
+        private DevExpress.XtraReports.UI.XRControlStyle FieldCaption;
+        private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
+        private DevExpress.XtraReports.UI.XRControlStyle DataField;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
+        private System.Resources.ResourceManager _resources;
+        public XtraReport1() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = @"zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.ShipperName1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConsigneeName1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.CarrierAgent1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AccountInfo1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AgentIATACode1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AgentAccountNo1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AirportDeparture1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnDest11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnCarrier11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnDest21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnCarrier21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnDest31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ConnCarrier31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AirportDestination1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.HandlingInfo1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Currency1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ChgsCode1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.PPD11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.COLL11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.PPD21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.COLL21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.CarriageValue1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.CustomValue1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AmountInsurance1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ShippingTerm1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.IssuedBy2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Piece1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.GrossWeight1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Unit1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ChargeableWeight1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Unit2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.RateCharge1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Total1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.GoodsNature1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.WeightChargeP1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.WeightChargeC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ValuationChargeP1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ValuationChargeC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TaxP1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TaxC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherAgentChargeP1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherAgentChargeC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherCarrierChargeP1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherCarrierChargeC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TotalPrepaid1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TotalCollect1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherCharge11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherCharge21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.OtherCharge31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SignatureShipper1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ExecuteDate1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ExecutePlace1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SignatureIssuing1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.HAWB1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Text1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.MAWB1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.HAWB2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Text2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.ShipperName1,
+                        this.ConsigneeName1,
+                        this.CarrierAgent1,
+                        this.AccountInfo1,
+                        this.AgentIATACode1,
+                        this.AgentAccountNo1,
+                        this.AirportDeparture1,
+                        this.ConnDest11,
+                        this.ConnCarrier11,
+                        this.ConnDest21,
+                        this.ConnCarrier21,
+                        this.ConnDest31,
+                        this.ConnCarrier31,
+                        this.AirportDestination1,
+                        this.HandlingInfo1,
+                        this.Currency1,
+                        this.ChgsCode1,
+                        this.PPD11,
+                        this.COLL11,
+                        this.PPD21,
+                        this.COLL21,
+                        this.CarriageValue1,
+                        this.CustomValue1,
+                        this.AmountInsurance1,
+                        this.ShippingTerm1,
+                        this.IssuedBy2,
+                        this.Piece1,
+                        this.GrossWeight1,
+                        this.Unit1,
+                        this.ChargeableWeight1,
+                        this.Unit2,
+                        this.RateCharge1,
+                        this.Total1,
+                        this.GoodsNature1,
+                        this.WeightChargeP1,
+                        this.WeightChargeC1,
+                        this.ValuationChargeP1,
+                        this.ValuationChargeC1,
+                        this.TaxP1,
+                        this.TaxC1,
+                        this.OtherAgentChargeP1,
+                        this.OtherAgentChargeC1,
+                        this.OtherCarrierChargeP1,
+                        this.OtherCarrierChargeC1,
+                        this.TotalPrepaid1,
+                        this.TotalCollect1,
+                        this.OtherCharge11,
+                        this.OtherCharge21,
+                        this.OtherCharge31,
+                        this.SignatureShipper1,
+                        this.ExecuteDate1,
+                        this.ExecutePlace1,
+                        this.SignatureIssuing1,
+                        this.HAWB1,
+                        this.Text1,
+                        this.MAWB1,
+                        this.HAWB2,
+                        this.Text2});
+            this.Detail.Height = 1105;
+            this.Detail.Name = "Detail";
+            // 
+            // PageHeader
+            // 
+            this.PageHeader.Height = 0;
+            this.PageHeader.Name = "PageHeader";
+            // 
+            // ShipperName1
+            // 
+            this.ShipperName1.BackColor = System.Drawing.Color.White;
+            this.ShipperName1.BorderColor = System.Drawing.Color.Black;
+            this.ShipperName1.CanGrow = false;
+            this.ShipperName1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ShipperName1.ForeColor = System.Drawing.Color.Black;
+            this.ShipperName1.Location = new System.Drawing.Point(83, 58);
+            this.ShipperName1.Name = "ShipperName1";
+            this.ShipperName1.Size = new System.Drawing.Size(340, 75);
+            this.ShipperName1.Text = "[Mast.ShipperName]";
+            this.ShipperName1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConsigneeName1
+            // 
+            this.ConsigneeName1.BackColor = System.Drawing.Color.White;
+            this.ConsigneeName1.BorderColor = System.Drawing.Color.Black;
+            this.ConsigneeName1.CanGrow = false;
+            this.ConsigneeName1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConsigneeName1.ForeColor = System.Drawing.Color.Black;
+            this.ConsigneeName1.Location = new System.Drawing.Point(83, 158);
+            this.ConsigneeName1.Name = "ConsigneeName1";
+            this.ConsigneeName1.Size = new System.Drawing.Size(340, 75);
+            this.ConsigneeName1.Text = "[Mast.ConsigneeName]";
+            this.ConsigneeName1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // CarrierAgent1
+            // 
+            this.CarrierAgent1.BackColor = System.Drawing.Color.White;
+            this.CarrierAgent1.BorderColor = System.Drawing.Color.Black;
+            this.CarrierAgent1.CanGrow = false;
+            this.CarrierAgent1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.CarrierAgent1.ForeColor = System.Drawing.Color.Black;
+            this.CarrierAgent1.Location = new System.Drawing.Point(83, 250);
+            this.CarrierAgent1.Name = "CarrierAgent1";
+            this.CarrierAgent1.Size = new System.Drawing.Size(340, 50);
+            this.CarrierAgent1.Text = "[Mast.CarrierAgent]";
+            this.CarrierAgent1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // AccountInfo1
+            // 
+            this.AccountInfo1.BackColor = System.Drawing.Color.White;
+            this.AccountInfo1.BorderColor = System.Drawing.Color.Black;
+            this.AccountInfo1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AccountInfo1.ForeColor = System.Drawing.Color.Black;
+            this.AccountInfo1.Location = new System.Drawing.Point(450, 258);
+            this.AccountInfo1.Name = "AccountInfo1";
+            this.AccountInfo1.Size = new System.Drawing.Size(341, 75);
+            this.AccountInfo1.Text = "[Mast.AccountInfo]";
+            this.AccountInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // AgentIATACode1
+            // 
+            this.AgentIATACode1.BackColor = System.Drawing.Color.White;
+            this.AgentIATACode1.BorderColor = System.Drawing.Color.Black;
+            this.AgentIATACode1.CanGrow = false;
+            this.AgentIATACode1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AgentIATACode1.ForeColor = System.Drawing.Color.Black;
+            this.AgentIATACode1.Location = new System.Drawing.Point(83, 317);
+            this.AgentIATACode1.Name = "AgentIATACode1";
+            this.AgentIATACode1.Size = new System.Drawing.Size(170, 16);
+            this.AgentIATACode1.Text = "[Mast.AgentIATACode]";
+            this.AgentIATACode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // AgentAccountNo1
+            // 
+            this.AgentAccountNo1.BackColor = System.Drawing.Color.White;
+            this.AgentAccountNo1.BorderColor = System.Drawing.Color.Black;
+            this.AgentAccountNo1.CanGrow = false;
+            this.AgentAccountNo1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AgentAccountNo1.ForeColor = System.Drawing.Color.Black;
+            this.AgentAccountNo1.Location = new System.Drawing.Point(258, 317);
+            this.AgentAccountNo1.Name = "AgentAccountNo1";
+            this.AgentAccountNo1.Size = new System.Drawing.Size(165, 16);
+            this.AgentAccountNo1.Text = "[Mast.AgentAccountNo]";
+            this.AgentAccountNo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // AirportDeparture1
+            // 
+            this.AirportDeparture1.BackColor = System.Drawing.Color.White;
+            this.AirportDeparture1.BorderColor = System.Drawing.Color.Black;
+            this.AirportDeparture1.CanGrow = false;
+            this.AirportDeparture1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AirportDeparture1.ForeColor = System.Drawing.Color.Black;
+            this.AirportDeparture1.Location = new System.Drawing.Point(83, 350);
+            this.AirportDeparture1.Name = "AirportDeparture1";
+            this.AirportDeparture1.Size = new System.Drawing.Size(340, 16);
+            this.AirportDeparture1.Text = "[Mast.AirportDeparture]";
+            this.AirportDeparture1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnDest11
+            // 
+            this.ConnDest11.BackColor = System.Drawing.Color.White;
+            this.ConnDest11.BorderColor = System.Drawing.Color.Black;
+            this.ConnDest11.CanGrow = false;
+            this.ConnDest11.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnDest11.ForeColor = System.Drawing.Color.Black;
+            this.ConnDest11.Location = new System.Drawing.Point(83, 383);
+            this.ConnDest11.Name = "ConnDest11";
+            this.ConnDest11.Size = new System.Drawing.Size(33, 16);
+            this.ConnDest11.Text = "[Mast.ConnDest1]";
+            this.ConnDest11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnCarrier11
+            // 
+            this.ConnCarrier11.BackColor = System.Drawing.Color.White;
+            this.ConnCarrier11.BorderColor = System.Drawing.Color.Black;
+            this.ConnCarrier11.CanGrow = false;
+            this.ConnCarrier11.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnCarrier11.ForeColor = System.Drawing.Color.Black;
+            this.ConnCarrier11.Location = new System.Drawing.Point(133, 383);
+            this.ConnCarrier11.Name = "ConnCarrier11";
+            this.ConnCarrier11.Size = new System.Drawing.Size(150, 16);
+            this.ConnCarrier11.Text = "[Mast.ConnCarrier1]";
+            this.ConnCarrier11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnDest21
+            // 
+            this.ConnDest21.BackColor = System.Drawing.Color.White;
+            this.ConnDest21.BorderColor = System.Drawing.Color.Black;
+            this.ConnDest21.CanGrow = false;
+            this.ConnDest21.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnDest21.ForeColor = System.Drawing.Color.Black;
+            this.ConnDest21.Location = new System.Drawing.Point(300, 383);
+            this.ConnDest21.Name = "ConnDest21";
+            this.ConnDest21.Size = new System.Drawing.Size(33, 16);
+            this.ConnDest21.Text = "[Mast.ConnDest2]";
+            this.ConnDest21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnCarrier21
+            // 
+            this.ConnCarrier21.BackColor = System.Drawing.Color.White;
+            this.ConnCarrier21.BorderColor = System.Drawing.Color.Black;
+            this.ConnCarrier21.CanGrow = false;
+            this.ConnCarrier21.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnCarrier21.ForeColor = System.Drawing.Color.Black;
+            this.ConnCarrier21.Location = new System.Drawing.Point(333, 383);
+            this.ConnCarrier21.Name = "ConnCarrier21";
+            this.ConnCarrier21.Size = new System.Drawing.Size(91, 16);
+            this.ConnCarrier21.Text = "[Mast.ConnCarrier2]";
+            this.ConnCarrier21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnDest31
+            // 
+            this.ConnDest31.BackColor = System.Drawing.Color.White;
+            this.ConnDest31.BorderColor = System.Drawing.Color.Black;
+            this.ConnDest31.CanGrow = false;
+            this.ConnDest31.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnDest31.ForeColor = System.Drawing.Color.Black;
+            this.ConnDest31.Location = new System.Drawing.Point(350, 383);
+            this.ConnDest31.Name = "ConnDest31";
+            this.ConnDest31.Size = new System.Drawing.Size(33, 16);
+            this.ConnDest31.Text = "[Mast.ConnDest3]";
+            this.ConnDest31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ConnCarrier31
+            // 
+            this.ConnCarrier31.BackColor = System.Drawing.Color.White;
+            this.ConnCarrier31.BorderColor = System.Drawing.Color.Black;
+            this.ConnCarrier31.CanGrow = false;
+            this.ConnCarrier31.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ConnCarrier31.ForeColor = System.Drawing.Color.Black;
+            this.ConnCarrier31.Location = new System.Drawing.Point(383, 383);
+            this.ConnCarrier31.Name = "ConnCarrier31";
+            this.ConnCarrier31.Size = new System.Drawing.Size(41, 16);
+            this.ConnCarrier31.Text = "[Mast.ConnCarrier3]";
+            this.ConnCarrier31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // AirportDestination1
+            // 
+            this.AirportDestination1.BackColor = System.Drawing.Color.White;
+            this.AirportDestination1.BorderColor = System.Drawing.Color.Black;
+            this.AirportDestination1.CanGrow = false;
+            this.AirportDestination1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AirportDestination1.ForeColor = System.Drawing.Color.Black;
+            this.AirportDestination1.Location = new System.Drawing.Point(83, 417);
+            this.AirportDestination1.Name = "AirportDestination1";
+            this.AirportDestination1.Size = new System.Drawing.Size(342, 16);
+            this.AirportDestination1.Text = "[Mast.AirportDestination]";
+            this.AirportDestination1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // HandlingInfo1
+            // 
+            this.HandlingInfo1.BackColor = System.Drawing.Color.White;
+            this.HandlingInfo1.BorderColor = System.Drawing.Color.Black;
+            this.HandlingInfo1.CanGrow = false;
+            this.HandlingInfo1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.HandlingInfo1.ForeColor = System.Drawing.Color.Black;
+            this.HandlingInfo1.Location = new System.Drawing.Point(133, 450);
+            this.HandlingInfo1.Name = "HandlingInfo1";
+            this.HandlingInfo1.Size = new System.Drawing.Size(686, 42);
+            this.HandlingInfo1.Text = "[Mast.HandlingInfo]";
+            this.HandlingInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Currency1
+            // 
+            this.Currency1.BackColor = System.Drawing.Color.White;
+            this.Currency1.BorderColor = System.Drawing.Color.Black;
+            this.Currency1.CanGrow = false;
+            this.Currency1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Currency1.ForeColor = System.Drawing.Color.Black;
+            this.Currency1.Location = new System.Drawing.Point(442, 383);
+            this.Currency1.Name = "Currency1";
+            this.Currency1.Size = new System.Drawing.Size(25, 16);
+            this.Currency1.Text = "[Mast.Currency]";
+            this.Currency1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ChgsCode1
+            // 
+            this.ChgsCode1.BackColor = System.Drawing.Color.White;
+            this.ChgsCode1.BorderColor = System.Drawing.Color.Black;
+            this.ChgsCode1.CanGrow = false;
+            this.ChgsCode1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ChgsCode1.ForeColor = System.Drawing.Color.Black;
+            this.ChgsCode1.Location = new System.Drawing.Point(483, 392);
+            this.ChgsCode1.Name = "ChgsCode1";
+            this.ChgsCode1.Size = new System.Drawing.Size(20, 16);
+            this.ChgsCode1.Text = "[Mast.ChgsCode]";
+            this.ChgsCode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // PPD11
+            // 
+            this.PPD11.BackColor = System.Drawing.Color.White;
+            this.PPD11.BorderColor = System.Drawing.Color.Black;
+            this.PPD11.CanGrow = false;
+            this.PPD11.Font = new System.Drawing.Font("Courier New", 10F);
+            this.PPD11.ForeColor = System.Drawing.Color.Black;
+            this.PPD11.Location = new System.Drawing.Point(508, 392);
+            this.PPD11.Name = "PPD11";
+            this.PPD11.Size = new System.Drawing.Size(16, 16);
+            this.PPD11.Text = "[Mast.PPD1]";
+            this.PPD11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // COLL11
+            // 
+            this.COLL11.BackColor = System.Drawing.Color.White;
+            this.COLL11.BorderColor = System.Drawing.Color.Black;
+            this.COLL11.CanGrow = false;
+            this.COLL11.Font = new System.Drawing.Font("Courier New", 10F);
+            this.COLL11.ForeColor = System.Drawing.Color.Black;
+            this.COLL11.Location = new System.Drawing.Point(525, 392);
+            this.COLL11.Name = "COLL11";
+            this.COLL11.Size = new System.Drawing.Size(16, 16);
+            this.COLL11.Text = "[Mast.COLL1]";
+            this.COLL11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // PPD21
+            // 
+            this.PPD21.BackColor = System.Drawing.Color.White;
+            this.PPD21.BorderColor = System.Drawing.Color.Black;
+            this.PPD21.CanGrow = false;
+            this.PPD21.Font = new System.Drawing.Font("Courier New", 10F);
+            this.PPD21.ForeColor = System.Drawing.Color.Black;
+            this.PPD21.Location = new System.Drawing.Point(542, 392);
+            this.PPD21.Name = "PPD21";
+            this.PPD21.Size = new System.Drawing.Size(16, 16);
+            this.PPD21.Text = "[Mast.PPD2]";
+            this.PPD21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // COLL21
+            // 
+            this.COLL21.BackColor = System.Drawing.Color.White;
+            this.COLL21.BorderColor = System.Drawing.Color.Black;
+            this.COLL21.CanGrow = false;
+            this.COLL21.Font = new System.Drawing.Font("Courier New", 10F);
+            this.COLL21.ForeColor = System.Drawing.Color.Black;
+            this.COLL21.Location = new System.Drawing.Point(558, 392);
+            this.COLL21.Name = "COLL21";
+            this.COLL21.Size = new System.Drawing.Size(16, 16);
+            this.COLL21.Text = "[Mast.COLL2]";
+            this.COLL21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // CarriageValue1
+            // 
+            this.CarriageValue1.BackColor = System.Drawing.Color.White;
+            this.CarriageValue1.BorderColor = System.Drawing.Color.Black;
+            this.CarriageValue1.CanGrow = false;
+            this.CarriageValue1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.CarriageValue1.ForeColor = System.Drawing.Color.Black;
+            this.CarriageValue1.Location = new System.Drawing.Point(583, 392);
+            this.CarriageValue1.Name = "CarriageValue1";
+            this.CarriageValue1.Size = new System.Drawing.Size(100, 16);
+            this.CarriageValue1.Text = "[Mast.CarriageValue]";
+            this.CarriageValue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // CustomValue1
+            // 
+            this.CustomValue1.BackColor = System.Drawing.Color.White;
+            this.CustomValue1.BorderColor = System.Drawing.Color.Black;
+            this.CustomValue1.CanGrow = false;
+            this.CustomValue1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.CustomValue1.ForeColor = System.Drawing.Color.Black;
+            this.CustomValue1.Location = new System.Drawing.Point(700, 392);
+            this.CustomValue1.Name = "CustomValue1";
+            this.CustomValue1.Size = new System.Drawing.Size(110, 16);
+            this.CustomValue1.Text = "[Mast.CustomValue]";
+            this.CustomValue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // AmountInsurance1
+            // 
+            this.AmountInsurance1.BackColor = System.Drawing.Color.White;
+            this.AmountInsurance1.BorderColor = System.Drawing.Color.Black;
+            this.AmountInsurance1.CanGrow = false;
+            this.AmountInsurance1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.AmountInsurance1.ForeColor = System.Drawing.Color.Black;
+            this.AmountInsurance1.Location = new System.Drawing.Point(442, 417);
+            this.AmountInsurance1.Name = "AmountInsurance1";
+            this.AmountInsurance1.Size = new System.Drawing.Size(92, 16);
+            this.AmountInsurance1.Text = "[Mast.AmountInsurance]";
+            this.AmountInsurance1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ShippingTerm1
+            // 
+            this.ShippingTerm1.BackColor = System.Drawing.Color.White;
+            this.ShippingTerm1.BorderColor = System.Drawing.Color.Black;
+            this.ShippingTerm1.CanGrow = false;
+            this.ShippingTerm1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ShippingTerm1.ForeColor = System.Drawing.Color.Black;
+            this.ShippingTerm1.Location = new System.Drawing.Point(575, 242);
+            this.ShippingTerm1.Name = "ShippingTerm1";
+            this.ShippingTerm1.Size = new System.Drawing.Size(233, 16);
+            this.ShippingTerm1.Text = "  ";
+            this.ShippingTerm1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // IssuedBy2
+            // 
+            this.IssuedBy2.BackColor = System.Drawing.Color.White;
+            this.IssuedBy2.BorderColor = System.Drawing.Color.Black;
+            this.IssuedBy2.CanGrow = false;
+            this.IssuedBy2.Font = new System.Drawing.Font("Courier New", 10F);
+            this.IssuedBy2.ForeColor = System.Drawing.Color.Black;
+            this.IssuedBy2.Location = new System.Drawing.Point(525, 83);
+            this.IssuedBy2.Name = "IssuedBy2";
+            this.IssuedBy2.Size = new System.Drawing.Size(297, 25);
+            this.IssuedBy2.Text = "[Mast.IssuedBy]";
+            this.IssuedBy2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Piece1
+            // 
+            this.Piece1.BackColor = System.Drawing.Color.White;
+            this.Piece1.BorderColor = System.Drawing.Color.Black;
+            this.Piece1.CanGrow = false;
+            this.Piece1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Piece1.ForeColor = System.Drawing.Color.Black;
+            this.Piece1.Location = new System.Drawing.Point(83, 592);
+            this.Piece1.Name = "Piece1";
+            this.Piece1.Size = new System.Drawing.Size(41, 16);
+            this.Piece1.Text = "Untranslated";
+            this.Piece1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // GrossWeight1
+            // 
+            this.GrossWeight1.BackColor = System.Drawing.Color.White;
+            this.GrossWeight1.BorderColor = System.Drawing.Color.Black;
+            this.GrossWeight1.CanGrow = false;
+            this.GrossWeight1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.GrossWeight1.ForeColor = System.Drawing.Color.Black;
+            this.GrossWeight1.Location = new System.Drawing.Point(133, 592);
+            this.GrossWeight1.Name = "GrossWeight1";
+            this.GrossWeight1.Size = new System.Drawing.Size(45, 16);
+            this.GrossWeight1.Text = "[Mast.GrossWeight]";
+            this.GrossWeight1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // Unit1
+            // 
+            this.Unit1.BackColor = System.Drawing.Color.White;
+            this.Unit1.BorderColor = System.Drawing.Color.Black;
+            this.Unit1.CanGrow = false;
+            this.Unit1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Unit1.ForeColor = System.Drawing.Color.Black;
+            this.Unit1.Location = new System.Drawing.Point(175, 592);
+            this.Unit1.Name = "Unit1";
+            this.Unit1.Size = new System.Drawing.Size(16, 16);
+            this.Unit1.Text = "[Mast.Unit]";
+            this.Unit1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ChargeableWeight1
+            // 
+            this.ChargeableWeight1.BackColor = System.Drawing.Color.White;
+            this.ChargeableWeight1.BorderColor = System.Drawing.Color.Black;
+            this.ChargeableWeight1.CanGrow = false;
+            this.ChargeableWeight1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ChargeableWeight1.ForeColor = System.Drawing.Color.Black;
+            this.ChargeableWeight1.Location = new System.Drawing.Point(267, 592);
+            this.ChargeableWeight1.Name = "ChargeableWeight1";
+            this.ChargeableWeight1.Size = new System.Drawing.Size(80, 16);
+            this.ChargeableWeight1.Text = "[Mast.ChargeableWeight]";
+            this.ChargeableWeight1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // Unit2
+            // 
+            this.Unit2.BackColor = System.Drawing.Color.White;
+            this.Unit2.BorderColor = System.Drawing.Color.Black;
+            this.Unit2.CanGrow = false;
+            this.Unit2.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Unit2.ForeColor = System.Drawing.Color.Black;
+            this.Unit2.Location = new System.Drawing.Point(350, 592);
+            this.Unit2.Name = "Unit2";
+            this.Unit2.Size = new System.Drawing.Size(16, 16);
+            this.Unit2.Text = "[Mast.Unit]";
+            this.Unit2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // RateCharge1
+            // 
+            this.RateCharge1.BackColor = System.Drawing.Color.White;
+            this.RateCharge1.BorderColor = System.Drawing.Color.Black;
+            this.RateCharge1.CanGrow = false;
+            this.RateCharge1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.RateCharge1.ForeColor = System.Drawing.Color.Black;
+            this.RateCharge1.Location = new System.Drawing.Point(367, 592);
+            this.RateCharge1.Name = "RateCharge1";
+            this.RateCharge1.Size = new System.Drawing.Size(90, 16);
+            this.RateCharge1.Text = "[Mast.RateCharge]";
+            this.RateCharge1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // Total1
+            // 
+            this.Total1.BackColor = System.Drawing.Color.White;
+            this.Total1.BorderColor = System.Drawing.Color.Black;
+            this.Total1.CanGrow = false;
+            this.Total1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Total1.ForeColor = System.Drawing.Color.Black;
+            this.Total1.Location = new System.Drawing.Point(475, 592);
+            this.Total1.Name = "Total1";
+            this.Total1.Size = new System.Drawing.Size(100, 16);
+            this.Total1.Text = "[Mast.Total]";
+            this.Total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // GoodsNature1
+            // 
+            this.GoodsNature1.BackColor = System.Drawing.Color.White;
+            this.GoodsNature1.BorderColor = System.Drawing.Color.Black;
+            this.GoodsNature1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.GoodsNature1.ForeColor = System.Drawing.Color.Black;
+            this.GoodsNature1.Location = new System.Drawing.Point(617, 550);
+            this.GoodsNature1.Name = "GoodsNature1";
+            this.GoodsNature1.Size = new System.Drawing.Size(198, 210);
+            this.GoodsNature1.Text = "[Mast.GoodsNature]";
+            this.GoodsNature1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // WeightChargeP1
+            // 
+            this.WeightChargeP1.BackColor = System.Drawing.Color.White;
+            this.WeightChargeP1.BorderColor = System.Drawing.Color.Black;
+            this.WeightChargeP1.CanGrow = false;
+            this.WeightChargeP1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.WeightChargeP1.ForeColor = System.Drawing.Color.Black;
+            this.WeightChargeP1.Location = new System.Drawing.Point(83, 783);
+            this.WeightChargeP1.Name = "WeightChargeP1";
+            this.WeightChargeP1.Size = new System.Drawing.Size(120, 16);
+            this.WeightChargeP1.Text = "[Mast.WeightChargeP]";
+            this.WeightChargeP1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // WeightChargeC1
+            // 
+            this.WeightChargeC1.BackColor = System.Drawing.Color.White;
+            this.WeightChargeC1.BorderColor = System.Drawing.Color.Black;
+            this.WeightChargeC1.CanGrow = false;
+            this.WeightChargeC1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.WeightChargeC1.ForeColor = System.Drawing.Color.Black;
+            this.WeightChargeC1.Location = new System.Drawing.Point(208, 783);
+            this.WeightChargeC1.Name = "WeightChargeC1";
+            this.WeightChargeC1.Size = new System.Drawing.Size(141, 16);
+            this.WeightChargeC1.Text = "[Mast.WeightChargeC]";
+            this.WeightChargeC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // ValuationChargeP1
+            // 
+            this.ValuationChargeP1.BackColor = System.Drawing.Color.White;
+            this.ValuationChargeP1.BorderColor = System.Drawing.Color.Black;
+            this.ValuationChargeP1.CanGrow = false;
+            this.ValuationChargeP1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ValuationChargeP1.ForeColor = System.Drawing.Color.Black;
+            this.ValuationChargeP1.Location = new System.Drawing.Point(83, 817);
+            this.ValuationChargeP1.Name = "ValuationChargeP1";
+            this.ValuationChargeP1.Size = new System.Drawing.Size(120, 16);
+            this.ValuationChargeP1.Text = "[Mast.ValuationChargeP]";
+            this.ValuationChargeP1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // ValuationChargeC1
+            // 
+            this.ValuationChargeC1.BackColor = System.Drawing.Color.White;
+            this.ValuationChargeC1.BorderColor = System.Drawing.Color.Black;
+            this.ValuationChargeC1.CanGrow = false;
+            this.ValuationChargeC1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ValuationChargeC1.ForeColor = System.Drawing.Color.Black;
+            this.ValuationChargeC1.Location = new System.Drawing.Point(208, 817);
+            this.ValuationChargeC1.Name = "ValuationChargeC1";
+            this.ValuationChargeC1.Size = new System.Drawing.Size(120, 16);
+            this.ValuationChargeC1.Text = "[Mast.ValuationChargeC]";
+            this.ValuationChargeC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TaxP1
+            // 
+            this.TaxP1.BackColor = System.Drawing.Color.White;
+            this.TaxP1.BorderColor = System.Drawing.Color.Black;
+            this.TaxP1.CanGrow = false;
+            this.TaxP1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.TaxP1.ForeColor = System.Drawing.Color.Black;
+            this.TaxP1.Location = new System.Drawing.Point(83, 850);
+            this.TaxP1.Name = "TaxP1";
+            this.TaxP1.Size = new System.Drawing.Size(120, 16);
+            this.TaxP1.Text = "[Mast.TaxP]";
+            this.TaxP1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TaxC1
+            // 
+            this.TaxC1.BackColor = System.Drawing.Color.White;
+            this.TaxC1.BorderColor = System.Drawing.Color.Black;
+            this.TaxC1.CanGrow = false;
+            this.TaxC1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.TaxC1.ForeColor = System.Drawing.Color.Black;
+            this.TaxC1.Location = new System.Drawing.Point(208, 850);
+            this.TaxC1.Name = "TaxC1";
+            this.TaxC1.Size = new System.Drawing.Size(120, 16);
+            this.TaxC1.Text = "[Mast.TaxC]";
+            this.TaxC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // OtherAgentChargeP1
+            // 
+            this.OtherAgentChargeP1.BackColor = System.Drawing.Color.White;
+            this.OtherAgentChargeP1.BorderColor = System.Drawing.Color.Black;
+            this.OtherAgentChargeP1.CanGrow = false;
+            this.OtherAgentChargeP1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherAgentChargeP1.ForeColor = System.Drawing.Color.Black;
+            this.OtherAgentChargeP1.Location = new System.Drawing.Point(83, 883);
+            this.OtherAgentChargeP1.Name = "OtherAgentChargeP1";
+            this.OtherAgentChargeP1.Size = new System.Drawing.Size(120, 16);
+            this.OtherAgentChargeP1.Text = "[Mast.OtherAgentChargeP]";
+            this.OtherAgentChargeP1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // OtherAgentChargeC1
+            // 
+            this.OtherAgentChargeC1.BackColor = System.Drawing.Color.White;
+            this.OtherAgentChargeC1.BorderColor = System.Drawing.Color.Black;
+            this.OtherAgentChargeC1.CanGrow = false;
+            this.OtherAgentChargeC1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherAgentChargeC1.ForeColor = System.Drawing.Color.Black;
+            this.OtherAgentChargeC1.Location = new System.Drawing.Point(208, 883);
+            this.OtherAgentChargeC1.Name = "OtherAgentChargeC1";
+            this.OtherAgentChargeC1.Size = new System.Drawing.Size(120, 16);
+            this.OtherAgentChargeC1.Text = "[Mast.OtherAgentChargeC]";
+            this.OtherAgentChargeC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // OtherCarrierChargeP1
+            // 
+            this.OtherCarrierChargeP1.BackColor = System.Drawing.Color.White;
+            this.OtherCarrierChargeP1.BorderColor = System.Drawing.Color.Black;
+            this.OtherCarrierChargeP1.CanGrow = false;
+            this.OtherCarrierChargeP1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherCarrierChargeP1.ForeColor = System.Drawing.Color.Black;
+            this.OtherCarrierChargeP1.Location = new System.Drawing.Point(83, 917);
+            this.OtherCarrierChargeP1.Name = "OtherCarrierChargeP1";
+            this.OtherCarrierChargeP1.Size = new System.Drawing.Size(120, 16);
+            this.OtherCarrierChargeP1.Text = "[Mast.OtherCarrierChargeP]";
+            this.OtherCarrierChargeP1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // OtherCarrierChargeC1
+            // 
+            this.OtherCarrierChargeC1.BackColor = System.Drawing.Color.White;
+            this.OtherCarrierChargeC1.BorderColor = System.Drawing.Color.Black;
+            this.OtherCarrierChargeC1.CanGrow = false;
+            this.OtherCarrierChargeC1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherCarrierChargeC1.ForeColor = System.Drawing.Color.Black;
+            this.OtherCarrierChargeC1.Location = new System.Drawing.Point(208, 917);
+            this.OtherCarrierChargeC1.Name = "OtherCarrierChargeC1";
+            this.OtherCarrierChargeC1.Size = new System.Drawing.Size(120, 16);
+            this.OtherCarrierChargeC1.Text = "[Mast.OtherCarrierChargeC]";
+            this.OtherCarrierChargeC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TotalPrepaid1
+            // 
+            this.TotalPrepaid1.BackColor = System.Drawing.Color.White;
+            this.TotalPrepaid1.BorderColor = System.Drawing.Color.Black;
+            this.TotalPrepaid1.CanGrow = false;
+            this.TotalPrepaid1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.TotalPrepaid1.ForeColor = System.Drawing.Color.Black;
+            this.TotalPrepaid1.Location = new System.Drawing.Point(83, 983);
+            this.TotalPrepaid1.Name = "TotalPrepaid1";
+            this.TotalPrepaid1.Size = new System.Drawing.Size(120, 16);
+            this.TotalPrepaid1.Text = "[Mast.TotalPrepaid]";
+            this.TotalPrepaid1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TotalCollect1
+            // 
+            this.TotalCollect1.BackColor = System.Drawing.Color.White;
+            this.TotalCollect1.BorderColor = System.Drawing.Color.Black;
+            this.TotalCollect1.CanGrow = false;
+            this.TotalCollect1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.TotalCollect1.ForeColor = System.Drawing.Color.Black;
+            this.TotalCollect1.Location = new System.Drawing.Point(217, 983);
+            this.TotalCollect1.Name = "TotalCollect1";
+            this.TotalCollect1.Size = new System.Drawing.Size(120, 16);
+            this.TotalCollect1.Text = "[Mast.TotalCollect]";
+            this.TotalCollect1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // OtherCharge11
+            // 
+            this.OtherCharge11.BackColor = System.Drawing.Color.White;
+            this.OtherCharge11.BorderColor = System.Drawing.Color.Black;
+            this.OtherCharge11.CanGrow = false;
+            this.OtherCharge11.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherCharge11.ForeColor = System.Drawing.Color.Black;
+            this.OtherCharge11.Location = new System.Drawing.Point(358, 783);
+            this.OtherCharge11.Name = "OtherCharge11";
+            this.OtherCharge11.Size = new System.Drawing.Size(375, 16);
+            this.OtherCharge11.Text = "[Mast.OtherCharge1]";
+            this.OtherCharge11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // OtherCharge21
+            // 
+            this.OtherCharge21.BackColor = System.Drawing.Color.White;
+            this.OtherCharge21.BorderColor = System.Drawing.Color.Black;
+            this.OtherCharge21.CanGrow = false;
+            this.OtherCharge21.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherCharge21.ForeColor = System.Drawing.Color.Black;
+            this.OtherCharge21.Location = new System.Drawing.Point(358, 817);
+            this.OtherCharge21.Name = "OtherCharge21";
+            this.OtherCharge21.Size = new System.Drawing.Size(375, 16);
+            this.OtherCharge21.Text = "[Mast.OtherCharge2]";
+            this.OtherCharge21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // OtherCharge31
+            // 
+            this.OtherCharge31.BackColor = System.Drawing.Color.White;
+            this.OtherCharge31.BorderColor = System.Drawing.Color.Black;
+            this.OtherCharge31.CanGrow = false;
+            this.OtherCharge31.Font = new System.Drawing.Font("Courier New", 10F);
+            this.OtherCharge31.ForeColor = System.Drawing.Color.Black;
+            this.OtherCharge31.Location = new System.Drawing.Point(358, 850);
+            this.OtherCharge31.Name = "OtherCharge31";
+            this.OtherCharge31.Size = new System.Drawing.Size(375, 16);
+            this.OtherCharge31.Text = "[Mast.OtherCharge3]";
+            this.OtherCharge31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SignatureShipper1
+            // 
+            this.SignatureShipper1.BackColor = System.Drawing.Color.White;
+            this.SignatureShipper1.BorderColor = System.Drawing.Color.Black;
+            this.SignatureShipper1.CanGrow = false;
+            this.SignatureShipper1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.SignatureShipper1.ForeColor = System.Drawing.Color.Black;
+            this.SignatureShipper1.Location = new System.Drawing.Point(375, 925);
+            this.SignatureShipper1.Name = "SignatureShipper1";
+            this.SignatureShipper1.Size = new System.Drawing.Size(455, 16);
+            this.SignatureShipper1.Text = "[Mast.SignatureShipper]";
+            this.SignatureShipper1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ExecuteDate1
+            // 
+            this.ExecuteDate1.BackColor = System.Drawing.Color.White;
+            this.ExecuteDate1.BorderColor = System.Drawing.Color.Black;
+            this.ExecuteDate1.CanGrow = false;
+            this.ExecuteDate1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ExecuteDate1.ForeColor = System.Drawing.Color.Black;
+            this.ExecuteDate1.Location = new System.Drawing.Point(358, 992);
+            this.ExecuteDate1.Name = "ExecuteDate1";
+            this.ExecuteDate1.Size = new System.Drawing.Size(138, 16);
+            this.ExecuteDate1.Text = "[Mast.ExecuteDate]";
+            this.ExecuteDate1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // ExecutePlace1
+            // 
+            this.ExecutePlace1.BackColor = System.Drawing.Color.White;
+            this.ExecutePlace1.BorderColor = System.Drawing.Color.Black;
+            this.ExecutePlace1.CanGrow = false;
+            this.ExecutePlace1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.ExecutePlace1.ForeColor = System.Drawing.Color.Black;
+            this.ExecutePlace1.Location = new System.Drawing.Point(500, 992);
+            this.ExecutePlace1.Name = "ExecutePlace1";
+            this.ExecutePlace1.Size = new System.Drawing.Size(208, 16);
+            this.ExecutePlace1.Text = "[Mast.ExecutePlace]";
+            this.ExecutePlace1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SignatureIssuing1
+            // 
+            this.SignatureIssuing1.BackColor = System.Drawing.Color.White;
+            this.SignatureIssuing1.BorderColor = System.Drawing.Color.Black;
+            this.SignatureIssuing1.CanGrow = false;
+            this.SignatureIssuing1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.SignatureIssuing1.ForeColor = System.Drawing.Color.Black;
+            this.SignatureIssuing1.Location = new System.Drawing.Point(725, 992);
+            this.SignatureIssuing1.Name = "SignatureIssuing1";
+            this.SignatureIssuing1.Size = new System.Drawing.Size(96, 16);
+            this.SignatureIssuing1.Text = "[Mast.SignatureIssuing]";
+            this.SignatureIssuing1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // HAWB1
+            // 
+            this.HAWB1.BackColor = System.Drawing.Color.White;
+            this.HAWB1.BorderColor = System.Drawing.Color.Black;
+            this.HAWB1.CanGrow = false;
+            this.HAWB1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.HAWB1.ForeColor = System.Drawing.Color.Black;
+            this.HAWB1.Location = new System.Drawing.Point(650, 1042);
+            this.HAWB1.Name = "HAWB1";
+            this.HAWB1.Size = new System.Drawing.Size(150, 16);
+            this.HAWB1.Text = "[Mast.HAWB]";
+            this.HAWB1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Text1
+            // 
+            this.Text1.BackColor = System.Drawing.Color.White;
+            this.Text1.BorderColor = System.Drawing.Color.Black;
+            this.Text1.CanGrow = false;
+            this.Text1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Text1.ForeColor = System.Drawing.Color.Black;
+            this.Text1.Location = new System.Drawing.Point(517, 1042);
+            this.Text1.Name = "Text1";
+            this.Text1.Size = new System.Drawing.Size(128, 16);
+            this.Text1.Text = "HAWB NO:";
+            this.Text1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // MAWB1
+            // 
+            this.MAWB1.BackColor = System.Drawing.Color.White;
+            this.MAWB1.BorderColor = System.Drawing.Color.Black;
+            this.MAWB1.CanGrow = false;
+            this.MAWB1.Font = new System.Drawing.Font("Courier New", 10F);
+            this.MAWB1.ForeColor = System.Drawing.Color.Black;
+            this.MAWB1.Location = new System.Drawing.Point(83, 21);
+            this.MAWB1.Name = "MAWB1";
+            this.MAWB1.Size = new System.Drawing.Size(221, 16);
+            this.MAWB1.Text = "[Mast.MAWB]";
+            this.MAWB1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // HAWB2
+            // 
+            this.HAWB2.BackColor = System.Drawing.Color.White;
+            this.HAWB2.BorderColor = System.Drawing.Color.Black;
+            this.HAWB2.CanGrow = false;
+            this.HAWB2.Font = new System.Drawing.Font("Courier New", 10F);
+            this.HAWB2.ForeColor = System.Drawing.Color.Black;
+            this.HAWB2.Location = new System.Drawing.Point(633, 20);
+            this.HAWB2.Name = "HAWB2";
+            this.HAWB2.Size = new System.Drawing.Size(150, 16);
+            this.HAWB2.Text = "[Mast.HAWB]";
+            this.HAWB2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Text2
+            // 
+            this.Text2.BackColor = System.Drawing.Color.White;
+            this.Text2.BorderColor = System.Drawing.Color.Black;
+            this.Text2.CanGrow = false;
+            this.Text2.Font = new System.Drawing.Font("Courier New", 10F);
+            this.Text2.ForeColor = System.Drawing.Color.Black;
+            this.Text2.Location = new System.Drawing.Point(500, 20);
+            this.Text2.Name = "Text2";
+            this.Text2.Size = new System.Drawing.Size(128, 16);
+            this.Text2.Text = "HAWB NO:";
+            this.Text2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // Title
+            // 
+            this.Title.BackColor = System.Drawing.Color.White;
+            this.Title.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.Title.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Title.BorderWidth = 1;
+            this.Title.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
+            this.Title.ForeColor = System.Drawing.Color.Maroon;
+            this.Title.Name = "Title";
+            // 
+            // FieldCaption
+            // 
+            this.FieldCaption.BackColor = System.Drawing.Color.White;
+            this.FieldCaption.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.FieldCaption.BorderWidth = 1;
+            this.FieldCaption.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.FieldCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.FieldCaption.Name = "FieldCaption";
+            // 
+            // PageInfo
+            // 
+            this.PageInfo.BackColor = System.Drawing.Color.White;
+            this.PageInfo.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.PageInfo.BorderWidth = 1;
+            this.PageInfo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.PageInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PageInfo.Name = "PageInfo";
+            // 
+            // DataField
+            // 
+            this.DataField.BackColor = System.Drawing.Color.White;
+            this.DataField.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.DataField.BorderWidth = 1;
+            this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.DataField.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DataField.Name = "DataField";
+            this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            // 
+            // XtraReport1
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail,
+                        this.PageHeader});
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 5, 0);
+            this.Name = "XtraReport1";
+            this.PageHeight = 1700;
+            this.PageWidth = 846;
+            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+                        this.Title,
+                        this.FieldCaption,
+                        this.PageInfo,
+                        this.DataField,
+                        this.xrControlStyle1});
+            this.Version = "9.2";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}

@@ -1,0 +1,19 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <h1 class="title">Drawing</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="Modal_Signature.closeModal();">Back</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item f-padding-0">
+                <canvas id="signature" height="230px" style="background-color:#f3dfba" width="100%"></canvas>
+            </div>
+            <div class="item button-bar">
+                <button class="button button-block button-balanced" ng-click="Modal_Signature.restart();">Restart</button>
+                <button class="button button-block button-positive" ng-click="Modal_Signature.save();">OK</button>
+            </div>
+        </div>
+    </ion-content>
+</div>

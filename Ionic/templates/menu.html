@@ -1,0 +1,49 @@
+﻿<ion-side-menus>
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="nav-title-slide-ios7" ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <!--<header class="bar bar-header" ng-class="Fix_Style.bar_list[Fix_Style.color]" ng-click="sideMenus.style()">
+            <h1 class="title">{{User.user.user_login}}</h1>
+        </header>-->
+        <ion-content>
+
+            <ion-list>
+                <ion-item menu-close class="f-menu_leftmenu_user" ng-class="'item-'+(Fix_Style.style_list[Fix_Style.color])" ng-click="sideMenus.user()">
+                    <div>
+                        <img class="f-menu_leftmenu_user_img" src="img/jay.jpg" />
+                    </div>
+                </ion-item>
+                <!--<ion-item menu-close ng-click="sideMenus.openPage('mystatus')" ng-show="action.permis('MyStatus','LeftMenu')">
+                    My Status
+                </ion-item>-->
+                <ion-item nav-clear menu-close ng-click="sideMenus.openPage('dashboard')" ng-show="action.permis('Dashboard','LeftMenu')">
+                    Dashboard
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('shipment')" ng-show="action.permis('Shipment','LeftMenu')">
+                    Shipment
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('stock')" ng-show="action.permis('Stock','LeftMenu')">
+                    Stock
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('billing')" ng-show="action.permis('Billing','LeftMenu')">
+                    Billing
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('setup')" ng-show="action.permis('Setup','LeftMenu')">
+                    Setup
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('chat')" ng-show="action.permis('Chat','LeftMenu')">
+                    Chat
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openDashboard('map')" ng-show="action.permis('Map','LeftMenu')">
+                    Map
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="sideMenus.openPage('more')" ng-show="action.permis('More','LeftMenu')">
+                    More
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

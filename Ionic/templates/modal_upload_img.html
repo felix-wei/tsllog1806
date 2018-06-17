@@ -1,0 +1,18 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <h1 class="title">Upload Picture</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="Modal_Upload.closeModal();">Back</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item f-item-image-center">
+                <img class="col-75" ng-src="{{Modal_Upload.upload.uri}}" />
+            </div>
+            <div class="item">
+                <button class="button button-block button-positive" ng-click="Modal_Upload.upload.upload();">Upload</button>
+            </div>
+        </div>
+    </ion-content>
+</div>

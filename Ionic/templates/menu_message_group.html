@@ -1,0 +1,20 @@
+﻿<ion-view title="Chat Group">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>    
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon ion-search" ng-click="action.openGroupSearch();"></button>
+        <button class="icon button button-icon ion-plus-round" ng-click="action.openGroupNew();"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content>
+        <div class="list">
+            <!--<div class="item item-divider f-message_text_center" ng-click="action.openGroupNew();">Create New Group</div>-->
+            <div class="item" ng-repeat="row in message.group.GroupList|orderBy:'group_name'" ng-click="action.openGroup(row);">
+                {{row.group_name}}
+                <span class="badge badge-assertive f-badge-height-0" ng-show="row.noRead>0">{{row.noRead}}</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

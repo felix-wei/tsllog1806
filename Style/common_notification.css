@@ -1,0 +1,175 @@
+﻿
+.notification {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 300px;
+    z-index: 100;
+}
+
+    .notification > div {
+        /*border: 1px solid #ddd;*/
+        /*margin:10px;*/
+        margin: 10px;
+        background-color: white;
+        /*padding-top:8px;
+                padding-right:6px;*/
+        padding: 10px;
+        text-align: left;
+        font-size: 12px;
+        font-family: Verdana, 微软雅黑, 宋体, Consolas;
+        border-radius: 6px;
+    }
+
+        .notification > div h2 {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        .notification > div p {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            color: #808080;
+        }
+
+    .notification .blue {
+        -webkit-box-shadow: 0 0 20px #0CC;
+        -moz-box-shadow: 0 0 20px #0CC;
+        box-shadow: 0 0 20px #0CC;
+    }
+
+    .notification .red {
+        -webkit-box-shadow: 0 0 20px #ff0000;
+        -moz-box-shadow: 0 0 20px #ff0000;
+        box-shadow: 0 0 20px #ff0000;
+    }
+
+    .notification .green {
+        -webkit-box-shadow: 0 0 20px #4cff00;
+        -moz-box-shadow: 0 0 20px #4cff00;
+        box-shadow: 0 0 20px #4cff00;
+    }
+
+
+.notification_rectangle {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 300px;
+    z-index: 100;
+}
+
+    .notification_rectangle > div {
+        margin: 6px;
+        margin-right: 10px;
+        background-color: white;
+        padding: 15px;
+        text-align: left;
+        font-size: 12px;
+        font-family: Verdana, 微软雅黑, 宋体, Consolas;
+    }
+
+        .notification_rectangle > div h2 {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        .notification_rectangle > div p {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            color: #808080;
+        }
+
+    .notification_rectangle .blue {
+        -webkit-box-shadow: inset 0 0 20px #0CC;
+        -moz-box-shadow: inset 0 0 20px #0CC;
+        box-shadow: inset 0 0 20px #0CC;
+    }
+
+    .notification_rectangle .red {
+        -webkit-box-shadow: inset 0 0 20px #ff0000;
+        -moz-box-shadow: inset 0 0 20px #ff0000;
+        box-shadow: inset 0 0 20px #ff0000;
+    }
+
+    .notification_rectangle .green {
+        -webkit-box-shadow: inset 0 0 20px #4cff00;
+        -moz-box-shadow: inset 0 0 20px #4cff00;
+        box-shadow: inset 0 0 20px #4cff00;
+    }
+
+
+
+.notification_dev {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 300px;
+    z-index: 100;
+}
+
+    .notification_dev > div {
+        /*border: 1px solid #ddd;*/
+        /*margin:10px;*/
+        margin: 6px;
+        background-color: white;
+        /*padding-top:8px;
+                padding-right:6px;*/
+        padding: 10px;
+        text-align: left;
+        font-size: 12px;
+        font-family: Verdana, 微软雅黑, 宋体, Consolas;
+    }
+
+        .notification_dev > div h2 {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: break-word;
+            color: white;
+        }
+
+        .notification_dev > div p {
+            font-size: 12px;
+            font-family: Verdana, 微软雅黑, 宋体, Consolas;
+            color: #efecec;
+        }
+
+    .notification_dev .blue {
+        background-color: #e7eff0;
+        border: 1px solid #b8d0d6;
+        box-shadow: 2px 2px 0 gray;
+    }
+
+        .notification_dev .blue h2 {
+            color: #0a0a0a;
+        }
+        .notification_dev .blue p {
+            color: #373636;
+        }
+
+    .notification_dev .red {
+        background-color: #ef473a;
+        border: 1px solid #e42012;
+        box-shadow: 2px 2px 0 gray;
+    }
+
+    .notification_dev .green {
+        background-color: #33cd5f;
+        ;
+        border: 1px solid #28a54c;
+        box-shadow: 2px 2px 0 gray;
+    }

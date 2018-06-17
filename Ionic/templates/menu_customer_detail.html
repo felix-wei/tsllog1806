@@ -1,0 +1,35 @@
+﻿<ion-view title="Customer">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="action.save();"></button>
+    </ion-nav-buttons>-->
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-input f-padding-right-80">
+                <label class="input-label">Code:</label>
+                {{vm.detail.PartyId}}
+            </div>
+            <div class="item item-input f-padding-right-80">
+                <label class="input-label">Name:</label>
+                {{vm.detail.Name}}
+            </div>
+            <div class="item item-input f-padding-right-80">
+                <label class="input-label">Address:</label>
+                {{vm.detail.Address}}
+            </div>
+            <div class="item item-input item-button-right f-padding-right-80">
+                <label class="input-label">Tel:</label>
+                {{vm.detail.Tel1}}
+                <a class="button button-icon icon ion-ios7-telephone positive" href="tel:{{vm.detail.Tel1}}"></a>
+            </div>
+            <div class="item item-input item-button-right f-padding-right-80">
+                <label class="input-label">Email:</label>
+                {{vm.detail.Email1}}
+                <a class="button button-icon icon ion-ios7-email positive" href="mailto:{{vm.detail.Email1}}"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

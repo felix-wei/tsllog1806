@@ -1,0 +1,28 @@
+﻿<ion-view title="User List">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon " ng-click="action.join();">Add</button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="row in vm.list" ng-switch="row.Joined">
+                <div class="item item-checkbox item-checkbox-right" ng-switch-when="0">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="row.selected">
+                    </label>
+                    {{row.Name}}
+                </div>
+                <div class="item item-checkbox item-checkbox-right" ng-switch-when="1">
+                    <label class="checkbox checkbox-stable">
+                        <input type="checkbox" ng-model="row.Added" ng-disabled="row.Added">
+                    </label>
+                    {{row.Name}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

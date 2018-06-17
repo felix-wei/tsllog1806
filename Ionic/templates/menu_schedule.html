@@ -1,0 +1,46 @@
+﻿<ion-view title="Haulier Schedule">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+    <div class="schedule_calendar" on-drag-left="calendar.onDragLeft()" on-drag-right="calendar.onDragRight()" on-touch="calendar.onEvent('touch');" on-release="calendar.onEvent('release');">
+        <div class="calendar_title">
+            <label>{{calendar.getSelectDay_yM()}}</label>
+            <button class="icon button-icon button ion-ios7-arrow-forward " ng-click="calendar.weekdays_right();"></button>
+            <button class="button button-clear button-positive " ng-click="calendar.weekdays_center();">Today</button>
+            <button class="icon button-icon button ion-ios7-arrow-back " ng-click="calendar.weekdays_left();"></button>
+            <button class="button button-icon icon button-clear" ng-class="{true:'button-balanced',false:''}[vm.showAll]" ng-click="calendar.showAll_toggle();">ALL</button>
+        </div>
+
+        <div class="calendar_content">
+            <table>
+                <tr>
+                    <td>Sun</td>
+                    <td>Mon</td>
+                    <td>Tue</td>
+                    <td>Wed</td>
+                    <td>Thur</td>
+                    <td>Fri</td>
+                    <td>Sat</td>
+                </tr>
+                <tr>
+                    <td ng-repeat="row in vm.days" ng-class="calendar.isSelectDay(row.date)" ng-click="calendar.setSelectDay(row);">
+                        <span class="{{row.isToday?'span_today':''}}">{{row.day}}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <ion-content class="has-header">
+        <div class="schedule_calendar_seat"></div>
+        <div class="list">
+            <div class="item" ng-repeat="row in vm.jobs.list" ng-click="job.openTrip(row);">
+                <h2>{{row.FromTime}}<span class="f-schedule-time-date">({{row.show_fromdate}})</span>&nbsp;-&nbsp;{{row.ToTime}}<span class="f-schedule-time-date">({{row.show_todate}})</span></h2>
+                <p class="f-margin-bottom0">{{row.JobNo}}&nbsp;&nbsp;({{row.ContainerNo}})</p>
+                <p class="f-margin-bottom0">From:{{row.FromCode}}</p>
+                <p>To:{{row.ToCode}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

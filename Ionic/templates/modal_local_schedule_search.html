@@ -1,0 +1,36 @@
+﻿
+<ion-modal-view class="f-modal_schedule_search">
+    <div class="f-modal_schedule_search_background" ng-click="search.closeModal();"></div>
+    <div class="list f-modal_schedule_search_title">
+        <div class="item item-input-inset f-modal_schedule_search_title">
+            <label class="item-input-wrapper">
+                <input type="search" placeholder="Search" ng-model="search.data.search" ng-change="search.search_changed();">
+            </label>
+            <button class="button icon button-icon button-clear button-small button-positive ion-search" ng-click="search.search();"></button>
+        </div>
+        <div class="item item-input">
+            <label class="input-label">From:</label>
+            <input type="date" ng-model="search.data.from" />
+        </div>
+        <div class="item item-input">
+            <label class="input-label">To:</label>
+            <input type="date" ng-model="search.data.to" />
+        </div>
+    </div>
+    <ion-content class="f-modal_schedule_search_content">
+        <div class="list f-modal_schedule_search_title_seat_141">
+            <!--<div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="search" placeholder="Search" ng-model="search.data.search">
+            </label>
+            <button class="button icon button-icon button-clear button-positive ion-search" ng-click="search.search();"></button>
+        </div>-->
+            <div class="item" ng-repeat="row in search.data.list" ng-click="search.openJob(row);">
+                {{row.JobNo}}
+                <span class="item-note">
+                    {{row.JobDate1}}
+                </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,53 @@
+﻿<div class="modal">
+    <form name="f">
+        <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+            <div class="buttons">
+                <button class="icon button button-icon ion-ios7-arrow-back " ng-click="det.closeModal();"></button>
+            </div>
+            <h1 class="title">Payment Item</h1>
+            <div class="buttons">
+                <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="det.save();" ng-disabled="f.$invalid"></button>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="item item-input item-select" ng-click="det.Chg_select();">
+                    <label class="input-label">ChgCode:</label>
+                    {{det.data.ChgCode}}
+                    <input type="hidden" ng-model="det.data.ChgCode" required />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Description:</label>
+                    {{det.data.ChgDes1}}
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">QTY:</label>
+                    <!--{{det.data.Qty}}-->
+                    <input type="number" ng-model="det.data.Qty" ng-change="det.Doc_changed();" />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Price:</label>
+                    <!--{{det.data.Price}}-->
+                    <input type="number" ng-model="det.data.Price" ng-change="det.Doc_changed();" />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Total:</label>
+                    {{det.data.DocAmt}}
+                </div>
+                <div class="item item-input item-select">
+                    <label class="input-label">GstType:</label>
+                    <select ng-model="det.data.GstType" ng-options="row.Code as row.Code for row in MasterData.Invoice_GstType.list|orderBy:'Code'" ng-change="det.GstType_changed();"></select>
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">GstAmount:</label>
+                    {{det.data.GstAmt}}
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">GstTotal:</label>
+                    {{det.data.LocAmt}}
+                </div>
+            </div>
+        </ion-content>
+    </form>
+
+</div>

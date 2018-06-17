@@ -1,0 +1,64 @@
+﻿<ion-view title="Driver">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="action.save();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <label class="input-label">Code:</label>
+                <div ng-switch="vm.detail.Id">
+                    <div ng-switch-when="0">
+                    <input type="text" ng-model="vm.detail.Code" />
+                    </div>
+                    <div ng-switch-default>{{vm.detail.Code}}</div>
+                </div>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Name:</label>
+                <input type="text" ng-model="vm.detail.Name" />
+            </div>
+            <div class="item item-input item-select" ng-click="action.towhead_select();">
+                <label class="input-label">Towhead:</label>
+                {{vm.detail.TowheaderCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">TEL:</label>
+                <input type="text" ng-model="vm.detail.Tel" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">IC No:</label>
+                <input type="text" ng-model="vm.detail.ICNo" />
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">Is Staff:</label>
+                <select ng-model="vm.detail.Isstaff">
+                    <option value="Y">Y</option>
+                    <option value="N">N</option>
+                </select>
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">ServiceLevel:</label>
+                <select ng-model="vm.detail.ServiceLevel">
+                    <option value="Level1">Level1</option>
+                    <option value="Level2">Level2</option>
+                    <option value="Level3">Level3</option>
+                </select>
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">Status:</label>
+                <select ng-model="vm.detail.StatusCode">
+                    <option value="Active">Active</option>
+                    <option value="InActive">InActive</option>
+                </select>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Remark:</label>
+                <input type="text" ng-model="vm.detail.Remark" />
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

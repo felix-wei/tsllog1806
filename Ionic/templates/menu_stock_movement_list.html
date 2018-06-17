@@ -1,0 +1,19 @@
+﻿<ion-view title="Stock Movement">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-search" ng-click="search.openModal();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="row in vm.list">
+                <div class="item job_list_item" ng-click="action.openDetail(row);">
+                    {{row.JobNo}}<!--({{row.StockStatus}})-->
+                    <p>Qty:{{row.StockQty}},Weight:{{row.Weight}},Volume:{{row.Volume}}</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

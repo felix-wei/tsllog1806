@@ -1,0 +1,319 @@
+﻿body {
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.tc_layout {
+    position: fixed;
+    _position: absolute;
+    zoom: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    /*background: url(/Images/hei.png) repeat;*/
+    z-index: 99900;
+    /*padding: 30px;
+    display:none;*/
+    height: 2000px;
+    text-align: center;
+    padding-top: 200px;
+}
+
+    .tc_layout img {
+        width: 100px;
+        height: 100px;
+    }
+
+.datalist_table {
+    width: 1400px;
+    background-color: #F2F2F2; /*d3d3d3*/
+    border-spacing: 0px;
+    border: 1px solid gray;
+    border-right: none;
+    border-bottom: none;
+}
+
+    .datalist_table th {
+        background-color: #DCDCDC; /*c0c0c0*/
+        font-size: 16px;
+        width: 14%;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+    }
+
+    .datalist_table tr {
+    }
+
+    .datalist_table td {
+        width: 14%;
+        vertical-align: top;
+        padding: 5px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+    }
+
+.datalist_table_container_orange {
+    border-radius: 7px;
+    background-color: #fffacd; /*fffacd*/
+    border-spacing: 0px;
+    margin-top: 4px;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.datalist_table_container_blue {
+    border-radius: 7px;
+    background-color: #CCEEFF;
+    border-spacing: 0px;
+    margin-top: 4px;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.datalist_table_container_green {
+    border-radius: 7px;
+    background-color: #98fb98;
+    border-spacing: 0px;
+    margin-top: 4px;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.datalist_table_container_red {
+    border-radius: 7px;
+    background-color: #ff6347;
+    border-spacing: 0px;
+    margin-top: 4px;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.datalist_table table th {
+    background-color: inherit; /*FFCC66*/
+    font-size: 10px;
+    border-radius: 6px;
+    text-align: left;
+    border: 0px;
+    white-space: nowrap;
+}
+
+.datalist_table table td {
+    width: 100%;
+    text-align: left;
+    border: 0px;
+    padding: 1px;
+    white-space: nowrap;
+}
+
+
+/*==============================================TimeLine View===========================================*/
+.timeline_table {
+    border-spacing: 0px;
+    border: 1px solid gray;
+    border-right: none;
+    border-bottom: none;
+    width: 2000px;
+    table-layout: fixed;
+    margin-top: 40px;
+}
+
+    .timeline_table th {
+        width: 159px;
+        height: 20px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        text-align: left;
+        vertical-align: bottom;
+        font-size: 8px;
+        padding: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .timeline_table td {
+        width: 159px;
+        height: 29px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0px;
+    }
+
+.timeline_table_tr_th {
+    background-color: #DCDCDC;
+}
+
+.timeline_table_tr0 {
+    background-color: #F2F2F2;
+}
+
+.timeline_table_tr1 {
+}
+
+
+.timeline_view {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 100px;
+    height: 16px;
+    background-color: white;
+    /*border-radius: 4px;*/
+    border: 2px solid green;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.timeline_view_dashed {
+    position: absolute;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+    display: none;
+}
+
+.timeline_view_timeline {
+    position: absolute;
+}
+
+.timeline_table_driver {
+    border-spacing: 0px;
+    border: 1px solid gray;
+    border-right: none;
+    border-bottom: none;
+    table-layout: fixed;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+}
+
+    .timeline_table_driver th {
+        width: 160px;
+        height: 29px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        text-align: left;
+        font-size: 8px;
+        padding: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+.timeline_table_search {
+    position: absolute;
+    background-color:white;/*透明：transparent;*/
+    z-index: 11;
+}
+
+.timeline_trip_Toast {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    border-radius: 7px;
+    border: 3px solid #ff8c00;
+    background-color: #fffacd;
+    padding: 10px;
+    width: 274px;
+    /*height:174px;*/
+    overflow: hidden;
+}
+
+.timeline_current_hour {
+    position: absolute;
+    z-index: -1;
+    /*border-left: 1px dashed gray;
+    border-right: 1px dashed gray;*/
+    width: 159px;
+    /*height:100%;*/
+    background-color: #fffacd;
+}
+
+
+
+/*======================================================================= Stage View ===================================*/
+.tb_stage_datalist {
+    /*width: 1400px;*/
+    background-color: #F2F2F2;
+    border-spacing: 0px;
+    border: 1px solid gray;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 33px;
+}
+
+    .tb_stage_datalist th {
+        background-color: #DCDCDC;
+        font-size: 16px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        padding: 0px;
+    }
+
+    .tb_stage_datalist #tr_stage_Title1 th {
+        background-color: #DCDCDC;
+        font-size: 13px;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        padding: 0px;
+    }
+
+        .tb_stage_datalist #tr_stage_Title1 th div {
+            width: 176px;
+            padding: 2px;
+        }
+
+    .tb_stage_datalist td {
+        vertical-align: top;
+        border: 1px solid gray;
+        border-top: none;
+        border-left: none;
+        padding:0px;
+    }
+    .tb_stage_datalist td table{
+        font-family:Arial;
+        border:1px solid gray;
+        margin:5px;
+        width:170px;
+        border-spacing:0px;
+    }
+    .tb_stage_datalist td table th{
+        border:0px;
+        font-size:8px;
+        overflow:hidden;
+        border-bottom-left-radius:4px;
+    }
+    .tb_stage_datalist td table td{
+        border:0px;
+        font-size:8px;
+        /*background-color:#F2F2F2;*/
+    }
+    .tb_stage_datalist .td_background_orange{
+        background-color: #fffacd;
+    }
+    .tb_stage_datalist .td_background_blue{
+    background-color: #CCEEFF;
+    }
+    .tb_stage_datalist .td_background_green{
+        background-color: #98fb98;
+    }
+    .tb_stage_datalist .td_background_red{
+        background-color: #FF9999;
+    }
+
+
+
+
+

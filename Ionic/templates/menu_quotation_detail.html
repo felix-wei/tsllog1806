@@ -1,0 +1,118 @@
+﻿<ion-view title="Quotation">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-eye" ng-click="mast.preview();"></button>
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="mast.save();"></button>
+    </ion-nav-buttons>
+
+    <ion-tabs class="tabs-top" ng-class="'tabs-'+(Fix_Style.style_list[Fix_Style.color])" delegate-handle="handle_job_detail">
+        <ion-tab title="Info">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-input">
+                            <label class="input-label">DocNo:</label>
+                            {{vm.job.mast.DocNo}}
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Type:</label>
+                            {{vm.job.mast.DocType}}
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Date:</label>
+                            {{vm.job.mast.DocDate}}
+                        </div>
+                        <div class="item item-input item-select" ng-click="mast.customer_select();">
+                            <label class="input-label">Customer:</label>
+                            {{vm.job.mast.PartyTo}}
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">Term:</label>
+                            <select ng-model="vm.job.mast.Term" ng-options="row.Code as row.Code for row in Fix_MasterData.term.data.list|orderBy:'Code'"></select>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">TotalAmount:</label>
+                            {{vm.job.mast.DocAmt}}
+                        </div>
+                        <!--<div class="item item-input">
+                            <label class="input-label">LocAmt:</label>
+                            {{vm.job.mast.LocAmt}}
+                        </div>-->
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Item">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Item List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="det.add();"></button>
+                        </div>
+                        <div class="item" ng-repeat="row in vm.job.det" ng-click="det.openDet(row);">
+                            {{row.ChgCode}}
+                            <p>{{row.ChgDes1}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Activity">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item f-item-noborder f-historylog-item f-historylog-item-right" ng-repeat="row in vm.job.log">
+                            <div class="f-historylog-verticalbox">
+                                <hr class="f-verticalbar0" ng-class="{true:'',false:'f-verticalbar-show'}[$index==0]" />
+                                <i class="icon f-historylog-icon" ng-class="{true:'ion-ios7-star-outline',false:'ion-ios7-circle-outline'}[historyLog.isOwn(row)]"></i>
+                                <hr class="f-verticalbar1" ng-class="{true:'',false:'f-verticalbar-show'}[$index==(vm.job.log.length-1)]" />
+                            </div>
+                            <div class="f-message-textbox f-message-textbox-left f-message-textbox-full">
+                                <div ng-if="row.type=='Image'||row.type=='Signature'">
+                                    <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type),row.Remark)" />
+                                </div>
+                                <div ng-if="row.type=='excel'||row.type=='pdf'||row.type=='file'">
+                                    <img ng-src="{{Modal_FullScreen_Image.Icon_Local(row.type)}}" ng-click="Modal_FullScreen_Image.openAttachFile(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type))" />
+                                </div>
+                                <p>{{row.Remark}}</p>
+                                <div class="f-message-textbox-fromleft"></div>
+                            </div>
+                            <div class="f-historylog-part">
+                                <!--{{row.CreateDateTime1}}-->
+                                {{row.CreateDate}}
+                                <br />
+                                {{row.CreateTime}}
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+    </ion-tabs>
+    <ion-footer-bar class="f-top-auto" ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <button class="button button-clear pull-right icon button-icon ion-ios7-plus-empty" ng-click="attachment.openPopover($event);"></button>
+    </ion-footer-bar>
+</ion-view>
+
+
+
+
+<script id="popover_attachments.html" type="text/ng-template">
+    <ion-popover-view>
+        <ion-content>
+            <div class="list">
+                <div class="item item-icon-left" ng-click="attachment.GetPdf();">
+                    <i class="icon ion-document-text"></i>
+                    Upload PDF
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.GetExcel();">
+                    <i class="icon ion-document-text"></i>
+                    Upload Excel
+                </div>
+            </div>
+        </ion-content>
+    </ion-popover-view>
+</script>

@@ -1,0 +1,94 @@
+﻿body {
+}
+
+
+
+.kpi_report {
+    width: 100%;
+}
+
+    .kpi_report tbody {
+    }
+
+    .kpi_report tr {
+        background-color: white;
+        border-top: 1px solid rgb(221, 221, 221);
+    }
+    
+    
+        .kpi_report tr:first-child {
+            border-top: 2px solid rgb(221, 221, 221);
+        }
+        .kpi_report tr:last-child {
+            border-bottom: 1px solid rgb(221, 221, 221);
+        }
+
+        .kpi_report tr:nth-child(2n+1) {
+            background-color: rgb(245, 245, 245);
+        }
+        .kpi_report tr:hover {
+            cursor:pointer;
+            background-color:#bfbfbf;
+        }
+        .kpi_report .tr_summary td{
+            /*font-size: 16px;*/
+            color: white;/*rgb(68, 68, 68);*/
+            background-color: #808080; /*rgb(245, 245, 245);*/
+        }
+
+
+        .kpi_report tr th {
+            padding-top: 8px;
+            padding-right: 6px;
+            padding-bottom: 7px;
+            padding-left: 6px;
+            min-width: 90px;
+            font-size: 16px;
+            color: white;/*rgb(68, 68, 68);*/
+            background-color: #808080; /*rgb(245, 245, 245);*/
+            font-family: 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
+            font-weight: normal;
+            border-left: 1px solid rgb(221, 221, 221);
+            text-align: center;
+            vertical-align:middle;
+        }
+        .kpi_report tr .th_small {
+            min-width: 60px;
+        }
+        .kpi_report tr .th_large {
+            min-width: 150px;
+        }
+        .kpi_report tr .th_large1 {
+            min-width: 250px;
+        }
+
+            .kpi_report tr th:first-child {
+                border-left: 1px solid rgb(221, 221, 221);
+            }
+
+            .kpi_report tr th:last-child {
+                border-right: 1px solid rgb(221, 221, 221);
+            }
+
+
+        .kpi_report tr td {
+            padding-top: 5px;
+            padding-right: 6px;
+            padding-bottom: 4px;
+            padding-left: 6px;
+            color: rgb(102, 102, 102);
+            font-family: 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            border-left: 1px solid rgb(221, 221, 221);
+            text-align: center;
+            vertical-align:middle;
+        }
+
+            .kpi_report tr td:first-child {
+                border-left: 1px solid rgb(221, 221, 221);
+            }
+
+            .kpi_report tr td:last-child {
+                border-right: 1px solid rgb(221, 221, 221);
+            }

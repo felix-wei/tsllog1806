@@ -1,0 +1,272 @@
+﻿<ion-view title="Job Detail">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="info.save();"></button>
+    </ion-nav-buttons>
+    <ion-tabs class="tabs-top" ng-class="'tabs-'+(Fix_Style.style_list[Fix_Style.color])" delegate-handle="handle_job_detail">
+        <ion-tab title="Info">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <!--<div class="item button-bar">
+                            <input type="button" class="button button-stable" value="Show Map" />
+                        </div>-->
+                        <div class="item item-input">
+                            <label class="input-label">JobNo:</label>
+                            <!--<input type="text" ng-model="vm.job.info.JobNo" readonly />-->
+                            {{vm.job.info.JobNo}}
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Status:</label>
+                            {{vm.job.info.StatusCode}}
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">JobType:</label>
+                            <select ng-model="vm.job.info.JobType">
+                                <option value="KD-IMP">KD-IMP</option>
+                                <option value="KD-EXP">KD-EXP</option>
+                                <option value="FCL-IMP">FCL-IMP</option>
+                                <option value="FCL-EXP">FCL-EXP</option>
+                                <option value="LOCAL">LOCAL</option>
+                            </select>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.pol_select();">
+                            <label class="input-label">Pol:</label>
+                            <label>{{vm.job.info.Pol}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.pod_select();">
+                            <label class="input-label">Pod:</label>
+                            <label>{{vm.job.info.Pod}}</label>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Vessel:</label>
+                            <input type="text" ng-model="vm.job.info.Vessel" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Voyage:</label>
+                            <input type="text" ng-model="vm.job.info.Voyage" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Etd Date:</label>
+                            <input type="date" ng-model="vm.job.info.EtdDate" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Etd Time:</label>
+                            <input type="time" ng-model="vm.job.info.EtdTime" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Eta Date:</label>
+                            <input type="date" ng-model="vm.job.info.EtaDate" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Eta Time:</label>
+                            <input type="time" ng-model="vm.job.info.EtaTime" />
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.party_select('ClientId')">
+                            <label class="input-label">Client:</label>
+                            <label>{{vm.job.info.ClientId}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.party_select('CarrierId')">
+                            <label class="input-label">Carrier:</label>
+                            <label>{{vm.job.info.CarrierId}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.party_select('HaulierId')">
+                            <label class="input-label">Haulier:</label>
+                            <label>{{vm.job.info.HaulierId}}</label>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Pickup From:</label>
+                            <textarea ng-model="vm.job.info.PickupFrom"></textarea>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Delivery To:</label>
+                            <textarea ng-model="vm.job.info.DeliveryTo"></textarea>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Container">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Container List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="container.add();"></button>
+                        </div>
+                        <div class="item" ng-repeat="row in vm.job.container" ng-click="container.edit(row);">
+                            {{row.ContainerNo}}
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Trip">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Trip List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="trip.add();"></button>
+                        </div>
+                        <div class="item" ng-repeat="row in vm.job.trip" ng-click="trip.edit(row);">
+                            <h2>{{row.ContainerNo}}</h2>
+                            <p>Driver:{{row.DriverCode}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Charge">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Charge List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="charge.add();"></button>
+                        </div>
+                        <div class="item" ng-repeat="row in vm.job.charge" ng-click="charge.edit(row);">
+                            <h2>{{row.ItemName}}</h2>
+                            <p>{{row.Cost}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Signature">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <ion-item class="item item-divider item-button-right item-button-right-2">
+                            Pickup Signature:
+                            <button class="button-positive icon button button-icon ion-ios7-compose button-clear f-margin-top-8" ng-click="signature.drawing(vm.job.signature.PickupSignature,'PickupSignature')"></button>
+                            <!--<button class="button-assertive icon button button-icon ion-ios7-trash button-clear f-margin-top-8" ng-click="signature.Delete(vm.job.signature[0],0)"></button>-->
+                        </ion-item>
+                        <div class="item item-thumbnail-left">
+                            <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(vm.job.signature.PickupSignature.FilePath,vm.job.signature.PickupSignature.FileType)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(vm.job.signature.PickupSignature.FilePath,vm.job.signature.PickupSignature.FileType),vm.job.signature.PickupSignature.FileName)" />
+                            <h2>{{vm.job.signature.PickupSignature.FileName}}</h2>
+                            <p class="f-margin-bottom2">{{vm.job.signature.PickupSignature.CreateDateTime}}</p>
+                            <p class="f-margin-bottom2">{{vm.job.signature.PickupSignature.FileNote}}</p>
+                        </div>
+                        <ion-item class="item item-divider item-button-right item-button-right-2">
+                            Delivery Signature:
+                            <button class="button-positive icon button button-icon ion-ios7-compose button-clear f-margin-top-8" ng-click="signature.drawing(vm.job.signature.DeliverySignature,'DeliverySignature')"></button>
+                            <!--<button class="button-assertive icon button button-icon ion-ios7-trash button-clear f-margin-top-8" ng-click="signature.Delete(vm.job.signature[0],0)"></button>-->
+                        </ion-item>
+                        <div class="item item-thumbnail-left">
+                            <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(vm.job.signature.DeliverySignature.FilePath,vm.job.signature.DeliverySignature.FileType)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(vm.job.signature.DeliverySignature.FilePath,vm.job.signature.DeliverySignature.FileType),vm.job.signature.DeliverySignature.FileName)" />
+                            <h2>{{vm.job.signature.DeliverySignature.FileName}}</h2>
+                            <p class="f-margin-bottom2">{{vm.job.signature.DeliverySignature.CreateDateTime}}</p>
+                            <p class="f-margin-bottom2">{{vm.job.signature.DeliverySignature.FileNote}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Billing">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Billing List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="billing.addNew();"></button>
+                        </div>
+
+                        <div ng-repeat="row in vm.job.billing">
+                            <div ng-if="row.DocType!=vm.job.billing[$index-1].DocType" class="item item-divider">
+                                {{row.DocType}}
+                            </div>
+                            <div class="item" ng-click="billing.openDetail(row);">
+                                {{row.DocNo}}
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+
+        <ion-tab title="Stock">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Stock List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="stock.addNew();"></button>
+                        </div>
+
+                        <div ng-repeat="row in vm.job.stock">
+                            <div class="item" ng-click="stock.openDetail(row);">
+                                {{row.StockStatus}}
+                                <p>Qty:{{row.StockQty}},Weight:{{row.Weight}},Volume:{{row.Volume}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+
+        <ion-tab title="Activity">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item f-item-noborder f-historylog-item f-historylog-item-right" ng-repeat="row in vm.job.activity">
+                            <div class="f-historylog-verticalbox">
+                                <hr class="f-verticalbar0" ng-class="{true:'',false:'f-verticalbar-show'}[$index==0]" />
+                                <i class="icon f-historylog-icon" ng-class="{true:'ion-ios7-star-outline',false:'ion-ios7-circle-outline'}[historyLog.isOwn(row)]"></i>
+                                <hr class="f-verticalbar1" ng-class="{true:'',false:'f-verticalbar-show'}[$index==(vm.job.activity.length-1)]" />
+                            </div>
+                            <div class="f-message-textbox f-message-textbox-left f-message-textbox-full">
+                                <div ng-if="row.type=='Image'||row.type=='Signature'">
+                                    <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type),row.Remark)" />
+                                </div>
+                                <div ng-if="row.type=='excel'||row.type=='pdf'||row.type=='file'">
+                                    <img ng-src="{{Modal_FullScreen_Image.Icon_Local(row.type)}}" ng-click="Modal_FullScreen_Image.openAttachFile(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type))" />
+                                </div>
+                                <p>{{row.Remark}}</p>
+                                <div class="f-message-textbox-fromleft"></div>
+                            </div>
+                            <div class="f-historylog-part">
+                                <!--{{row.CreateDateTime1}}-->
+                                {{row.CreateDate}}
+                                <br />
+                                {{row.CreateTime}}
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+
+    </ion-tabs>
+    <ion-footer-bar class="f-top-auto" ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <button class="button button-clear pull-right icon button-icon ion-ios7-plus-empty" ng-click="attachment.openPopover($event);"></button>
+    </ion-footer-bar>
+</ion-view>
+
+
+<script id="popover_attachments.html" type="text/ng-template">
+    <ion-popover-view>
+        <ion-content>
+            <div class="list">
+                <div class="item item-icon-left" ng-click="attachment.openCamera();">
+                    <i class="icon ion-camera"></i>
+                    Take Photo
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.AddAttach();">
+                    <i class="icon ion-document"></i>
+                    Attach File
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.drawing();">
+                    <i class="icon ion-edit"></i>
+                    Signature
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.Message.openModal();">
+                    <i class="icon ion-ios7-paper-outline"></i>
+                    Message
+                </div>
+            </div>
+        </ion-content>
+    </ion-popover-view>
+</script>

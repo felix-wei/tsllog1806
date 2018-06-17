@@ -1,0 +1,689 @@
+﻿body {
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.button {
+    background-color: #f6f6f6;
+    border: 1px solid #808080;
+    padding-top: 5px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-image: url('/DXR.axd?r=1_19-qE9x8');
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+    .button:hover {
+        cursor: pointer;
+        background-image: url('/DXR.axd?r=1_20-qE9x8');
+    }
+
+    .button a {
+        color: black;
+        text-decoration: none;
+    }
+
+.gridview {
+    border-spacing: 0px;
+}
+
+    .gridview th {
+        background-color: rgb(220, 220, 220);
+        color: rgb(0, 0, 0);
+        border-top: 1px solid rgb(159, 159, 159);
+        border-bottom: 1px solid rgb(159, 159, 159);
+        border-left: 1px solid rgb(159, 159, 159);
+        padding-top: 5px;
+        padding-right: 7px;
+        padding-bottom: 5px;
+        padding-left: 7px;
+        font-weight: normal;
+    }
+
+    .gridview tr th:last-child {
+        background-color: rgb(220, 220, 220);
+        color: rgb(0, 0, 0);
+        border-top: 1px solid rgb(159, 159, 159);
+        border-right: 1px solid rgb(159, 159, 159);
+        border-bottom: 1px solid rgb(159, 159, 159);
+        border-left: 1px solid rgb(159, 159, 159);
+        padding-top: 5px;
+        padding-right: 7px;
+        padding-bottom: 5px;
+        padding-left: 7px;
+        font-weight: normal;
+    }
+
+
+/*=========================  table grid view  ==============================*/
+.bx_table_grid {
+    border-spacing: 0px;
+}
+
+    .bx_table_grid > tbody > tr > th {
+        border-top: 1px solid #9f9f9f;
+        border-left: 1px solid #9f9f9f;
+        border-right: 0px;
+        border-bottom: 1px solid #9f9f9f;
+        background-color: #DCDCDC;
+        padding: 6px;
+        font-family: Verdana;
+        font-size: 10px;
+        white-space: nowrap;
+        font-weight: normal;
+        text-align: left;
+        cursor: pointer;
+    }
+
+        .bx_table_grid > tbody > tr > th:last-child {
+            border-right: 1px solid #9f9f9f;
+        }
+
+    .bx_table_grid > tbody > tr > td {
+        border-top: 0px;
+        border-left: 1px solid #CFCFCF;
+        border-right: 0px;
+        border-bottom: 1px solid #CFCFCF;
+        padding-top: 3px;
+        padding-right: 4px;
+        padding-bottom: 3px;
+        padding-left: 4px;
+        font-family: Verdana;
+        font-size: 10px;
+    }
+
+        .bx_table_grid > tbody > tr > td:last-child {
+            border-right: 1px solid #CFCFCF;
+        }
+
+
+    .bx_table_grid > tbody > tr .td_border0 {
+        border: 0px;
+    }
+
+        .bx_table_grid > tbody > tr .td_border0:last-child {
+            border: 0px;
+        }
+
+        .bx_table_grid.bx_table_grid_border0 > tbody > tr >td{
+            border: 0px;
+        }
+        .bx_table_grid.bx_table_grid_border0 .tr_label >td{
+            border: 0px;
+            padding-top:4px;
+            padding-bottom:0px;
+        }
+
+/*========================= bx a button ...  ==============================*/
+.bx_a_button {
+    text-decoration: none;
+    color: #606060;
+    border: 1px solid #9f9f9f;
+    background: #e6e6e6 url('/DXR.axd?r=1_23-qE9x8') repeat-x top;
+    margin-left: -2px;
+    margin-right: 2px;
+}
+
+    .bx_a_button:hover {
+        border: 1px solid #606060;
+        background: #f2f2f2 url('/DXR.axd?r=1_24-qE9x8') repeat-x top;
+        cursor: pointer;
+    }
+
+
+/*=========================  bx div gridview  ==============================*/
+.bx_gridview {
+    font-family: Verdana;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+}
+
+    .bx_gridview .gridview_header {
+        white-space: nowrap;
+        font-weight: normal;
+        text-align: left;
+        cursor: pointer;
+        font-size: 0px; /*====== 去掉inline-block间隙*/
+    }
+
+
+
+/*=========================  bx div table  ==============================*/
+.bx_table {
+    font-family: Verdana;
+    /*position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;*/
+    display: table;
+}
+
+.bx_table_noheader {
+    font-family: Verdana;
+    display: table;
+    border-top: 1px solid #CFCFCF;
+}
+
+.bx_table > .header {
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: left;
+    cursor: pointer;
+    display: table-header-group;
+}
+
+    .bx_table > .header .col {
+    }
+
+
+    .bx_table > .header > div {
+        display: table-cell;
+        min-width: 80px;
+        text-align: left;
+        overflow: hidden;
+        min-height: 20px;
+        height: 100%;
+        vertical-align: middle;
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+        font-size: 12px;
+        border-top: 1px solid #9f9f9f;
+        border-left: 1px solid #9f9f9f;
+        border-right: 0px;
+        border-bottom: 1px solid #9f9f9f;
+        background-color: #DCDCDC;
+        padding: 5px 6px;
+    }
+
+        .bx_table > .header > div:last-child {
+            border-right: 1px solid #9f9f9f;
+        }
+
+.bx_table > .footer {
+    white-space: nowrap;
+    font-weight: normal;
+    text-align: left;
+    display: table-row;
+    cursor: pointer;
+    height: 27px;
+}
+
+    .bx_table > .footer:hover {
+        cursor: initial;
+    }
+
+.pager {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 17px;
+    background-color: #DCDCDC;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 12px;
+    border: 1px solid #9f9f9f;
+    background-color: #DCDCDC;
+    padding: 5px 6px;
+}
+
+    .pager .pager_button {
+        color: #606060;
+        border: 1px solid #9f9f9f;
+        background-color: #e6e6e6;
+        width: 30px;
+        text-align: center;
+    }
+
+        .pager .pager_button:hover {
+            cursor: pointer;
+            border: 1px solid #606060;
+            background-color: #f2f2f2;
+        }
+
+        .pager .pager_button[disabled="disabled"] {
+            color: #CFCFCF;
+            border: 1px solid #e6e6e6;
+            background-color: #f2f2f2;
+        }
+
+            .pager .pager_button[disabled="disabled"]:hover {
+                cursor: initial;
+                border: 1px solid #e6e6e6;
+                background-color: #f2f2f2;
+            }
+
+    .pager .pager_input {
+        width: 40px;
+        text-align: center;
+    }
+
+/*.bx_table > .pager > div {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height:17px;
+        background-color: #DCDCDC;
+        text-align: left;
+        overflow: hidden;
+        vertical-align: middle;
+        font-size: 12px;
+        border: 1px solid #9f9f9f;
+        background-color: #DCDCDC;
+        padding: 5px 6px;
+    }
+    .bx_table > .pager > div .pager_button{
+        color: #606060;
+        border: 1px solid #9f9f9f;
+        background-color: #e6e6e6;
+        width:30px;
+        text-align:center;
+    }
+    .bx_table > .pager > div .pager_button:hover{
+        cursor:pointer;
+        border: 1px solid #606060;
+        background-color:#f2f2f2;
+    }
+    .bx_table > .pager > div .pager_button[disabled="disabled"]{
+        color:#CFCFCF;
+        border: 1px solid #e6e6e6;
+        background-color:#f2f2f2;
+    }
+    .bx_table > .pager > div .pager_button[disabled="disabled"]:hover{
+        cursor:initial;
+        border: 1px solid #e6e6e6;
+        background-color:#f2f2f2;
+    }
+    .bx_table > .pager > div .pager_input{
+        width:40px;
+        text-align:center;
+    }*/
+
+
+.bx_table > .body {
+    display: table-row-group;
+}
+
+
+
+.bx_table .item {
+    display: table-row;
+    white-space: nowrap;
+    font-size: 0px; /*====== 去掉inline-block间隙*/
+    vertical-align: bottom;
+}
+
+    .bx_table .item:hover .col {
+        background-color: #f2f2f2;
+    }
+
+.bx_table .item_selected .col {
+    background-color: #e6e6e6;
+}
+
+.bx_table .item > div {
+    display: table-cell;
+    text-align: left;
+    /*overflow: hidden;*/
+    white-space:normal;
+    min-height: 20px;
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    border-top: 0px;
+    border-left: 1px solid #CFCFCF;
+    border-right: 0px;
+    border-bottom: 1px solid #CFCFCF;
+    padding-top: 3px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    font-size: 10px;
+}
+
+    .bx_table .item > div:last-child {
+        border-right: 1px solid #CFCFCF;
+    }
+
+.bx_table .item:hover > div {
+    background-color: #f2f2f2;
+}
+
+.bx_table .item_selected > div {
+    background-color: #e6e6e6;
+}
+
+
+.bx_table > .header, .item .col {
+}
+
+.bx_table .col_center {
+    text-align: center;
+}
+
+.bx_table .item_empty:last-child > div {
+    padding-bottom: 4px;
+}
+
+.bx_table .item_empty > div {
+    border: 0px;
+    padding-top: 4px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.bx_table .item_empty:hover > div {
+    background-color: white;
+}
+
+.bx_table .item_empty > div:last-child {
+    border: 0px;
+}
+
+.bx_table .item_empty1:last-child > div {
+    padding-bottom: 4px;
+}
+
+.bx_table .item_empty1 > div {
+    border: 0px;
+    padding-top: 2px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.bx_table .item_empty1:hover > div {
+    background-color: white;
+}
+
+.bx_table .item_empty1 > div:last-child {
+    border: 0px;
+    padding-right: 0px;
+}
+
+.bx_table > .header .col_30 {
+    min-width: 30px;
+}
+
+.bx_table > .header .col_40 {
+    min-width: 40px;
+}
+
+.bx_table > .header .col_50 {
+    min-width: 50px;
+}
+
+.bx_table > .header .col_60 {
+    min-width: 60px;
+}
+
+.bx_table > .header .col_80_normal {
+    min-width: 80px;
+}
+
+.bx_table > .header .col_120 {
+    min-width: 120px;
+}
+
+.bx_table > .header .col_150 {
+    min-width: 150px;
+}
+
+.bx_table > .header .col_200 {
+    min-width: 200px;
+}
+
+.bx_table > .body .col_200 {
+    width:200px;
+    max-width: 200px;
+}
+.bx_table > .body .col_150 {
+    width:150px;
+    max-width: 150px;
+}
+
+.bx_table .col_box {
+    width: 50px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    background-color: white;
+    line-height: 20px;
+}
+
+.bx_table .col_boxset {
+    width: 107px;
+}
+
+.bx_table .col_box_small {
+    width: 33px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    background-color: white;
+    float: left;
+    margin-left: 2px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.bx_table .col_box_small:hover {
+    cursor:pointer;
+}
+
+.bx_table .col_box_large {
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    background-color: white;
+    line-height: 20px;
+}
+
+.bx_table .col_box_green {
+    background-color: green;
+    color: white;
+}
+
+.bx_table .col_box_red {
+    background-color: red;
+    color: white;
+}
+
+.bx_table .col_box_gray {
+    background-color: gray;
+    color: white;
+}
+
+.bx_table .col_box_blue {
+    background-color: blue;
+    color: white;
+}
+
+.bx_table .col_box_orange {
+    background-color: orange;
+    color: white;
+}
+
+.bx_table .col_box_calm {
+    background-color: #91f8f4;
+    color: white;
+}
+
+
+
+/*==================  box  ===========================*/
+.col_boxset {
+    width: 107px;
+}
+
+.col_boxset .col_box_small {
+    width: 33px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    background-color: white;
+    float: left;
+    margin-left: 2px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.col_boxset .col_box_small:hover {
+    cursor:pointer;
+}
+
+.col_boxset .col_box_large {
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    background-color: white;
+    line-height: 20px;
+}
+
+.col_boxset .col_box_green {
+    background-color: green;
+    color: white;
+}
+
+.col_boxset .col_box_red {
+    background-color: red;
+    color: white;
+}
+
+.col_boxset .col_box_gray {
+    background-color: gray;
+    color: white;
+}
+
+.col_boxset .col_box_blue {
+    background-color: blue;
+    color: white;
+}
+
+.col_boxset .col_box_orange {
+    background-color: orange;
+    color: white;
+}
+
+.col_boxset .col_box_calm {
+    background-color: #91f8f4;
+    color: white;
+}
+
+
+/*===================  box end  ================================*/
+
+.bx_table_nofocus_row .item:hover > div {
+    background-color: white;
+}
+.bx_table_nofocus_row .item:hover > .col {
+    background-color: white;
+}
+
+/*================== bx_table width 100%  =====================*/
+.bx_table_100pc {
+    width: 100%;
+}
+
+/*=======================  single control css  ============================*/
+.single_text {
+    width: 130px;
+}
+
+.single_text_small {
+    width: 70px;
+}
+.single_text_large {
+    width: 170px;
+}
+
+.single_button {
+    width: 80px;
+}
+
+.single_select {
+    width: 124px;
+}
+
+.single_date {
+    /*width: 119px;*/
+    width: 129px;
+}
+
+.single_text_full {
+    width: 97%;
+}
+
+.single_textarea_full {
+    width: 98%;
+}
+
+.single_select_full {
+    width: 99%;
+}
+
+.single_buttonselect_full{
+    position:relative;
+    width:100%;
+    min-height:22px;
+    line-height:22px;
+    /*min-width:160px*/
+}
+.single_buttonselect_full >.code0{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:60%;
+}
+.single_buttonselect_full >.code0_full{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.single_buttonselect_full >.code0 input{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding-right:16px;
+    box-sizing:border-box;
+}
+.single_buttonselect_full >.code0 .bx_a_button{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    width:18px;
+    box-sizing:border-box;
+    margin-right:-1px;
+}
+.single_buttonselect_full >.code1{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:40%;
+    right:0;
+    width:60%;
+    box-sizing:border-box;
+    padding-left:2px;
+}

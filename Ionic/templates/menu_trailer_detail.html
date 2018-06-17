@@ -1,0 +1,32 @@
+﻿<ion-view title="Trailer">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="action.save();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <label class="input-label">Code:</label>
+                <div ng-switch="vm.detail.Id">
+                    <div ng-switch-when="0">
+                        <input type="text" ng-model="vm.detail.Code" />
+                    </div>
+                    <div ng-switch-default>{{vm.detail.Code}}</div>
+                </div>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Name:</label>
+                <input type="text" ng-model="vm.detail.Name" />
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">Type:</label>
+                <select ng-model="vm.detail.Type">
+                    <option value="chessis">Trailer</option>
+                </select>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,1212 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v9.2, Version=9.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>E:\work\修改repx\Report9.2\DevExpress.XtraReports.v9.2.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>zh-CN</Localization>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class rptInvoice : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.DetailBand detailBand1;
+        private DevExpress.XtraReports.UI.XRTable xrTable1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow4;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell22;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow3;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell20;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell7;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell11;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow2;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell9;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell10;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell12;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell14;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell13;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell16;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell21;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel57;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label3;
+        private DevExpress.XtraReports.UI.XRLabel label4;
+        private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.XtraReports.UI.XRTable table1;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell5;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell3;
+        private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel20;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
+        private DevExpress.XtraReports.UI.XRSubreport subreport1;
+        private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRTable table2;
+        private DevExpress.XtraReports.UI.XRTableRow tableRow5;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell4;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell6;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell8;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell15;
+        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel39;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel30;
+        private DevExpress.XtraReports.UI.XRLabel label7;
+        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
+        private DevExpress.XtraReports.UI.XRLabel label6;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
+        private System.Resources.ResourceManager _resources;
+        public rptInvoice() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
+                        "W9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
+                        "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAACAAAAAQAAAGhTeXN0ZW0uRHJhd" +
+                        "2luZy5CaXRtYXAsIFN5c3RlbS5EcmF3aW5nLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhb" +
+                        "CwgUHVibGljS2V5VG9rZW49YjAzZjVmN2YxMWQ1MGEzYVBBRFBBREtgDtLkhuldJwAAAAAAAACYAQAAI" +
+                        "nAAaQBjAHQAdQByAGUAQgBvAHgAMQAuAEkAbQBhAGcAZQAAAAAAQHMAdQBiAHIAZQBwAG8AcgB0ADEAL" +
+                        "gBTAGMAcgBpAHAAdABzAC4ATwBuAEIAZQBmAG8AcgBlAFAAcgBpAG4AdACWYgAAQAABAAAA/////wEAA" +
+                        "AAAAAAADAIAAABRU3lzdGVtLkRyYXdpbmcsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsL" +
+                        "CBQdWJsaWNLZXlUb2tlbj1iMDNmNWY3ZjExZDUwYTNhBQEAAAAVU3lzdGVtLkRyYXdpbmcuQml0bWFwA" +
+                        "QAAAAREYXRhBwICAAAACQMAAAAPAwAAAPNhAAAC/9j/4AAQSkZJRgABAQEASABIAAD/4QAWRXhpZgAAT" +
+                        "U0AKgAAAAgAAAAAAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjH" +
+                        "BYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoK" +
+                        "CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAE0AoADASIAAhEBAxEB/8QAHwAAAQUBA" +
+                        "QEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhB" +
+                        "yJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZ" +
+                        "WZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1" +
+                        "NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/" +
+                        "8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkN" +
+                        "OEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKk" +
+                        "pOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+" +
+                        "Pn6/9oADAMBAAIRAxEAPwD6pooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAGSHarNjOBnHrXx" +
+                        "z4Z+IXxG+JXxMm0TSfFK6KshmMSxwKY40TJxjGScY5zX2O6hgQeMjBr4o1n9nTx9Brl5JpP2KeBpXaK4" +
+                        "S8ERZScjIOCDg9KAPYm+HfxfCkj4oxk9h9jH+Few+FLXUrHw3p1trl6l/qcUIS4ukXAlcdWxgda+A/iB" +
+                        "4L8a/Ds2MniKWaAXRbyJIb0vllxnkHgjIr7b+COp3ms/Cjw1f6nO9xeTWo8yVzlnIYrknucAUAdswyMY" +
+                        "r480X4keMp/j/H4dm8SXraUNde1MJSPBiWUjb93pgYr7Er4N8P/APJ1Kf8AYyy/+jmoA+8h05rhvjhql" +
+                        "/onwr8QalpF3JZ39rCskU0YBKneo7gjoTXc151+0R/yRbxV/wBey/8AoxaAPmjwV8bPGnhvxrYHxxqF1" +
+                        "e6VIEM8E0acRSKCsq4A5AIPuMivqb4n6tcWfwr1/VtDvDFPFp7XNtdQYPQbgw4Ixj+deH/Fn4cN4l+CP" +
+                        "hbxJpUJk1fS9Jg84KMtNbBASPcp1HtmuY+GfxIOofBLxh4M1abN1aaVPJp8jNy8IX5o/wDgPUe2fSgD6" +
+                        "d+EV9ear8NfDmoancyXd5c2aSyzSAbmZuecce1dbKwVSxGQoJI9a4r4H/8AJIvCX/YPi/lXaXH+pk/3T" +
+                        "/KgD418O/Eb4i/Ej4mnRNI8TjRUuHm8lEgXy4kQMwBGCScDrmvWD8O/i9/0VJP/AADH+FeAfs8QzXHxt" +
+                        "igtZzbXEsV8kU4GTGxhkAbHfBwfwr1z4taR8RPh94JuNf8A+FnahfmGSOPyPsSR53NjO7cen0oA9z+Hu" +
+                        "m69o/hmGz8W6tHq+qo7lrtE271JyoxgcgcV01eH/sp+KNc8WeDdXvfEepz6hcR35hR5cfKojU4GAO5Ne" +
+                        "3n7vFAGT4u1i10Dw1qerX7+XbWdu8zsDg8DgD3JwB7mvjDw78afHeg+MNGm8U6rfzaTI0c8ttcRpiS2k" +
+                        "HDcLk/Kcg+or1v9q3xZCp0TweouZobuVb3UktV3yfZ1bhQPcgn/AICK8h+P/ivQ/G0ej3mhaFrGm3GnR" +
+                        "fZZGubcJGYBjYMgnBU5HPrQB9y288VxBHNC6yRSKGR15DAjIINSV4j+yl4y/wCEk+HiaXdSbtQ0VhbNk" +
+                        "8tCcmNvwwV/4DXt1AHzZ+1j448TeDta8Pr4a1m50+O5t5TKkaqQxVhg8g8807wX4c+LPirwnpmuW3xL8" +
+                        "iO/hEyxPaAlc9iQtc1+3B/yG/Cn/XvP/wChLXSfC3xl8RtP+HmgWmjfDn+0dPhtVWC7/tKNPOXnDbTyP" +
+                        "pQBzHwx+KXjew+MsPhHxLrCaxavfPYSmSJRhhkB0IAPUdDX1wvTpivkf4bfCvxzd/GmHxZ4k0ZdItEvW" +
+                        "1CXfKj5JJIRApJJyepxX1wpyM0AeR/tKeOdV8CeBYLvQHSG/u7oW6zsgby12kkgHjPFeb/Cyx+K3xC8K" +
+                        "prtp8RmsoHmeERS2ys2VOCeBit39tQ/8W90b/sJD/0W1b37In/JG7b/AK/bj/0IUAeNeJPiP8Rvhv8AE" +
+                        "saNq3ica0tu8Pmo8KiOVHCkjGAQcHGc19n18I/tNf8AJedQ/wC3X/0Ba+7qAOM+MmoXukfDHxHqOlXT2" +
+                        "l9a2jSwzRgbkYEdMj8K+a/g9rnxQ+Jt3qdvZePZbBrFEdjLAjh9xI4wvtX0X8eP+SO+Lf8Arwf+lfKH7" +
+                        "OGk+MtV1DW18C69aaNNHDGbhriLf5i7jjHynpzQB1HxZ8QfFL4V6npK3vjg6n9rV5UC26BRtIBDAryDm" +
+                        "vqL4e6zL4i8D6HrNyqrPfWcU8ioMKGZQSB7Zr4a8Z3Xinxb8SbXw1461qMXtreHThcyxKscW5wN2FAyp" +
+                        "4OfTFfd/hDRYvDnhfS9Ft5HlisLZLZZHGC+1QMke/WgC7qpZdLvDG7RuIXKuvVTtOCK+K/hf42+JnxA8" +
+                        "XR6DaeN7mykeKSUSywo4wgzjAWvtTVv+QVef9cX/wDQTX5+fAaw8Ral8RIrfwfqsGlasbeUrcTJvUKB8" +
+                        "wxg9fpQB9N2fgL4t299bSy/EuG4ijlVpImtcB1ByV+73Ga9yGCBXi2g+E/i5Brum3GueOtOutLhuEkub" +
+                        "eGDa00YOWUHyx1Fe0L90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU" +
+                        "AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAh/H8K8jm0z4zpLMttrvh" +
+                        "CSASN5TT28m8pn5d2FxnGOleu0UAfNnxK+EvxP+IkdgniLXPCxjsWYxLbpNHy2Mk/J7Cvcvh74dXwn4K" +
+                        "0jQlm8/7DAIjLjG88knHbkmuhooAD0r5o0z4C+JbT4wp4wk1LSDaDV21Awq0nmbDIWx9zGcH1xX0vRQA" +
+                        "A5Fcn8VvDt34t+H2s6Fp0sENzexCNZJyQi/MCScAnt6V1lFAHP+DNJuNH8G6NpN6YZJ7O0jtpDHkoxVd" +
+                        "vGRnHHevnHxp+zHqt14p1C88J6pplnpVw7PHDcNIrxhh8yfKpG3kgc9K+rqKAOb+HWiXPhrwTomi3skU" +
+                        "lxYWqQSPFkozAdRkA10UgDAqeQRzTqKAPl7RfgH4z8J+PH8QeENc0NTHJK1ubxZCdjgghlCkdDjg10nj" +
+                        "n4f/Ffxx4dm0XxBr3hRbGRlkxbQyqzMpyoJK8DNe+0UAeVfs/fDvVPhv4a1HTNYurK5e5u/tKNaFyANi" +
+                        "rg7lH92vVD9z8KWigDzH4feBdW034heKPFvii5srm/1PbDaLbM5+zwA/c+YDHATp6H1ruPFGkW2v+H9R" +
+                        "0i+XfbXsDwuPZh1+oODWtRQB84/BT4LeMPh141i1V9V0afT5YzBdwRSS7nQ8ggFMbgQD19a+jhRRQB4d" +
+                        "+0P8I9b+JeqaPPpF7ptrFZQvGwumcMxYg8bVPHFej/DPQLrwv4F0XQ9QkhkurCAQvJCSUYgnkZAP6V1V" +
+                        "FACEA0oGKKKAPNvjt8O5viR4Pj0yyuorW9guFuIXmBKEgEEHHI4PXB6Vw/gD4e/FrwN4fXRtD1zwl9iW" +
+                        "RpQJ4pnYM3XnaOK+gaKAPl7WvgD4z8XePE1/wAX65ohEssRuTYrIDsQAYRSoGcDua+oaKKAOY+Jmg3Xi" +
+                        "jwJreiafJDFc31uYUeYkIpOOTgE15p+z58JNb+Gmp6zcaxe6bdR3sKIgtS5KlWJ53KOOe1e5UUAfOvxt" +
+                        "+A+peNvG39v+G7/AE+yaaJBcLcl1JlXgOu1T2C/iK928MRalBoFjDrjQPqkcKpcPbkmN3AwWXIB561qU" +
+                        "UAV9RiefT7mKLb5kkTKu7pkggZ9q+XfAXwF+IXgfxCmtaHrPhn7csbRDzvOdcN142CvqqigDyOLTPjNJ" +
+                        "NEt1r/hGO3Lr5rW9vL5gTPO3cuM4z1r1wcAYoooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii" +
+                        "igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAPTgUhJx0ryL9q" +
+                        "e8vNP8AhLc3mm3t1ZXUV3BtltpmibBbBGVIOMGvmT4KeKPEeq/FjwxZX/iLWbi1lu18yKW+lZXABOCC3" +
+                        "I4oA++QcjNFFFABQaKpa5frpei6hqDrvW0t5Jyv94IpbH6UAXASc5pa/ObxH8UfGev6tLfz+I9ThMrEr" +
+                        "Ba3TwxxgnhQqkDAzj1r2+z+CPxUubOCc/ESeMyxq+w6hdErkZxQB9VUitkmvhX4uaJ8Qfhm+nDVfGupX" +
+                        "a3wfy2t9Rn+UrjOQSP7wr1H9kn4i694hvtT8Pa9fS36W9uLm3nmO6RAGCspbqw5BGfQ0AfTVBoHSsXxr" +
+                        "rB8P+EdY1dYxI1layTqh6MyqSAfbOKANlTntS1+cl/8Q/G/iDWhNL4n1ZLi6kChYbt4Y1JbAAVSABzXu" +
+                        "qfAz4qsik/EaZSQCV/tC64oA+pSSO2aFOc+or5cHwL+KYPPxHmI/wCv+6r174I+GvFPhTw/f6d4y1Ian" +
+                        "cfazJb3P2h5maMqOCX5HIPHvQB6NSMcClrM8To0nhvVVR3jc2su10YqynYcEEdCKANIE+lLX5nnxz4uH" +
+                        "H/CU69x/wBRGb/4qv0b8JIyeFdGV5JJWFnCC8jFmY7Bkknkk+poA1aRjjtS189ftZ/EPWfClro+j+Hru" +
+                        "Sxm1BZJZ7mLhwikAKp7ZJOTQB9C0V8IfCXR/iF8S7vUIdK8a6naLZIrSPcajPzuJAAAJ9DXpf8Awov4q" +
+                        "f8ARR5v/A+6oA+o2baOenrS186+BvhV8S/DPjXRdT1LxedX0yGUm6t5L+cgoVI+6/Ddc49q+ih0oAQnF" +
+                        "KMkVm+JY72bQNRh0kqNQktpEtyz7QJCpCkntg45r5nh+B/xW+zK8vxDlifblkGo3R2+2aAPqqkJI7V+a" +
+                        "b+N/FyTOjeKteO0kEjUZu3/AAKveNB+EHxP1rw/p+q23xDuVjvbZLmON9QudwDqGAOD70AfWo5FIxwM1" +
+                        "zHwy07WtI8C6Rp/iecXGr20ZjnmExl3kMcHceSduOtdO33TmgAUlh2oLYr5Q/bD1vWND8VaAdG1fUtPW" +
+                        "ezcyJa3UkSsVfgkKRzzT/2Otc1jW/E3iD+2dX1K/WG0j8tbq6eVVLPyQGJ54oA+raKKr304tbWadgSsU" +
+                        "bSED0Az/SgCfJ7Clr86vFnxY8Y+Itanv5PEGp2kbOTHb2tw0KRoTwoCkZ+pr2XR/g18U9U0iyvx8Q54f" +
+                        "tMKTCM6hdEqGAIBPrzQB9Xkkds0oORmvmGx+DnxV0nU7C+Xxy+oCC5jke2k1C4CugYEg7uDxnivp4dKA" +
+                        "CmknPAzRKdq5zgDk1+fHxG+LPi7xD4pv549d1Gys0mdLe2tJ2hSNAcAfKRk4AyTnmgD9CaK+S9B+DvxS" +
+                        "1fRNP1FPiFcQreQJOsb6hckqrKGAJHGcEVf/wCFF/FPIz8SJgPX7fdUAfUp/WivO/gtoHifwt4YuNM8Z" +
+                        "agNRu0u3eG5+0PMzxEDGS3I5zxXolABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR" +
+                        "RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAeNftb/APJF7/8A6+rf/wBDFfKn7P3/ACWfwn/19" +
+                        "/8AsjV9V/tb/wDJF7//AK+rf/0MV8qfs/f8ln8J/wDX3/7I1AH6IUUUGgArC8ff8iL4j/7Btz/6Kat2s" +
+                        "Lx9/wAiL4j/AOwbc/8AopqAPzMi++v1H86/UfTP+Qbaf9cU/wDQRX5cRf6xPqP51+o+mf8AINtP+uKfy" +
+                        "FAHy9+3DwPCI/6+f/adcz+xX/yUbV/+wY3/AKMSum/bj/5lH/t5/wDadcz+xX/yUbV/+wY3/oxKAPtAd" +
+                        "K4/4w/8ks8V/wDYOm/9BNdgOlcf8Yf+SWeK/wDsHTf+gmgD87fD/wDyHtL/AOvmL/0MV9r/ABB/aC0Pw" +
+                        "T4svtAv9H1O4uLTaHkhMe1tyhhjLZ6Gvijw/wD8h7S/+vmL/wBDFfpLdeEfDt7fTX15oemXF5PgyzS2y" +
+                        "O74GBkkelAHiH/DV3hn/oAaz+cX/wAVXcfCj4yaZ8TNWvbLSdL1C1NpCJnkuCm3lsAfKSc14r+2bo2ma" +
+                        "RP4UGlafaWQlW53i3hWPdgx4zgc9TT/ANiDnxD4pH/TrD/6G1AH12OgrP8AEf8AyL+p/wDXrL/6Aa0BW" +
+                        "f4j/wCRf1P/AK9Zf/QDQB+Xhr9QPC//ACLWk/8AXpD/AOgCvy/NfqB4X/5FrSf+vSH/ANAFAGnXyN+2+" +
+                        "jf2/wCFn2nZ9mmGe2dy19c1xfxQ+HOi/EbR47HWxKjwMXt7iEgSQsRg4zwQeMg+goA+IfhP8UdU+GV1q" +
+                        "E2j2lndm9REkW6DEDaSQQVIPc16P/w1d4q/6AWh/lL/APF13n/DJ/hz/oYdX/74j/wrlfil+zno3hDwF" +
+                        "q+vWGt6hPcWMYkEUyJtb5gCOBnvQB0vwj/aLufFfi200TxJpdpaG+fyre4tGYBZMcKysTnOMZB/CvpQd" +
+                        "K/Nr4ScfFPwiBx/xNrb/wBGrX6S0AFRz/6qT/dP8jUlRz/6qT/dP8jQB+Wt3/x9z/77fzr9J/hd/wAk2" +
+                        "8Lf9gu2/wDRS1+bF3/x9z/77fzr9J/hd/yTbwt/2C7b/wBFLQB09I3SlpG6UAfIP7b3/I0eGf8Aryk/9" +
+                        "DFP/Yg/5GTxR/16Rf8AoZpn7b3/ACNHhn/ryk/9DFP/AGIP+Rk8Uf8AXpF/6GaAPryqHiD/AJAOpf8AX" +
+                        "tL/AOgGr9UPEH/IB1L/AK9pf/QDQB+XVfp54O/5FLQ/+vGD/wBFrX5h1+nng7/kUtD/AOvGD/0WtAGxR" +
+                        "QaKAI7j/USAAklSAB9K/LvVY3j1O7RxhlmcEehDGv1HYZxXh/jX9m7wr4l8QXWqw3t/pkl05klht9hjL" +
+                        "k5LAEcZ9KAPGND/AGnPE+kaNYadFo+jSpZwJbq7iXcyooUE4fGcCrv/AA1Z4pbhtC0P8pf/AIuu8P7KH" +
+                        "hzGf+Eh1f8A74j/AMK8A+Onw/tfhx4xi0ixvZry3ltUuFeZQGGSwIOOOq0AfaPwb+Idp8R/Cf8AattbN" +
+                        "aXEMpgubYtuEb4B4PcEEEV3tfNv7EnPg3xGP+n9P/RYr6SoAKKKKACiiigAooooAKKKKACiiigAooooA" +
+                        "KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDyj9prR9T1/4W3Gm6Jp9zq" +
+                        "F7LdQkRW6biArZJPtx+tfLHhLwF8S/C3iKw1vTPCGote2UnmRia3LJnBHIBGetff1FAHy5/wsL4/f8AQ" +
+                        "mRf+C9//jldN8N/Ffxh1rxpp1p4t0BNM0PLvczrZFCQEbC7ixxltvQZr32igBEzt5qprNkmp6RfWEpIj" +
+                        "uoHgYjsGUqf51cooA/PrW/gj490nU57SPw7d3yRPhLm1AdJB2I5/nXr1t49+PkFvFEng5GWNAgLae+Tg" +
+                        "Y5+evqeigD4i+Jen/F/4jSaefEXhC5Ast4iFtaFB82Mk5Y+gr0/9lf4X674Sv8AVNd8R2hsJbmAWsFs5" +
+                        "BkxuDM7AZx90AD619HUCgAXpWP4w0dfEHhXVtIaQxi+tpLfeP4SykA/ga2KKAPz6uvg78Q9H1UrF4Zvb" +
+                        "iS2lyk1uokjcqchgQenevYh8Qfj6MD/AIQ2I9s/2c//AMcr6jooA+K/idoPxd+I9hY3/iLww6tYSNDDb" +
+                        "2tvschxlnKlicfIoz712n7Jfg/xL4V8R68fEOh3+nQ3Nogjknj2qzK/TPrg/pX1BQaAEX7ozWf4jEjeH" +
+                        "9TWGJppTbShI0GS7bDgD3NaNFAH50n4ReP9vHhHVv8AvzX6B+FhIvhnSFnhkgmFpEHikGGRtgypHqDWn" +
+                        "RQAV5f8btZ8faHHpNx8PNOGpNI0iXcBt/NCjAKtwQR/EOteoUUAfLn/AAsL4/f9CZF/4L3/APjlY/i/x" +
+                        "B8cfFfhu+0TVPB7LZ3ihJDDYsr4BB4Jc46elfXdFAHxZ8Efgv4tHj/SNU17SJ9L0/Tp1unkuCAzspyqq" +
+                        "uck7gM9sV9p0YooAKgvGZLeZlVnKoxCr1bjoKnooA/Oub4SeP5J5H/4RHV8MxP+pr7v+GkFza/D3w3bX" +
+                        "1vLbXcGnwRSwyjDI6oAQfxFdLRQAUHpRRQB8vftZ+DvEnivxPob+HtDv9QitrRlkkgjyoJfIH1wKf8As" +
+                        "l+D/EnhXxHrzeIdDvdPiuLSMRyTx7QzK/T8jX08KKACobyFbi2lgk+5KjI30Iwf51NQaAPz/wDE3wM8d" +
+                        "aRrFzaW2gXWoWschEVzagOsqdj1yDjqD0r1TTfG3x507TrWyg8HK0VtEsKF9PYsQoAGSH68V9WUUAfMu" +
+                        "l+N/jvf6nZ2l14Xjs7eaZI5bgWBHlIWG5ss5AwM9Qa+ml6DvRRQAjdvrXzRrPjX466drF/aWPhiO9tIb" +
+                        "iRILg2LN5kYY7TkOAeMdq+mDRQB8uf8LC+Pv/QmRf8Agvf/AOOV5t4/8MfFb4ga+mq6/wCEb0XSwrAog" +
+                        "ttiBVJPQt15PevuyigDyH9mzwDqXgLwRPFraLFqN/cfaZIFbd5K7QFUnpnjJx6169RRQAUUUUAFFFFAB" +
+                        "RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB" +
+                        "RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFB6HFfPf7RvxY1/wTrmm6d4TuYTP9ma5vke2E" +
+                        "ojQsFRie2Tn8x60AfQlFeTfs8fEif4heE7iTVpIv7aspjHciNdgZG5jcDtnkfUV6yOlABRVfUblbOxuL" +
+                        "l87IY2kbHooJP8AKvlHwd8Yfij8R/Fd1p3hNtFs8RNcLDPEMRxggfeOST8woA+tqK8Ga3/aBVC327wsS" +
+                        "BnG0f8AxNe1aEb46PYnVvLGo/Z0+1CI5Tzdo37fbdnFAF+iqupXQsbG6unBKQRNKQD1Cgkj9K+UvBnxf" +
+                        "+KXxH8U3On+FH0S0KxtcLDPF8qRggY3HJJ5FAH1vRXgz2/7QKqT9u8LH6KP6rXtmiG9Oj2R1URjUPJT7" +
+                        "SIzlfN2jdj2znFAF2iq2qXQstNurtgxWCJpSF6kKMkD8q+T/B/xj+KPxG8V3Gm+FH0Wzby2nSGaH5UjG" +
+                        "B945JPIoA+uaK+WviR41+NPw80q21LX7zQGtZ5xbqbeEOd+0tyMDjCmvZvgl41uPiB4Ds9cvbdLe7Mkk" +
+                        "EyRZ2FkP3hnsQRx60Ad/RSN1FfKnjD43+Nrz4rz+E/B4061QX39nQfaIt5kk3bdzMegz6CgD6sorwd7b" +
+                        "9oJVJF74WYjsFHP/jte4WBnNnD9sAFxsXzAp434+bHtnNAFiiue8faheaV4K13UNMkSK8tLOWeF3TeoZ" +
+                        "VJGR3HFeK/s1/FTxX8QPFepWfiG6tJLS2s/OVIrcIS5dQOR7ZoA+i6KKRuhoAWivlL40fHHxV4c8d6np" +
+                        "/hW7t20qzZLd3ltFcLPtyyBu+Pf0PpXv/wp8XReN/Ael64hUSzR7LhB/BMvDj8xkexFAHXUUHpxXmXxI" +
+                        "j+KMuvW48AS6NDpQtx5rX2C5lyc4GDxjb+tAHptFfG2k/Gb4qap43j8LW19o41N7prQFrVRGHUkHn04N" +
+                        "fRHwuT4iJPqK/EaTS5I8Rm0exwOfm3hhgf7OPxoA9Boor5d/aB+MnjHwP8AEa40jQ7qzWwFvFMiyWyuy" +
+                        "lhzyevIJ/GgD6ioqppTyy6daSTuHleFGdgMBmKjJx25p+oXAtLOe4YEpDG0hA7gDP8ASgCxRXyJ4S+M3" +
+                        "xO+InjCXS/Cb6NZlkeaOGeIFUjXHBc5JPIrX+I/jP41fD3SINT1+98Pm1mnEC/Z4Q53lS3QgcYU0AfUl" +
+                        "FcB8D/HFx8QfAVvrV9bxwXYleCZYs7Cy91B5AII4rv6ACivkP4n/G7x/wCHPHXiDTNNubT+zrG7MCO1k" +
+                        "rbQRuUFu5xn8q+hPg946tvH/gq11WNkW9T9zewA/wCqmA5/A9R7GgDuKK8r8D+L9b1X4z+NPDt9cxSaT" +
+                        "pUcb20awBWBfB5bvjJr1SgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKK" +
+                        "ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAq6lfW+m2FzeXsgitreJpZZD0VVGSfyFfIfg7" +
+                        "4heB9VuvHerePr2ZL/xGWtIoltnk+z2oHygEd87Tj/YHrXvXx50fxP4l8Hf2B4Tto3/ALQlCXszzrH5U" +
+                        "AIJAz13Hjjtmup0fwb4f0zS7Sxh0nT3itokhVntkZiFAGScck4zmgD4m/Z88YReCfilb77nfo9+xsZ5O" +
+                        "VBVm+SQjthgD7Amvvtegz1r5k/aE+CGq+I/FdlqvgjTrUJJb+XdRiVIFV1PysAcdQecf3fevc/hw2vx+" +
+                        "DtLg8W26QazBGIJ9kiyCTbwJNw45GCR65oA3tXtzeaXeWoIDTwvECegLKR/WvhHT/hd8V/CuqzSaHpOr" +
+                        "Wt0u6L7VYTBd657MrZIOAa+9bjf5L+VjzMHbkZGccV5FDr/AMZY4wj+CtAlccNIuohQx9QN3H0oA+X/A" +
+                        "BH4n+LPg2+tV8Ra34ksJnHmwpc3bMHAPpkgjOODX3B8PNUuNc8D6Fqt7t+1XllFNLtGAXKgkgducmvnL" +
+                        "4veAPin8T9S0ufUvD2laclkjRL5V+jD5mBLHJz2HAr6S8EaO/h7wlo+jyyLK9jaRW7SL0ZlUAke2elAF" +
+                        "/WrVr7SL6zjYK9xBJECegLKQP518Kab8L/ix4X1SeTQ9J1i0ulBiNzYzBd6Z7MGHBwK+8rrzfJkEBUS7" +
+                        "TsLDI3Y4z7ZryOPxB8ZUiVZvBXh+SRRhnXUgoY+uN3FAHzB4h8UfFjwZfWy+Idb8SWFw482GO5u2YOAc" +
+                        "ZwSQRnsa+4/AOqz654J0LVLsKLm8s4ppdowNzKCcfjXzd8W/h78Uvidq2m3OpeH9K05bSIwr5WoKwwzZ" +
+                        "LHJzx6CvpbwZpB0DwnpGkNIJWsbWO3aQdGKqASPbNAE3in/AJFjV/8Arzm/9ANfGv7HH/JV5/8AsGy/+" +
+                        "hJX2nqtsL3TLu0ZionieIsBnG4EZ/Wvk74Z/Cv4m/DbxhPq2k6Lpepjy5LYebfIiuhI+Yc5HQdaAO1/b" +
+                        "W/5Jxov/YVX/wBFS1t/sg/8kcg/6/p/5iuR+Lvhz4s/EvQrPS77wrpFlDbXP2ndDqKMzMFZQOTwPmP6V" +
+                        "6r8B/Bt74E+Hdlo2qSRPfGSS4lETblQsfug98etAHoh6ivgyx/5Oqj/AOxn/wDa9feLkjGBn2r5P8TfB" +
+                        "jxzp3xjm8V+GrSx1K3XUf7Sg825WPLbt+xgSD19KAPrI0CvH5fEXxmaNhH4I0BHIwrHUgQD643c16zYm" +
+                        "f7HB9s2fafLXzdn3d+Pmx7ZzQBzvxP/AOSceKv+wZcf+i2r5j/Yl/5HbX/+wev/AKMWvqTx9Y3WqeCte" +
+                        "0/TY1lvbuylghRmChmZCByenWvEP2Zvhd4s8BeLNTu/EdhBBa3Nn5SPHcpId4dTjAOemaAPpCuU+J/i2" +
+                        "HwV4I1bW5cGS3iIgQ/xzNwi/mR+ANdXXknxX8J69428a+FdPNmh8HWN0LzUJTOoMzjO1NmclRjH/Avag" +
+                        "D58h8ReArj4GX2h6jqkz+Lb2dtUkmNs5H2vJ2ruxjG35c9PmNbn7HHjP+z/ABHfeFLyXbb6ivn2oY8CZ" +
+                        "B8wH+8vP/Aa+qj4a0IdNG00f9ukf+FfMPjb4IeMbH4q3HiDwDYWosEu0vbU/aUj2PwzLtJGF3ZGPSgD6" +
+                        "2H3RjpigVW0+W4msbeS8gFvcvGrSQhgwRscjI64PerDHA7UAfBnw/8A+Tn7X/sOz/8AoT196d6+TvCHw" +
+                        "b8a6b8bbbxPeadbppa6pJdO63cZIjZmIOM57jivrGgAr4Y/a+/5LFP/ANeMH9a+56+Wf2hfhB4y8bfEi" +
+                        "41bQdPt5bA20UKu90iElRzwTnqaAPpvSf8AkG2f/XFP/QRUPiP/AJF7VP8Ar1l/9ANTaYjx2FrHMoWVY" +
+                        "lV1BzghRkZpdTt/tdhc2xbas0TxlsZxkEZoA+Jf2Pf+Svr/ANg+f/2WvYv21P8Akmuk/wDYVT/0VJXC/" +
+                        "Dj4UfEv4b+NZNY0jR9L1RUjkt0Ml6iLIjEfNjOR0HFdJ8XfD3xa+JWgWml33hXSLKGC4Fzuh1FGZiFZQ" +
+                        "OT0+Y0AdR+x5/ySD/uIz/ySvcK85+AXgu+8B/Dy30jVnja+aZ7mVYm3KhbHy574AFejUAfNnhzwrZeNP" +
+                        "iF8adB1EfurmaDZJjJikG4q49wfz5FeSfCbxPqHwa+Kl5pev74rBpvseox9gM/JMB3x1z/dJ9a+mfhp4" +
+                        "S1rRfij4/1rU7VItP1iaN7R1mVywUtnKjkdR1rm/wBpH4PXPjg2WseGIojrsQ8ieN5BGJ4uxJPGVP6H2" +
+                        "oAl+FrrJ+0Z8TJIyGR4LZlYHIYFVwQfSvdK+ff2a/h14t8Fa/rV54tt0RLm1ighcXKSk7D04PYYr6CoA" +
+                        "KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA" +
+                        "KKKKACiiigAooooAKKKKADA9KKKKACjA9KKKACiiigAwPSiiigAxRiiigAwPQUdOlFFAAeRzRgegoooA" +
+                        "MD0FFFFABijFFFABRRRQAYHoKKKKACjAoooAKMD0oooAKKKKADFFFFABRiiigAoIz1oooAMCjA9KKKAA" +
+                        "DHSiiigAooooAKKKKACiiigAoopC2OxoAWimBtwJ5qpeapZWAJvbu3twBuHmShSR64NCTewNpF6jI9a4" +
+                        "/UPiP4ZtI2cX/2kKnmD7PGXDLnHDdOvvXNan8WoUkKadpczndhWnfbuAxzhcnuMda2hh6k9kQ6kY7nqm" +
+                        "4etG5fUV8/ap8SPEt9bvLHcW2nWeSnmxoOvorHJLDphf0ro/hV4evdWnj8TeIp7q4wS1lHcyEnnrLjoM" +
+                        "9gBjvWs8JKlBzqOxEaym7RPX6KKK5DYKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK" +
+                        "KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK" +
+                        "KKKACijIozQAUUUUAFFGRSbh60ALRSBgaMj1oAWijIqOWeGL/Wyon+8wFAElBrFvPFOg2ZcXOs6fGyDL" +
+                        "KZ13D8M5rn774peEbePcureec42wROx/LFWqU5bJkucVuzuaK8rvPjXoEL4t7TUbhMffCKgz6YY5rCvf" +
+                        "jm+xxZ6KqtnhprjIH1AGf1reGCry2iQ60Frc9xz70Zr55b4teLtTmjTSrG2BbgJDbvMSfz60ybUPibqE" +
+                        "Be7u7nT7dzy87R2gT65wwFW8BUXxSS+ZP1iPRM+icms291zTLKMvd6lZwoDgmSZRg+nWvmy+tppJFbxD" +
+                        "43haVeGjgmlu5AO2Cvykf8AAqzoovDKThYYdZ1icMQ6oEgVgehGNzdfWrjgF1l+H6k/WG9kfQt78SvCl" +
+                        "lIyS61byEDP7kNJn2BAI/WsGb4y6I/y6ZYarfzZ5jjgwQPzrzez0PWfs4ms/COm6XAEYNc6q3b1bzWx+" +
+                        "IWmXc0NtEYtW8ZM6qoQ2miQ5BA52lgFQfXkVpHCUtkm/n/lcl159dDvtQ+KGuBJDb+HIrFcjZLqd0Ihz" +
+                        "0ypwfwBrnbr4leIr24aK31SxV2GPs+l2T3Eg+jNwD9a5TTTaXtzt8MeFbvVLr/n5vpGnOR0YquFHvkkV" +
+                        "rahb6hZwmLxP4ktdGhxj+zdMRTKRkHGyPAX/gTcVuqFKLtyq/3/AIambqSfUNU1bXH51nVb2BMEML+/F" +
+                        "vuHT/Uwjdn6kism3g+0RLc20Ms0Ckf6UyLaQAjofNfLk+u0qaitL+zW9Fr4T0Frq9kPy3N6PtMzH+8Ix" +
+                        "8i/Ug1v3/hoWSpqPxL1mUSkbotNgcSTsPT+6g+gx9Kq6g9vl/wCdWYtmsmoXottKjl1O9J3FbNSka+rN" +
+                        "M2X78425Hem6hLYaTujuZIdSv8AgG1tjttISOnmMPmmI9Acdee1Q654uku7NtO0S1j0jRgcfZrc/PKPW" +
+                        "R+rH26VF4G8LXPi3W0sbYFLdRvuJscRp/iewrbkaj7Sq7R/Ei93yx3Ol+GfhO68baydT1kE6VattKhQq" +
+                        "yEf8skA4Cjvj6V9HxIqRqiAKqjAA4AHpVTRdNttI06CwsIhFbQKFRR/M+pPrV6vExOIdaXktj0KcOSNg" +
+                        "ooornNAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKK" +
+                        "ACiiigAooooAKKKKACiiigAooooAKKKKACiikouAtFFH40AFFMLhepx9ayL7xNotgGa71ewiVDhszrkH" +
+                        "0xnNNJvZCckjaorhrz4p+ErVtv9qic4z+4idx9MgYzWBe/G7RY1/wBC0+/uGzjDhYx+eTW0MNWntFkOr" +
+                        "Bbs9YoJ4rwm++OV4zv9h0SBEx8pnmJIPuAOa5+8+MPiu5UCGSytcdTFACT/AN9E1vHLq76WIliYI+ky4" +
+                        "BA9aR5FT77BR6k4r5OvvHXii9Mnn65ehX4ZI22L+Q6Vh3N7d3YAu7u4uAOgmlZwPzNbRyqb+KRm8WuiP" +
+                        "rq78R6NZb/tWrWMTJ95WnXcPwzmsC8+KPhG1QN/ayT84xBGzn9BXy38u7tu/WtGw0XVNRZPsGn3tyW4V" +
+                        "o4WYZ+vStv7LpwV5y/Ih4qbeiPeLv41eHI5GW3g1G4AHDJEFGfT5iDWFefHPKOLPQmD/wALS3OV/EAVx" +
+                        "OnfC3xbfhGOmrbqTgtcSqhX3xkn9DWs/wALV09d/iHxPpVgE5kjVtzBexGcfypexwUPtX+8Oes+hLefG" +
+                        "rxBLt+y2en22OuVaTP5kVjXXxS8XXDsRqaQqw+5FCigfQkE/rV9tM+G+lhhd6zqerTIc7bRAqsPTOMf+" +
+                        "PVFJ4q8GafvGj+DEuGDBlkv5i3H0OSD7VtBUf8Al3Sb/rzIcpdZHM3HizxHqEbRTazqU6MeUWVjn8qlg" +
+                        "8MeKNYIZdK1W52gEGYN09i9bs3xT1uMP/ZNppWlIzZ/0e1XIHoSeD+VZP8AbvjHxJJshvdYvSWztt9wU" +
+                        "H/gOABW3vx15YxI91vW7LyfDPWolD6nNpOlRkZDXd2i5Ppxkg+1NHh3wtZgf2p4ximPKtHp9s0hVvTce" +
+                        "MfhVvS/hP4r1MiW6tobNWO4tdS/N9cDJz9a1ZPAHhXQhu8UeLYi65BhtAAx9u5B/Csnidf4l35I0jDry" +
+                        "/eznDd+B7DyzBpes6myghjd3CwIT24QE/qKdZeJ5WeNPDnhLSopUDYZLVruT6hmJ6fjW23iP4f6KxGje" +
+                        "GptTmU8T3rYUkdDhvX6CqN98WNfkj8rS4bDSLfsttCCRntk8fkAaFGVT7DfnJ/oJtLr9xrQ6V8S9YiCz" +
+                        "TyabaEbW3OlqgBHXamP5ZrIuvCugWTb/E3jOKebbgx2Qa4fr/eOa5o3XiDxXdeWZtS1Sc4+TLSY9MgcD" +
+                        "611+ifB/Xr1RNqklvpcP3j5h3uB9BwPxNErUvjmo+i1BXlsrmbJrPgnTONK8N3OpSrysmp3GEB/3F4I7" +
+                        "80+08YeKtVf7H4YsorJCNoi0q0ClR2BfBI+uRXRy6f8OPCOBe3MuvagnLRKd65+gwo/EmsvVvizqTQG0" +
+                        "8N2Nno1pyF8tAXx+WB+Wfes1ab/AHcG/OQ37vxP7hD8PNbu4zqPjPWINNhzkyX0/mSc+gzjJ9M1Xlu/A" +
+                        "fh9SthY3PiO8XIEt2fLtwfXb3/L8a4u4utQ1q+Vrma6v7yQ4XcTI5+g5/SvRfCXwg1LUNlz4gf+zrXqY" +
+                        "lAMrD37L+Oa0nGMI3rz+S/q5MLv4F95zl94z8Ra8w0/TybS3fhLHTI/LBHp8vJroPD/AMK5UtTqfjO+T" +
+                        "SLBcM8ZYeafq3QZ9OTXTan4t8KfD+GSx8K2UF5qWNryKdwB/wBuTkk+w/SvJPEniXVfEt15+r3TygZ2Q" +
+                        "9I0HsvT8etTT9pVVqS5Y9+o5Wh70ndnbar4+0zQLaTTfh7p0dqhG2TUJEzJJ7jPJ+rfgK82u7me8uXuL" +
+                        "uaWedzlpJGLMfxqKlRHkkSOJS8jkKqgZLE9AB3NdlOhCkrx+ZlKbm9di5oumXetapb6fp0Rlup22qOwH" +
+                        "dj6AdSa+qfBHha08KaJHY2mGkPzzzEcyv3J9uwHYVgfCnwOnhfSzdXqBtXuVHmnr5S/88wf516EBXi47" +
+                        "F+2lyR+FHdQpciu9wAooorzzoCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo" +
+                        "oooAKKKKACiiigAooooAKKKKACiiigAooooAM0UwsewzVO/1aw05GfULy2tVXqZZVX+ZoWuwNpbl/NGR" +
+                        "XDan8U/CdhvU6l9pkVtpS2jaQ/gcYI/GuV1H44WKbhpukXU+GwGmkWMEevGTW8MLWntEzdWK3Z7FuHrS" +
+                        "5FfOepfGbxFcbhZW9hZjOVYIZGA9Dk4P1xXMaj498U6huE+t3aqW3bYSIwPptwa6oZXWe9kZvEwR9XXF" +
+                        "xDbxmS4ljiQHBaRgo/M1gal448M6azrd61ZiRBlkR97fkuTXyfc3NxdOz3VxNO7HLGSQtuPvUQAAAAGB" +
+                        "0HQV0Qypfbl9xlLF/yo+kNQ+MXhe2Yi3e8u+MgxQEAn0yxH8q5u++OS5X7BobkD73nz4/LaDmvE6K6Y5" +
+                        "bQW6uQ8TNnpV/8AGXxLcAi2isLUZyCsZdgPT5jj9K56++IXiu9dzLrVzGrDBSECNfwAHX8a5b6kU+GKW" +
+                        "d9kEUksn92NSx/QVusLRhryoydSbZPd6jf3pX7ZfXdxt6GaZnx+ZqoFGc4Geua63Svh54p1Jl8rR54UY" +
+                        "433OIgOM5wecfQV1+lfBLUZlU6rqttbZAJSFDIQfTJwKmWJw9LRyXyGqVSR5JzSFgO4/wAa99Hw18D6C" +
+                        "vma3qLysCDi6uhGPptGM1G3jT4c+HQq6LpsV1KoyjW9rnv03vWLzBS0pwb/AAK+r2+NnjOm6Dq+pnGna" +
+                        "Xe3HG7McLYx656V1un/AAl8V3gBltba0U4/18wyR7Bc/rit/VfjbetlNI0mCBBkAzyFzjtwuAD+JrjNV" +
+                        "+IfirUgyzavNCjDG22AiH6c/rTvjKnRRXmLlox8ztoPg1BZp5niDxFBbru48tAoIHXlj1/CkfTfhVog/" +
+                        "wBIv5tVmX5giyNJu/2flAX8DXkdzcTXUrSXU0k7sc7pXLnP41Ggy4RAS5ONijJz6Y601hqkv4lR/LQPa" +
+                        "xWkYnrR+I/hbSFC+GvCUOUOUlnVUPv2ZhWZqPxi8S3Py2gsrGPJ/wBXFuOPqxPP0Fc/ovgPxNrG1rXSZ" +
+                        "o4m6Sz/ALpfqN2CR9Aa7zRPgjcOEk1nVY4xwTHax7j9NzcfoaxlHB0vi1f3midaWysebal4q1/Usi/1i" +
+                        "/lXBG0ylQR7hcCsyzsrrUJ1jsrae6lJAAjQueenSvem8N/DjwgQdUmt57pcELcy+a5I/wBgf4YrOv8A4" +
+                        "w6Pp0Rg8M6KzKBhWcLAn/fK8n9KqGJctMPTuHsus5HE6P8ACvxVqIVnskso2H3rqQKR/wABGTmuri+EW" +
+                        "kaTEJ/FPiJIlAJ2x7Yh9ctkn8q5DXPif4o1Yuq3q2MTcFLRNnH+8cn9a425nmupmluppJ5WOS8rFm/M1" +
+                        "o6WKq/HJR8kZuVKL2uewPq3wv8ADZ/4l2mtq1yhJDFDKM9CNznH5AiszU/jJqrJ5Wh6bZ6dCBhMjewHb" +
+                        "jhf0NeX5ycD5mPA9T7V13h34deJNc2PHYm0tm5E91+7GPUKeT+VS8NQprmqu/qylUnLSCsZms+Lde1nc" +
+                        "NR1a6ljbOY9+xPptGARWPaW015P5NlDJcTt/BEhcn8q968P/BnSLNBLrl3LfSKMtGv7qIY/Uj8RWlqXj" +
+                        "PwX4LgNppiQNMnH2ewQcn/afp+ZNR9dgvcw0L/gP2DetRnmHh/4SeItTCvfLFpkLAf685f/AL5H9cV26" +
+                        "+AfA/hCBZ/E9+LqUD7tzJtVvcRryf1rjPEvxa1/Vd0em7NLtj/zy+aUj3c9PwFee3E0tzO01zLJNMxyZ" +
+                        "JGLMfxNX7HFVv4suVdkLmpweiueyar8XrHTIjaeEdIjWJeBJKgjT6hF5P4kV5t4h8Xa94hYjU9RlkjPP" +
+                        "kIdkY/4COD+OawSQOpA+tdn4O+HOt+KAkyx/YdPPP2mdfvf7q9T/KrVHD4Zcz/4JClUqOyOMVcsqIpLE" +
+                        "4CjkmvRvCHwn1jWVjuNVzpli3zHeuZnHsvb6mvXPDXgrw74KtWvCIzNGu6S9uyMr647L+FcL46+MJYyW" +
+                        "fhNcDJVr6Rf/QF/qa53jauIfJh1bzNvZRpq9RnVSf8ACHfDCx3KqreFeAP3lzN/gPyFeS+NviTrHiXfb" +
+                        "xs1hpx4+zwty4/226n6DiuNurma7upLm6mkmuHOWkkYsxP1NQ10UcDGD56msjOVZy0jogAA6cUUUV2mF" +
+                        "g7Z4x79K9u+CfgXYIvEmrRHzGGbKJx90H/loR6nt6VyHwk8EnxPq/2y/Rv7ItGG/PSZ+oT6Dqa+l40CD" +
+                        "CAKoAAA6CvHzHF/8uofM7MPS+2xVBA6U6iivGtY7QooooAKKKKACiiigAooooAKKKKACiiigAooooAKK" +
+                        "KKACiiigAooooAKKKKACiiigAooooAKKKM0AFFNWRW6HNUdV1rTdJjMmpX1varjP72QAn6DqfwppNuyE" +
+                        "2luX6M+9eZ658YfDtkzJYC51GUZx5SbU/76bt9Aa4TWPjPrd1uXTLS1sUJOGYGV8fjgZ/Cumnga9T7Nv" +
+                        "UzlXhHqfQ5OB1xWBrPi7QtHDf2hq9nCy4ym8M/P+yMn9K+YNX8Va/rDE6jq93KpOdgcog/4CuBWIAB0F" +
+                        "dtPKW9ZyOeWK/lR9C6r8a9Dtwy6ba3t8/OCVES5+rc49wK43VfjXr1wxGnWdlZpu4LZlbHvnA/SvLaK7" +
+                        "IZfRh0v6mLxE5HRan438TampW81q8KEEFI28tSD2IXGa56RmkffIzO/Tc53H8zSUV1xpwhpFWM3Nvdh6" +
+                        "e1FFGRgknGOvtWggorT0fw/q+ssBpWm3V0D/EkZ2/8AfR4rv9D+C+t3e19Vu7Wwj5yi/vX7emB+v4VzV" +
+                        "cTRpfGyo0pTeiPLadDG88gjhjeWQnAVFLEn8K+jdE+EHhmwCteLcajKOpnk2qef7q4/Wuinv/C3g+Da8" +
+                        "mmaYoGNkYVWP4Dk1xzzWL0pRbN1hraydj580j4c+KtUwY9Le3T+/dERDj2PP6V2+k/A+YkHWNYQDulrH" +
+                        "k/99N/hWtr3xp0uAsNHsbm9k7SSnyk/qf0H1rgdc+K/inUw6QXMenxNn5bZPm/76OT+WKSlja2y5UH7m" +
+                        "HmerWvw48F+H4xcahFHLsw3m38/A98ZAx+BqO7+I/gvw7GYdM2SsoIEenwALwem7gfrXzvf3dxfzGS9u" +
+                        "JrhyclppC5/WoPoMVSy5y1rTbB4i3wI9g1n4330u5dG0qG3B4Ely5dvY4GB+HNcPrPj7xPq24XWr3Ecb" +
+                        "Z/d258pcHt8vP5muX7471PY2lzfzCGxt5riY/wRIWP6V1RwtCj9n7zKVac9GQuTI5eQl2PVmOT+ZpBxw" +
+                        "Oh7V6L4f+EXiPU8PfiDTID18475CP8AdH9SK9J0D4P+HdO2vqCzanMO87bUz/ujr+Oayq5jRguXf0KhQ" +
+                        "nI+eLGzub6cQ2NtNcyHpHDGXJ/AV3Oh/CXxPqJVrqGHToT1a4fLf98rmveLy/8AD/hKyHny2OmW46IoC" +
+                        "Fseijk1534i+NFlCWj0Cxlun7TXB8tPwUcn9K5frletpQh8zR0YU/jZc0T4MaNalW1W6udQcdVU+Un5D" +
+                        "k/nW7PqHgbwRHtUadayoB8kKCSU/XGT+ZrwnxB488Sa9uW81OWKBusNt+6T6HHJ/E1y4HWrWDq1VevN+" +
+                        "gvbwj8CPbNe+No3OmhaUWxwJrtsZ99q/wCNeda9468Sa4GS+1SVYm6w258pPyHP5k1zNHTrxXXSwVGnr" +
+                        "FfeZSqyluw6EnuxyT6mj+tdN4Y8Ea/4kKtp9kyWx63M/wAkePbPLfhXr3hf4OaPpwSbWpX1K4HVPuRD8" +
+                        "ByfxP4Uq+No0dHq+wQoyqbHhei6LqeuT+TpFjPdyd/LX5V+rdB+Jr0/w58FruUJN4hvhbqeTb2w3N9Cx" +
+                        "4H4A17OX0zQdOLMbWwsox2AjQV5f4u+Mtnbu8Phq3+2SjgXMwKxD3A6n9K8+WMxGI9yjGyOj2NOmrzZ3" +
+                        "Gj+FPDXhK2M9taW0BQfPdXBBf8AFm6fQYrk/FPxi0nT98OhwtqdwP8AloTshB+vU/gMe9eKeIfEWreIZ" +
+                        "/N1e+luOcrGTiNfoo4H86yK3pZbd81Z3ZnLEdIKx03iXxxr/iQldQvWjtT/AMu0HyR498dfxJrmRx0oq" +
+                        "S2hluriOC2ieeaQ7UjjXczH2Ar0Y04U46KyMHJz3I62fDXhnVvEt35Ok2jSqD88zfLHH9W/p1r0zwN8H" +
+                        "ZJfLvfFZ2L94WUb8n/fYfyH517JZ21ppNgIbaKG1tYF+6gCoo9f/r15mIzGMHy0tWb08K5fFscL4K+FW" +
+                        "k6EY7nU8alqA+YM64ijP+yvf6mtnxt450nwlBsuH869K5jtIsbvbP8AdFcN8Q/i2I/N07wqQ7j5ZL7sv" +
+                        "/XMdz7mvE55ZbieSe4leaaQ7nkkOWY+pNZ0cFVxD9pXehpOrGmuWmdB4x8Z6v4rud+ozbLYEmO0i4jQe" +
+                        "/8AePua5yiivYhCMFyxVkcjbk7sKKKKoQVseE/D914m1yDTbIFWf5pJO0aDqxrIRWd1VFZnYhVVRkkno" +
+                        "APU19PfCvwavhXQladVOqXQD3DddvpGPYfzrkxmJVCnpu9jWjT9pLyOp0DSLTRNJttPsI9kEChR6se5P" +
+                        "ua0cUDoKK+abbd2enYKKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU" +
+                        "hNAC0UmayNe8RaToURfVNRt7Xj7rNlz9FHJ/Kmk27ITdtzYpCeK8b8QfG21iLx6DYyXL9prj5EHXnaOT" +
+                        "+YrzXX/AIgeJdc3LdalJDAf+WNt+7Xr045P5mu2ll1apurIxliIR21Po/XvF+g6CD/ampW8T/8APNW3y" +
+                        "f8AfIya871z43Wibk0PTJbg9prlgi/kMk14UeTk9Sc5ozXo0srpR+N3OaWJm9jsdb+JXijVtytqBtIm6" +
+                        "x2i+Xx9fvH865CZ3nlaSd3lkbq0jFifxNNorvhShT+BWMHKUt2JjpzxS0UVYgooooAKKdDG80qxQo8kj" +
+                        "cBEUsx+gFd/4b+E/iLV9kt4iaZbNglp+ZMeyD+tZ1K0KSvN2KjCUtkeffWtPRdA1XW5Qmk2E91zgui/I" +
+                        "Pqx4H519BeG/hT4d0hkkuoH1K4X+O55TPsg4/PNd7HHDbQhIY44okHCoAoUfTtXmVc1S0pI6IYXT3zwj" +
+                        "QPgpf3O19d1CK0Q9YrceY/rjceB+tekaH8NPDGjhXi08XMy9JLo+Yc/Q8D8qi8TfEzw5oRaMXRvrpePJ" +
+                        "tcPg+7dBXk/iX4u+INVDRacY9Lt2/55fNLj3Y9PwArnSxeKd3ojW9KmtNT3rVNZ0nQLXfqd5bWUIGFVm" +
+                        "C5HsvU/hXnXiD41adbbo9CsZ71/+es37qMfhyx/IV4Rczy3U7TXMsk0zHJkkYsx/E1HXXSyymtajuzGW" +
+                        "KcvhVjsNe+I/ifWg6S6i1tA3/LK1HljH1HzfrXIMzO5d2LOTksTk5+tJRXo06UIaRijCU292FFOijeaV" +
+                        "Y4UeSRjhURSxJ9gK9H8K/CLW9V2Tauw0u2PO1xumb/gPQfj+VTVrwpK82KMXPZHm2R3NdX4b+H3iPXyr" +
+                        "W9g1tbN/wAvFz+7XHsDyfwFe/eFvh94e8PBXt7JZ7pf+Xi5xI+fUdh+Arq5XjhiaSV1jjQZLMcAD3NeV" +
+                        "VzRt2pI64YbrI8s8OfBjSbTZJrlzNqMo6xKfLi/Icn8TXo+maXp+j2/k6dZwWsIH3YkC/me/wCNcB4r+" +
+                        "Lmj6Szw6Vu1S5GRlDthU+79/wAPzrx3xP478QeJWZb69aK2PS2t8pH+PdvxNYww2JxWs3ZFupTpqyPeP" +
+                        "E3xL8OaEXj+0m9ulH+otcPj/eboPzrybxJ8XNf1QvHp3l6ZbHj9380pHux6fgK85HAwKK9Gll9Knruzn" +
+                        "niJy02JLiea5nae4lkmmblpJGLMfqTzUdFFdyjZaI5+bXVhQSB1OK6Dwp4R1jxROE0u0Ywg/PcyfLEn4" +
+                        "9/oK9x8G/CvRtD2XGoKNS1Bed8q/u0P+ynT8TmuTEY2nR0vdm1OjKZ434Q8Aa74mZJLW3NrZH/l6uAVX" +
+                        "/gI6n8K9q8JfCvQdDVJbqP+0r1efNuB8qn/AGU6fnmu+CqqAAAADFcH42+JmkeG/MtbdhqGpAf6iJvlQ" +
+                        "/7bdvp1ryJ4uvi3yx27I6o0adJXZ288kNpA008kcMMYyWYhVUfWvK/GXxksbLfbeG4lvpwdpuHyIV+nd" +
+                        "v5V5H4t8X6x4omJ1S6P2cNlLaLKxL/wHv8AU5rn67cPlajrV3MqmJvpA1PEGv6p4hufP1i8luW/hQnCJ" +
+                        "/ur0FZdFFerGMYLlijlbb1YUDk45owSQACSeAB1J9BXsHw5+Ez3Qi1HxUjRw/ejsuhcdi/oP9nrWVavC" +
+                        "hHmmyoRc37pw/grwRqviycG0QQWCkB7yUfIPZf7x+n419E+DvBWkeFLfbYQ+ZdMMSXUuDI/49h7Cugtb" +
+                        "eC0to4LaJIoYxtREGAo9hWH408W6d4T0w3V/JulYYhgU/PKfb0HvXg18XUxUuSP3HfClGkrs0dc1ix0H" +
+                        "Tpb7VLhILdO7dWPoB3PtXzn8QfiLqHiqV7a33WekBuIFPzS+8hH/oPSsLxf4p1LxVqZu9Sl+RSfJgTIS" +
+                        "IegHr79awq9LCZfGkuapqzmq13J2Wwf5Aooor0krHOFFFFABQKK1vC2h3HiPXrTTLXhpm+dv7iDlm/Kl" +
+                        "KSgnJ9BWb0R6L8CvCAv74+IL5Aba2bbbKw+9J3b6L/OvfVGBVPR9PttK062sLKMJbwRhEA9B3+tXa+Wx" +
+                        "Fd15ubPVp01CNkFFFFYGgUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUE4oAKQnF" +
+                        "ZOueINM0KIzateQW0fbe3zN9F6n8q8q8T/Gtfnh8N2G7t9puhgfgg5/P8q2pYepWdoIiVSMN2ezT3MME" +
+                        "TSzypFGoyzuwUD6k1574n+LXh7St8Vg76ncrxtg4jB93PH5ZrwTX/Eer+IJvM1e/muPSMnEa/RRxWT9O" +
+                        "npXqUcqS1qu5ySxTfwnfeI/it4j1csltMum2x42W33yPdzz+WK4OaR5pWlmkeSRuruSSfxNNor06dGFJ" +
+                        "WgrHPKcpbsKKKKu3UiwUUUUxhRRRQAUVYsLK51G7S1sLaa5uH+7HEu4mvWvB3wZmnKXHii58lOv2S3bL" +
+                        "f8AAn6D8PzrCtiaVH4mXCnKex5Np9jd6ldJbafazXVw3SOJCx/HHSvVfCnwXvblUm8SXQtYSM/ZoCGk/" +
+                        "Fug/DNez6JoWm6HaC20q0itoe4Qct7k9T+NaOcV49fMpz0grI7IYZLWRh+HfCuj+HYgulWEUT4wZSN0j" +
+                        "fVjzW1LJHHGzysqIoyzMcAD1JrgfGnxS0fw/wCZb2hGo6gOPLib5EP+2/b6DJrw3xZ411zxPIw1C7KWu" +
+                        "crawfJGPqP4vxrOjg6td8z082OVaFPRHtPiv4t6LpIeDSwdUu14/dnESn3bv+FeM+KfHWv+JC6Xl4YbU" +
+                        "ni2txsQD37n8TXMfgMdvaivYo4KlRd7XZyTrSnuAGKKKK61psY2CijgAk11Xg3wLrHiqUNax/Z7EH57u" +
+                        "YYT32j+I1NSpCmuabsNRb0SOWRWd1RFLMxwAoySfSvSvBvwj1bWQlzrDHTLM8hSMzOPYdF/H8q9d8GeA" +
+                        "NF8LIsltF9ovsYa7nALn2Xso+ldeBg14uIzNy92mreZ208NbWRz/hfwho/hmAJpdnGspHzzuN0j/Vjz+" +
+                        "XFb+8AEngDqTWB4t8W6X4XtPO1O4UOR+7gTmSU/7I/r0rwDxt8SNY8SmSCFzYabkj7PE3zOP9tu/wBOl" +
+                        "ctHDVcU+bp3NZ1IUlZHrXjT4q6PoZe204jU79cgrE37tD/tN/QV4d4q8Za34nmJ1O7YW2fltovljX8O/" +
+                        "wBT+lc6AAMAcUte1QwVKjqtWcM60phRRRXYZWCiiun8D+CtV8XXOLRDBZIcS3cg+VfZf7ze1RUnGmuaT" +
+                        "sioxcnZGBZWdzf3cVrZQST3Mpwkca5Y/hXtHgf4OxxiK88VMJX6iyRvkH++e/0HFeh+DfB2leFrTy9Oh" +
+                        "BnYYluH5kk+p7D2FdJjC8dq8PFZjKp7sNEdtLDKOsiC1t4LO3SG2iSGFBtREXAA9hVfWNXsdF0+S91O5" +
+                        "S3t06u56n0A7n2Fc/488c6f4StB9oInv5ATFaxn5j7k9h7184eKfEmp+J9QN1q0/mEZ8uEcRxD0Vf69a" +
+                        "yw2BniHzPRF1a8aasjsvHnxW1DWjJZ6H5ljpxyGkziaUfX+Eew5rzT1J5JOSe5oor6CnRhRXLBaHBKbm" +
+                        "7sKKKK0SsSFTWVrcX13Da2cLz3EzbY40GSxqTS9Pu9V1CCx0+FprqZtqIo/U+g96+mPhx4Ds/CVkJXCz" +
+                        "6rKuJp8fd/2V9B/OuXF4uGHXeRrRpOqzJ+Gnwzt/DypqGrrHc6sfmVeqQey+re/5V6X060dK5fx74vtP" +
+                        "COkm6uMS3MmVt7cHBkb39FHc185KVSvPXVs9BKNKIz4geNLHwfpvmTATX0uRb2oPzOR1J9FHrXzHr2sX" +
+                        "2vapLqGqTGW4c/8BUdlUdgKbrer3uu6lNqGpzGa5lPJ7KOyj0A9Ko19BhMHHDxu9ZHBXre0dlsFFFFdp" +
+                        "hYKKKKBhRRRQAV9CfAnwudM0RtZukxeX4/dgjlIu359fyrxzwD4fbxL4ps7AqTb7vMuD6Rryfz4H419a" +
+                        "QxJFFHHGoVEACqOgAHAryM0rtful8zqwsL+8yQUUUV4p3BRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRR" +
+                        "RQAUUUmaAFoozSE0AKaTPPFcf4t+IegeHA0VxdC5vBwLW3w759+y/jXjHir4ra9rReKycaXaNkbYGzIR" +
+                        "7v/AIYrpo4OrW1irIyqVow3PcfFPjfQ/DeV1K9X7Rji3i+eQ/8AAR0/HFeP+KfjFq+ob4dCiTTrc8CRs" +
+                        "PMR9eg/WvLmZmdmclnY5ZmOST6k0lexRy2lDWWrOOpiJS22Jry6uL25a4vJ5Z535aSRizH8TUNFFd6SS" +
+                        "sjBu+4UUUUwCiiigAooooAKKO1db4K8Bax4qlWS3j+zafn5rqUEKfXaP4j+lRUqRpLmkxxTk7I5NEeSR" +
+                        "I41Z5HOFVRkk+wr1DwZ8IdR1Py7rxA76faHBECgGZx79k/U/SvWvBvgPR/CqK1pCJ7wj57qYAufp2UfS" +
+                        "urxxXjYjMpS0pq3mdlPDW1mZHhzw7pfh+0FvpNlHbqR87AZdz/tN1NbLAVHNNHBC8kzKkaAlmY4AHqTX" +
+                        "jnj74vpD5lj4U2zS8q184+RT/sD+L69PrXBTpVK8rR1Z0SnGmj0bxb4u0jwtbeZqdyBIR8lunzSOfZf6" +
+                        "mvAvGnxN1nxIXt7Z20/TW48qJvncf7TdT9BgVxd7dXF9dyXV5cSz3Mhy0srFmP41DXt4bL6dH3pas4am" +
+                        "IlLRbBjgD0ooor0F2OdBRRRTsMKktoJrq4jgtYnmnkO1I413Mx9hWl4X8Paj4l1NbLSoDIx5kkbhIh6s" +
+                        "f6V9I+AvAWm+EoFeIC41F1xLduvzH2X+6tcWKxkcPpvI1p0XU9DifAHwhSHy7/xUBLL95bFTlV9N57n2" +
+                        "6V7FBDFDCscUaRxoMKqjAA9hUgGDTZJVjRmchVUZZicAD1r5+tXnXd5nowioqyBiMZzXl3xE+Klvopl0" +
+                        "/QTHd6mMq0pOYoT/wCzN7Vy3xO+J7X5m0nw1K0dp92a8U4aQd1T0Hv1NeRjvXpYTLr+/W+45auI6RLWp" +
+                        "X93ql7JeajcSXF1J96SQ5J/wHtVaiivaSUdInHe7uFFFFABR2J9KOgyeBXrPwk+HH9reVrWvREWKtugt" +
+                        "mGPOP8Aeb/Z9u9Y168aEeaRUYOb5UUvhn8Mp/EHl6lrSyW+lZ3Rx9HuP8F9+/avoPT7K2sLaO2s4I4Le" +
+                        "NdqRou0KKsIgRFVAFVRgAcAClLY6183iMTPESvLY9KnTVNWQhwDjpXnfxP+IcPhaBrHTylxrEi/Kh5WE" +
+                        "H+Jvf0FP+K3jxPC9kLSwKyaxcL+7XqIl/vt/QV83XFxNc3Ek9zK0s0rFndzlmY9STXZgcF7X95P4fzMa" +
+                        "9fl92I6+u7i/vJbu+mee6mO55HOSTUFFFe8lZWRw3CiiigAqaytZ767htbOJ5rmZgkcaDJYmoa+h/gz4" +
+                        "GGi2K6xqkX/ABNLlf3aMP8AURnt/vHvXPicTHDw5uvQ0pU/aSt0Nr4ZeB7fwlpm+YJLqs6gzzYyF/2F/" +
+                        "wBkfrXbjGKMGmu4QMWOAOST2r5mpOVSTlLc9NJRVkZviXXLPw/o9xqN++2GJeADy7Hoo9zXyn4r8QXni" +
+                        "fWptSvzgvxFGOkadlH9feui+LHjFvE+um3tHJ0uzJSLHSRu8n9B/wDXrha9zAYX2UfaS3ZwYirzvlWwU" +
+                        "UUV6RzhRRRQAUUUUAFH86KvaHpsus6zY6bB/rLqVY/oCeT+AyaTkopyfQLX0R7p8AvDwsfDsusTpi4v2" +
+                        "/dkjkRKePzOT+VerqMACqmnW0NjYwWlsoWCBBGgHYAYq2OlfJ1ajqzc2etCPLFIKKKKzKCiiigAooooA" +
+                        "KKKKACiiigAooooAKKKKACiimkj1pXAcaTNch4x8faJ4Y3R3VwZ73HFrAQz/j2X8a8R8XfFDXvEHmQQS" +
+                        "f2bYNx5VuxDkf7T9fyxXXRwdStqlZGU68Iep7V4u+Iug+Gy8UtwLq9H/LtbkMwP+0eij614p4s+J+v6/" +
+                        "vihk/s2ybjyrdiGI/2n6n8MCuE65zznr70vfPevZw+X0qOr1ZxTryn6BxkkjOeue9FFFdySWxiFFFFAB" +
+                        "RRRQAUUUUAFFFFMAqxp9jdaleR2mn28lzdSHCxxjJP+A9zXT+BvAGq+LJRKim000H5ruReD7IP4j+lfR" +
+                        "HhHwnpXha0EGl24DkfvJ35kkPqW/pXBicfCj7sdWb06Dnq9jgPAfwht7MJe+KCl1cjDLaocxJ/vH+I+3" +
+                        "T6165HFHGipGoVFGAqjAA9KkAHpSNjmvAq1p1XzTZ3QhGCsgPrWH4r8Uab4YsPteqzhFPEcS8ySt6KO/" +
+                        "wDKuY+InxJsvDKyWdlsvNWxjyw3yw+7n1/2a+edZ1W/1rUJL3VLl7i5f+JjwB6Adh7V2YTASre9LSJlW" +
+                        "r8mx0Xjvx9qniyZonY2mmA5W0jbr7uf4j+lcf2x2o7Y7UV70KcKa5YKyOCUnN3YUUUVYgooopgArqPAn" +
+                        "gy/8X6iYrYGCyiIFxcsOEHovqx//XT/AIeeCrvxfqWwb4dOiP8ApFxjp/sr6t/Kvp7Q9Js9F02Gw06BY" +
+                        "baFcKo7+pJ7k+tebjcb7H3KfxHRRoc+r2Kvhjw/p3h3S0stLhEcQ5ZurO3qx7mtoCjAHamk4FfPttu7O" +
+                        "9JRVkJK4jQuzBVUZJPQCvnn4sfEWTXZZtJ0SUppSkrLMpwbkjsP9n+daHxo8fm7ll8P6NLmBDtu5lPEh" +
+                        "/55g+nqa8fHAwPpXtYDBbVanyOLEVm/diIBiloor1zlCiiigAoorZ8H6DceJfEFrplt8okOZZP+ecY+8" +
+                        "35cD3NKUlCLlIEruyOs+EPgX/hJb/8AtHVIj/ZFs33T/wAvDj+H/dHf8q+kYkWNAqABRwAOg9qqaPplt" +
+                        "pOm29hZRLHawIERAO3+J61eFfLYnESrz5nsepSpqnGwVzfjvxPbeFdAmv7ghpT8kEWeZH7D6V0TsqqSz" +
+                        "AADJJ7V8r/FDxU/ijxLK0TsdPtCYbdexA6v+J/SrwmH9vUSeyJrVPZxOa1XULrVtRuL6/lMt1O26Ryf0" +
+                        "HoB0qrRRX0ySSsjzXfqFFFFMAooqaxtZ769gtLVN887iNF9STQ2km2HWx6F8FvBw17WTql/FnTbI/KG6" +
+                        "Sy9QPoOD+VfSC9Oax/CWhweHfD9nplso2wr87Y5dzyzH6mtmvl8XXdepzdFsenSpqEbAa8t+OfittJ0Y" +
+                        "aPZSbb3UFIdl6pD3/Pp+del3k6W1u80zhIo1Lux7ADJNfI3jHXZfEniS91OXO2V8RKf4Ixwo/L+da5fQ" +
+                        "9rU5nsicRU5Y2RjDgYHSiiivo+p5wUUUUAFFFFABRRRQAV6r+z5owvPEV5qkq5jsotkZ9JH/wAAD+deV" +
+                        "HpX018ENKGm+BLWVlCy3rtct9CcL+gFcGY1OSjZdTbDR5pHehQBThRRXzp6QUUUUAFFFFABRRRQAUUUU" +
+                        "AFFFFABRRQTgUAITjtQW9qxPEvifSfDluJtXvI4cj5Y+sj/AO6o5NeJ+Mvi9qmqGS30BDptqePNPMzD6" +
+                        "jhfwya6KGFqV37q0Mp1oU9z2Hxb420XwvERqV0DckZW2i+eRvw7fU4rw/xh8VdZ11nh05m0uwPG2Jsyu" +
+                        "P8Aaft9B+defzSPNK8krs8jnLOxyWPqSabXtUMup0tZas454iU9FoBySSeSTkk8kn1PrRRRXetNjAKKK" +
+                        "KACiiigAooooAKKKKACiitjwv4b1PxPqAtNKgLkEGSVuI4h6sf6DmplKMFeTshpN6IyoYZZ5kht4nlnc" +
+                        "4SNF3Fj6AV7V8PfhEFMd/4rAY8MliDkD/roe59hXceA/AGmeE4RIg+1akw+e7kHI9lH8I+ldmAK8PFZj" +
+                        "KfuUtu52UsPy6yIoIVhhSOJUSNBtVVGAAOwHapcY5pe1UdV1K20uwlvL+eO3tohl5HOAP8A6/tXmJN6I" +
+                        "69kW3kWMFnIVQMlicACvEviV8V8+fpvhOXHOyW//pH/APFflXMfEf4k3fidpLLTTJa6PnGOjzj/AGvQf" +
+                        "7P51572AwPSvaweX29+r9xxVcRfSIrEsxZmZmJySxyST1J96SiivXWisjjtcKKKKBhRRR9KADIHWuj8D" +
+                        "eErzxbrQtLbMdtGQ1xORkRr/iew/HtWf4b0S98Q6vBp2nJumlPLEfKijqzewr6p8IeHbLwzokWn2CYC8" +
+                        "ySH70jd2NcOOxaox5Y/E/wN6NLnd3sW9B0az0PTILDToVitoRhR3J7knuT3NaQFA6Cg184227s9BJJaA" +
+                        "TXmHxl8cf2Dp40rTJANUukyzDkwRnjd7E9q7Dxn4jt/DGhXOo3RB2DbFGTzI5+6o/r7V8oatqNzq2pXN" +
+                        "/fSF7m4cu5/oPYV6GAwvtZc8tkc+Iq8q5VuVBnvz9Tn9aKKK+h3RwBRRRQAUUUUAFfRvwR8LDRvDa6jc" +
+                        "Ji+1ECXkYKRdVX8ep+teJeAdCbxH4ssNPKkwF/Mn9o15P59Pxr61jRUjVUAVVAAA4wPSvHzWu0lRXqzr" +
+                        "w1NfEySkJxS0jHFeLY7Tzz42eIjonhNrW2fbeaiTCuDyEx85/Lj8a+asAAAAAD0rvfjZrX9reObiBHJg" +
+                        "sFFunpu6ufzOPwrgq+ly+j7Kir7vU82vPnn6BRRRXaYhRRRQAV6l8A9A+3+I7jVZVDQ2CbY89PNbIz+A" +
+                        "z+deWjg19N/BPShpvgKzdl2y3hNy/GDzwv6AVwZjV9nRt3NaEOaZ3q9KU9KBQ3Q186kemec/HLXP7L8F" +
+                        "PaxOUn1BxACOoTqx/Lj8a+bAMD0r0/9oDU2uvFttYK37uytxkZ43ucn9Nv515hX0eX0vZ0VLuebXnzT9" +
+                        "AoooruMQooooAKKKKACiiigCS3ge5uIbeMZeZ1jUe7HAr7J0m0Sw061tIRiO3iWJR7KAK+W/hhZf2h4+" +
+                        "0WEjIWbzmGOyjdX1eK8PNZ3lGB24SNk2LRRRXlHWFFFFABRRRQAUUUUAFFFFABSE4qC6vILS3ea7ljhh" +
+                        "QZaSRgqj6mvJPGfxktoFktvC8P2mYcfapRiMf7o6t/KtadCdZ2giJVIw3Z6nrOsafo1m11ql3FbQD+KR" +
+                        "sZ9gOpP0rxbxh8ZLicyW3hiEwxdDdzjLt/uL0X6n8q8s1jWL7W71rnVbyS6uG4y7ZAHoB0A9hVe3t57p" +
+                        "itrbzzsOoiiZ8fkK9ehl1On71V3ZxzxEpaRFvbq4vrl7m9uJLi4k5eSRixP4moe+e9bVl4U8QXyM9pom" +
+                        "oyKOCfII5/Gti1+GXi65iDrpDoD2llRD+ROa73XpRVuZIw5ZPWxxtFekW/wb8TyBTI+nRZ6hpiSv5L/A" +
+                        "FrXh+Buosy+drdoq/xbIGJ/DJrKWNoLeRaozfQ8gor3WH4GWQkBm1y6dO4WFVJ/GtaD4LeGkdWkn1KYD" +
+                        "+FpgAfyUVk8yoLuUsNN9D5060dBntX09b/CjwhDKHOmvLj+GWd2X8s1qW/gHwtbyCSLQrAOO/l5/nWUs" +
+                        "1p9EylhJdz5L3rnG4Z9KkWN3YKkbsx6AKSa+xI9A0mJw0Wl2CMOhW2QH+VXxCi/dVQPYVn/AGt2gUsJ5" +
+                        "nx2mhau4BTSdRIPQi1fB/StGLwP4pmjDx6BflDyDsAP6mvrYDAowe9ZvNanSKKWFXVny3bfDHxfcpuGk" +
+                        "eWD2lmRT+pq/Z/CDxXOcSw2dsPWScH/ANBzX0rijFQ8zrPsV9VgeBaP8E9Ua/i/ti9tUsgcv9lZmkb2G" +
+                        "QAM+vP0r23QtHsdD06Oy0y2SC3Tso5J9Se59zWjigVy1sTUr/GzWFOMNgxRRRWBoIe9cn4u8DWHiuWJt" +
+                        "WvNR8qIfJBDMEjB/vYxya62kwc9acZSi7xdhNJ7nm8Pwc8KxnLJfSeu+46/kBVuP4UeEFXnTJGPq1zJn" +
+                        "+dd7j2oxWrxFV7yZCpR7I4X/hVPhD/oFv8A+BMn/wAVT4/hb4RTppIPf5p3b+bV2+KMfSp9vV/mY/Zx7" +
+                        "I5GP4c+E0HGiWpJ67gT/Wph4B8KgADQNOwPWIGuoxRik6s39pj5I9jmP+EB8K/9ADTf+/Io/wCEB8K/9" +
+                        "ADTf+/Irp8UtL2k+7Dlj2MjRPDukaI8j6TptrZtIMOYYwpI9DWuBRRSbb3GklsFFFFIZg+J/CmkeJvJG" +
+                        "s2zXCw5MYErIAT3+UisE/CnwhjjSn/8CZP/AIqu7IJ6GjFXGrOKspWJcIvdHnk/wh8KSE7LW6hz/cuW/" +
+                        "rmqn/ClvDJ/5bamP+3hf/ia9OxRitFiay+0yfZR7I8nuPgjojj/AEfUNRgP+0yv/QVUPwLsT/zHLzP/A" +
+                        "FxSvZMUmKv67X/mF7Gn2PDp/gZMH/0fXk2/9NLc5/RqqXHwO1NEzb6vZyt6PEyfrk175ilxVLMMR/MS8" +
+                        "PTfQ80+E3gC78JXF/dapJby3U6rHGYWLBUByc5A6nFelgYAFAormqVJVJc0tzWMVFWQVW1GcWtnPcEFv" +
+                        "KjZ8AZJwM1ZpGGfpUFHxdeyTXN5cXFyjiWWRpH3KRyST3+tV9w6ZHPvX2nLawyoUlijdD1VlBBrKu/CW" +
+                        "gXkRiudG090PUCBR/IV7Ec1SSTgcLwsnsz5Cor6ku/hf4RuSpOkRw7enkO0f54NY138F/Dcru0M2oW+e" +
+                        "irKGUf99KT+tbxzSi/iTJeFn5HzpR0617ZefAtRC32HXWL54E9uMAfgeaw774LeIIGItbzT7lAOpZoz9" +
+                        "MEH+dbQx1CXWxDoTXQ8v2l/kX7zcD8a+y9GthZaRZWyfdhgSMfgoFfNlv8ADfxVZ6pYNdaRI0BuI97RO" +
+                        "smF3DJODwMV9PKOSB0FedmdaM3FQdzpw0HG90PFB6UUjnajH0Ga8s6j5I+IV59v8ca3PnINyyr/ALq/K" +
+                        "P5Vz1WdTlM2p3sh6vPI3PuxqtX11NcsEl2R5En7zCiiirEFFFFABRRRQAUUUUAel/AC287xvLMRxBaOQ" +
+                        "fQkgf1NfRo614V+zjBnUNbuP7scSD8SxP8AKvdRXzeYyviGejhlaAtFFFcRuFFFFABRRRQAUUUUAFFFF" +
+                        "AHHa54E07xBKW1281G9T+CLz/Ljj+iqAM+55otvhr4RgCY0W3kZOjSszk/XJrsaKtVaiVlLQjkje9jJt" +
+                        "vDui2sivbaTYROvRkt1B/PFaSRxx52Iqf7oxUlFS23uUklsNPPejHSnUVNu4xpUHrSgUtFMAxRiiigAo" +
+                        "oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo" +
+                        "oooAKKKKACiiigAooooAKKKKACiiigAxTcANnvTqKAEwKUDFFFFgCmyDcjD1GKdRQB47qPwRsJ5Gex1e" +
+                        "7hJLEiaNXBJOe2MfrXL6h8FvEMBH2K6sLtTnOWaMj06ivoqiuuGPrw6mLoQfQ+TNQ8B+KdPybnRLoqAT" +
+                        "uhAlAH/AAEnFc5PFJbsEuI5InPO2RCh/WvtXFQXdlbXiFLq3hnUjaRIgYEenNdcM2mviiZPCLoz4uor6" +
+                        "k1X4a+FtSLGTSYYHbA32xMRGPQDj9K5TVfghp0rFtM1S6tgTnbKolA46Z4NdUM0oy+K6MpYaa21PBqK9" +
+                        "K1T4OeJLRS1m1nfKAT+7kKMfoGGM/jXHat4W17Sdx1HSLyFRjL+WWXn/aXIrqp4mjU+GRlKnKO6Maiky" +
+                        "MkZ5HUdxTsH8K38zO/c9w/ZvQGx11/+msS/kpr2da8b/Zw50rXOOftEf/oJr2Ra+Yx3+8SPTofw0LRRR" +
+                        "XKbBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF" +
+                        "FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF" +
+                        "FFABRRRQAUUUUAFFFFABRRRQAUUUUAGKQ0UUgE/CmsKKKT02Ax9U8L6Hq25dQ0mzm4+8YwG568jmvOvG" +
+                        "vwt8O2dm13YLeWrlvuJNuXp0+YE/rRRXbhak1JJNmFZLlI/2chttPECDoJ4x/46a9lFFFLG/wAeQ6H8N" +
+                        "BRRRXKbBRRRQAUUUUAFFFFABRRRQB//2QsBkwJwcml2YXRlIHZvaWQgT25CZWZvcmVQcmludChvYmplY" +
+                        "3Qgc2VuZGVyLCBTeXN0ZW0uRHJhd2luZy5QcmludGluZy5QcmludEV2ZW50QXJncyBlKSB7DQpYdHJhU" +
+                        "mVwb3J0IHN1YlJwdCA9IG5ldyBYdHJhUmVwb3J0KCk7DQogICAgICAgIHN1YlJwdC5Mb2FkTGF5b3V0K" +
+                        "FN5c3RlbS5Db25maWd1cmF0aW9uLkNvbmZpZ3VyYXRpb25TZXR0aW5ncy5BcHBTZXR0aW5nc1siQ29tc" +
+                        "GFueUhlYWRlciJdKTsNCihzZW5kZXIgYXMgWFJTdWJyZXBvcnQpLlJlcG9ydFNvdXJjZT1zdWJScHQgO" +
+                        "w0KfQ==";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrLabel57 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.table1 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.subreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.table2 = new DevExpress.XtraReports.UI.XRTable();
+            this.tableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.tableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // detailBand1
+            // 
+            this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.xrTable1,
+                        this.xrLabel57,
+                        this.label2,
+                        this.label3,
+                        this.label4,
+                        this.label5,
+                        this.table1});
+            this.detailBand1.Height = 328;
+            this.detailBand1.Name = "detailBand1";
+            // 
+            // pageHeaderBand1
+            // 
+            this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label1,
+                        this.xrLabel7,
+                        this.xrLabel20,
+                        this.xrLabel16,
+                        this.xrLabel13,
+                        this.xrLabel5,
+                        this.xrLabel14,
+                        this.subreport1});
+            this.pageHeaderBand1.Height = 308;
+            this.pageHeaderBand1.Name = "pageHeaderBand1";
+            // 
+            // DetailReport
+            // 
+            this.DetailReport.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.Detail});
+            this.DetailReport.DataMember = "Detail";
+            this.DetailReport.Level = 0;
+            this.DetailReport.Name = "DetailReport";
+            // 
+            // ReportFooter
+            // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.xrLabel39,
+                        this.xrLabel30,
+                        this.label7});
+            this.ReportFooter.Height = 167;
+            this.ReportFooter.Name = "ReportFooter";
+            // 
+            // PageFooter
+            // 
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label6,
+                        this.pictureBox1});
+            this.PageFooter.Height = 39;
+            this.PageFooter.Name = "PageFooter";
+            // 
+            // xrTable1
+            // 
+            this.xrTable1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+                        | DevExpress.XtraPrinting.BorderSide.Right) 
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable1.BorderWidth = 0;
+            this.xrTable1.Font = new System.Drawing.Font("Arial", 12F);
+            this.xrTable1.Location = new System.Drawing.Point(0, 133);
+            this.xrTable1.Name = "xrTable1";
+            this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+                        this.tableRow4,
+                        this.tableRow3,
+                        this.xrTableRow1,
+                        this.tableRow2,
+                        this.xrTableRow3});
+            this.xrTable1.Size = new System.Drawing.Size(733, 120);
+            this.xrTable1.StylePriority.UseBorderColor = false;
+            this.xrTable1.StylePriority.UseBorders = false;
+            this.xrTable1.StylePriority.UseBorderWidth = false;
+            this.xrTable1.StylePriority.UseFont = false;
+            this.xrTable1.StylePriority.UseTextAlignment = false;
+            this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel57
+            // 
+            this.xrLabel57.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel57.Location = new System.Drawing.Point(0, 8);
+            this.xrLabel57.Multiline = true;
+            this.xrLabel57.Name = "xrLabel57";
+            this.xrLabel57.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel57.Size = new System.Drawing.Size(317, 25);
+            this.xrLabel57.StylePriority.UseFont = false;
+            this.xrLabel57.StylePriority.UseTextAlignment = false;
+            this.xrLabel57.Text = "Attention : [Mast.Attention]";
+            this.xrLabel57.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(0, 42);
+            this.label2.Name = "label2";
+            this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label2.Size = new System.Drawing.Size(450, 25);
+            this.label2.StylePriority.UseFont = false;
+            this.label2.Text = "Subject : Export Sea Freight Quotation";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(0, 67);
+            this.label3.Name = "label3";
+            this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label3.Size = new System.Drawing.Size(450, 25);
+            this.label3.StylePriority.UseFont = false;
+            this.label3.Text = "Payment Terms: [Mast.Terms]";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 92);
+            this.label4.Multiline = true;
+            this.label4.Name = "label4";
+            this.label4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label4.Size = new System.Drawing.Size(742, 33);
+            this.label4.StylePriority.UseFont = false;
+            this.label4.StylePriority.UseTextAlignment = false;
+            this.label4.Text = "Further to our pleasant meeting, we would like to thank you for your freight enqu" +
+                "iry.\r\nWe would like to append to you our most competitive rates for your kind pe" +
+                "rusal.\r\n";
+            this.label4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 267);
+            this.label5.Multiline = true;
+            this.label5.Name = "label5";
+            this.label5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label5.Size = new System.Drawing.Size(733, 33);
+            this.label5.StylePriority.UseFont = false;
+            this.label5.StylePriority.UseTextAlignment = false;
+            this.label5.Text = "* The above rates are quoted inclusive of BAF subject to ENS USD23/B/L (effective" +
+                " 10/01/2010) ISPS  EURO 17.00\r\n* Validity Period: Till further notice\r\n";
+            this.label5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // table1
+            // 
+            this.table1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.table1.Location = new System.Drawing.Point(0, 308);
+            this.table1.Name = "table1";
+            this.table1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+                        this.tableRow1});
+            this.table1.Size = new System.Drawing.Size(625, 20);
+            this.table1.StylePriority.UseFont = false;
+            // 
+            // tableRow4
+            // 
+            this.tableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell22});
+            this.tableRow4.Name = "tableRow4";
+            this.tableRow4.Weight = 0.22222222222222221;
+            // 
+            // tableRow3
+            // 
+            this.tableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell20});
+            this.tableRow3.Name = "tableRow3";
+            this.tableRow3.Weight = 0.33333333333333331;
+            // 
+            // xrTableRow1
+            // 
+            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.xrTableCell1,
+                        this.xrTableCell2,
+                        this.xrTableCell3,
+                        this.xrTableCell4,
+                        this.tableCell7,
+                        this.tableCell11});
+            this.xrTableRow1.Name = "xrTableRow1";
+            this.xrTableRow1.Weight = 0.22222222222222221;
+            // 
+            // tableRow2
+            // 
+            this.tableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell9,
+                        this.tableCell10,
+                        this.tableCell12,
+                        this.tableCell14,
+                        this.tableCell13,
+                        this.tableCell16});
+            this.tableRow2.Name = "tableRow2";
+            this.tableRow2.Weight = 0.22222222222222221;
+            // 
+            // xrTableRow3
+            // 
+            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.xrTableCell13,
+                        this.tableCell21});
+            this.xrTableRow3.Name = "xrTableRow3";
+            this.xrTableRow3.StylePriority.UseTextAlignment = false;
+            this.xrTableRow3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableRow3.Weight = 0.3333333333333332;
+            // 
+            // tableCell22
+            // 
+            this.tableCell22.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.tableCell22.Name = "tableCell22";
+            this.tableCell22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell22.StylePriority.UseFont = false;
+            this.tableCell22.StylePriority.UseTextAlignment = false;
+            this.tableCell22.Text = "Port of Loading";
+            this.tableCell22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.tableCell22.Weight = 1;
+            // 
+            // tableCell20
+            // 
+            this.tableCell20.Name = "tableCell20";
+            this.tableCell20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell20.StylePriority.UseTextAlignment = false;
+            this.tableCell20.Text = "[Mast.Pol]";
+            this.tableCell20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.tableCell20.Weight = 0.99999999999999989;
+            // 
+            // xrTableCell1
+            // 
+            this.xrTableCell1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.xrTableCell1.Name = "xrTableCell1";
+            this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell1.StylePriority.UseFont = false;
+            this.xrTableCell1.Text = "Port of Discharge";
+            this.xrTableCell1.Weight = 0.24921604166407274;
+            // 
+            // xrTableCell2
+            // 
+            this.xrTableCell2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell2.StylePriority.UseBorders = false;
+            this.xrTableCell2.Weight = 0.2283093002449258;
+            // 
+            // xrTableCell3
+            // 
+            this.xrTableCell3.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.xrTableCell3.Name = "xrTableCell3";
+            this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell3.StylePriority.UseFont = false;
+            this.xrTableCell3.StylePriority.UseTextAlignment = false;
+            this.xrTableCell3.Text = "20\'GP";
+            this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell3.Weight = 0.10051208532028008;
+            // 
+            // xrTableCell4
+            // 
+            this.xrTableCell4.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.xrTableCell4.Multiline = true;
+            this.xrTableCell4.Name = "xrTableCell4";
+            this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell4.StylePriority.UseFont = false;
+            this.xrTableCell4.StylePriority.UseTextAlignment = false;
+            this.xrTableCell4.Text = "40\'GP";
+            this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell4.Weight = 0.13705174747559196;
+            // 
+            // tableCell7
+            // 
+            this.tableCell7.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.tableCell7.Name = "tableCell7";
+            this.tableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell7.StylePriority.UseFont = false;
+            this.tableCell7.StylePriority.UseTextAlignment = false;
+            this.tableCell7.Text = "40\'/HC";
+            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell7.Weight = 0.12588334273075408;
+            // 
+            // tableCell11
+            // 
+            this.tableCell11.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.tableCell11.Name = "tableCell11";
+            this.tableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell11.StylePriority.UseFont = false;
+            this.tableCell11.StylePriority.UseTextAlignment = false;
+            this.tableCell11.Text = "Transit Time";
+            this.tableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell11.Weight = 0.15902748256437529;
+            // 
+            // tableCell9
+            // 
+            this.tableCell9.Name = "tableCell9";
+            this.tableCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell9.Text = "[Mast.Pod]";
+            this.tableCell9.Weight = 0.18100321765315869;
+            // 
+            // tableCell10
+            // 
+            this.tableCell10.Name = "tableCell10";
+            this.tableCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell10.StylePriority.UseTextAlignment = false;
+            this.tableCell10.Text = "[Mast.Currency]";
+            this.tableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell10.Weight = 0.29652212425583985;
+            // 
+            // tableCell12
+            // 
+            this.tableCell12.Name = "tableCell12";
+            this.tableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell12.StylePriority.UseTextAlignment = false;
+            this.tableCell12.Text = "[Mast.Gp20]";
+            this.tableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell12.Weight = 0.10051208532028012;
+            // 
+            // tableCell14
+            // 
+            this.tableCell14.Name = "tableCell14";
+            this.tableCell14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell14.StylePriority.UseTextAlignment = false;
+            this.tableCell14.Text = "[Mast.Gp40]";
+            this.tableCell14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell14.Weight = 0.1369912719601715;
+            // 
+            // tableCell13
+            // 
+            this.tableCell13.Name = "tableCell13";
+            this.tableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell13.StylePriority.UseTextAlignment = false;
+            this.tableCell13.Text = "[Mast.Hc40]";
+            this.tableCell13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell13.Weight = 0.12543244440254639;
+            // 
+            // tableCell16
+            // 
+            this.tableCell16.Name = "tableCell16";
+            this.tableCell16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell16.StylePriority.UseTextAlignment = false;
+            this.tableCell16.Text = "[Mast.TsDay]DAYS";
+            this.tableCell16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell16.Weight = 0.15953885640800342;
+            // 
+            // xrTableCell13
+            // 
+            this.xrTableCell13.Name = "xrTableCell13";
+            this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrTableCell13.Text = "Remark";
+            this.xrTableCell13.Weight = 0.18100321765315869;
+            // 
+            // tableCell21
+            // 
+            this.tableCell21.Multiline = true;
+            this.tableCell21.Name = "tableCell21";
+            this.tableCell21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.tableCell21.Text = "[Mast.Des]";
+            this.tableCell21.Weight = 0.81899678234684137;
+            // 
+            // tableRow1
+            // 
+            this.tableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell1,
+                        this.tableCell5,
+                        this.tableCell2,
+                        this.tableCell3});
+            this.tableRow1.Name = "tableRow1";
+            this.tableRow1.Weight = 0.8;
+            // 
+            // tableCell1
+            // 
+            this.tableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.tableCell1.Multiline = true;
+            this.tableCell1.Name = "tableCell1";
+            this.tableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell1.StylePriority.UseBorders = false;
+            this.tableCell1.Text = "Local Charges";
+            this.tableCell1.Weight = 0.97718383311603652;
+            // 
+            // tableCell5
+            // 
+            this.tableCell5.Name = "tableCell5";
+            this.tableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell5.Weight = 0.32398956975228155;
+            // 
+            // tableCell2
+            // 
+            this.tableCell2.Name = "tableCell2";
+            this.tableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell2.StylePriority.UseTextAlignment = false;
+            this.tableCell2.Text = "20\'";
+            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.tableCell2.Weight = 0.36310299869621909;
+            // 
+            // tableCell3
+            // 
+            this.tableCell3.Name = "tableCell3";
+            this.tableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell3.StylePriority.UseTextAlignment = false;
+            this.tableCell3.Text = "40\'";
+            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.tableCell3.Weight = 0.36571056062581475;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 9F);
+            this.label1.Location = new System.Drawing.Point(0, 123);
+            this.label1.Multiline = true;
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label1.Size = new System.Drawing.Size(767, 35);
+            this.label1.StylePriority.UseFont = false;
+            this.label1.StylePriority.UseTextAlignment = false;
+            this.label1.Text = "[Mast.CompanyInvHeader]";
+            this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel7.Location = new System.Drawing.Point(0, 208);
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel7.Size = new System.Drawing.Size(58, 25);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            this.xrLabel7.Text = "Date:";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel20
+            // 
+            this.xrLabel20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel20.Location = new System.Drawing.Point(0, 266);
+            this.xrLabel20.Multiline = true;
+            this.xrLabel20.Name = "xrLabel20";
+            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel20.Size = new System.Drawing.Size(767, 42);
+            this.xrLabel20.StylePriority.UseFont = false;
+            this.xrLabel20.Text = "[Mast.Address]";
+            // 
+            // xrLabel16
+            // 
+            this.xrLabel16.Font = new System.Drawing.Font("Arial", 12F);
+            this.xrLabel16.Location = new System.Drawing.Point(642, 208);
+            this.xrLabel16.Multiline = true;
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel16.Size = new System.Drawing.Size(125, 25);
+            this.xrLabel16.StylePriority.UseFont = false;
+            this.xrLabel16.Text = "[Mast.InvoiceN]";
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel13.Location = new System.Drawing.Point(0, 241);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.Size = new System.Drawing.Size(767, 25);
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.Text = "[Mast.Name]";
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel5.Location = new System.Drawing.Point(525, 208);
+            this.xrLabel5.Multiline = true;
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.Size = new System.Drawing.Size(117, 25);
+            this.xrLabel5.StylePriority.UseFont = false;
+            this.xrLabel5.StylePriority.UseTextAlignment = false;
+            this.xrLabel5.Text = "Reference No:";
+            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.Font = new System.Drawing.Font("Arial", 12F);
+            this.xrLabel14.Location = new System.Drawing.Point(67, 208);
+            this.xrLabel14.Multiline = true;
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel14.Size = new System.Drawing.Size(150, 25);
+            this.xrLabel14.StylePriority.UseFont = false;
+            this.xrLabel14.Text = "[Mast.InvDate]";
+            // 
+            // subreport1
+            // 
+            this.subreport1.Location = new System.Drawing.Point(0, 0);
+            this.subreport1.Name = "subreport1";
+            this.subreport1.Scripts.OnBeforePrint = resources.GetString("subreport1.Scripts.OnBeforePrint");
+            this.subreport1.Size = new System.Drawing.Size(775, 100);
+            // 
+            // Detail
+            // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.table2});
+            this.Detail.Height = 20;
+            this.Detail.Name = "Detail";
+            // 
+            // table2
+            // 
+            this.table2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.table2.Location = new System.Drawing.Point(0, 0);
+            this.table2.Name = "table2";
+            this.table2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+                        this.tableRow5});
+            this.table2.Size = new System.Drawing.Size(625, 20);
+            this.table2.StylePriority.UseFont = false;
+            // 
+            // tableRow5
+            // 
+            this.tableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+                        this.tableCell4,
+                        this.tableCell6,
+                        this.tableCell8,
+                        this.tableCell15});
+            this.tableRow5.Name = "tableRow5";
+            this.tableRow5.Weight = 0.8;
+            // 
+            // tableCell4
+            // 
+            this.tableCell4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.tableCell4.Multiline = true;
+            this.tableCell4.Name = "tableCell4";
+            this.tableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell4.StylePriority.UseBorders = false;
+            this.tableCell4.Text = "[ChgCode]";
+            this.tableCell4.Weight = 0.97718383311603652;
+            // 
+            // tableCell6
+            // 
+            this.tableCell6.Name = "tableCell6";
+            this.tableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell6.Text = "[Currency]";
+            this.tableCell6.Weight = 0.32398956975228155;
+            // 
+            // tableCell8
+            // 
+            this.tableCell8.Name = "tableCell8";
+            this.tableCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell8.StylePriority.UseTextAlignment = false;
+            this.tableCell8.Text = "[Price20] [Unit]";
+            this.tableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.tableCell8.Weight = 0.36310299869621909;
+            // 
+            // tableCell15
+            // 
+            this.tableCell15.Name = "tableCell15";
+            this.tableCell15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.tableCell15.StylePriority.UseTextAlignment = false;
+            this.tableCell15.Text = "[Price40] [Unit]";
+            this.tableCell15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.tableCell15.Weight = 0.36571056062581475;
+            // 
+            // xrLabel39
+            // 
+            this.xrLabel39.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel39.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.xrLabel39.Location = new System.Drawing.Point(0, 100);
+            this.xrLabel39.Name = "xrLabel39";
+            this.xrLabel39.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel39.Size = new System.Drawing.Size(450, 25);
+            this.xrLabel39.StylePriority.UseBorders = false;
+            this.xrLabel39.StylePriority.UseFont = false;
+            this.xrLabel39.StylePriority.UseTextAlignment = false;
+            this.xrLabel39.Text = "[Mast.CompanyName]";
+            this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel30
+            // 
+            this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel30.Location = new System.Drawing.Point(0, 125);
+            this.xrLabel30.Name = "xrLabel30";
+            this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel30.Size = new System.Drawing.Size(342, 42);
+            this.xrLabel30.StylePriority.UseBorders = false;
+            this.xrLabel30.StylePriority.UseFont = false;
+            this.xrLabel30.StylePriority.UseTextAlignment = false;
+            this.xrLabel30.Text = "[Mast.Saleman]";
+            this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(0, 17);
+            this.label7.Multiline = true;
+            this.label7.Name = "label7";
+            this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label7.Size = new System.Drawing.Size(642, 33);
+            this.label7.StylePriority.UseFont = false;
+            this.label7.StylePriority.UseTextAlignment = false;
+            this.label7.Text = "Please take into consideration the above quotation.\r\nShould you have any doubts/e" +
+                "nquiries ,please do not hesitate to contact me on my HP:[Mast.SalemanTel]";
+            this.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(75, 14);
+            this.label6.Multiline = true;
+            this.label6.Name = "label6";
+            this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label6.Size = new System.Drawing.Size(683, 25);
+            this.label6.StylePriority.UseFont = false;
+            this.label6.StylePriority.UseTextAlignment = false;
+            this.label6.Text = "ALL BUSINESS TRANSACTED SUBJECT TO THE STANDARD TRADING CONDITIONS OF THE SINGAPO" +
+                "RE LOGISTICS ASSOCIATION 2004 FOR OCEAN/LAND  TRANSPORTATION COPY IS AVALIABLE U" +
+                "PON REQUEST.";
+            this.label6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 39);
+            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            // 
+            // rptInvoice
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.detailBand1,
+                        this.pageHeaderBand1,
+                        this.DetailReport,
+                        this.ReportFooter,
+                        this.PageFooter});
+            this.Font = new System.Drawing.Font("Arial", 12F);
+            this.Margins = new System.Drawing.Printing.Margins(25, 25, 50, 20);
+            this.Name = "rptInvoice";
+            this.PageHeight = 1169;
+            this.PageWidth = 827;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+                        this.xrControlStyle1});
+            this.Version = "8.2";
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}

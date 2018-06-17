@@ -1,0 +1,37 @@
+﻿<ion-view title="{{chat.group_name}}">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+        <!--<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>-->
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <!--<button class="button button-clear" ng-click="GoBack();">Back</button>-->
+        <button class="icon button button-icon ion-person-stalker" ng-click="action.goSetting();"></button>
+    </ion-nav-buttons>
+
+    <ion-content delegate-handle="handle_msg_group_detail">
+        <div class="list">
+            <div class="item item-divider f-messagechat_to_view_more" ng-show="sv_mc.haveHistory" ng-click="action.viewMore();">To view more</div>
+
+            <div class="item f-item-message" ng-repeat="row in chat.msgList" ng-class="{true:'f-item-message-right',false:'f-item-message-left'}[action.isOwn(row)]">
+
+                <img class="f-message-usericon f-message-usericon-side" ng-src="{{Modal_FullScreen_Image.UserIcon_Remote(row.sender)}}" />
+                <div class="f-message-textbox f-message-textbox-side">
+                    <h2>
+                        {{row.sender}}&nbsp;&nbsp;
+                        <b style="font-size: 14px; font-weight: normal; color: #666;">({{row.date}})</b>
+                    </h2>
+                    <p>&nbsp;&nbsp;{{row.msg}}</p>
+                    <div class="f-message-textbox-from-side"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar ng-class="'bar-'+(Fix_Style.style_list[Fix_Style.color])">
+        <div class="item-input-inset f-full-row f-padding-0">
+            <div class="item-input-wrapper">
+                <input type="text" id="input_msg" ng-model="Detail.msg.text" />
+            </div>
+            <button class="button button-small" ng-class="'button-'+(Fix_Style.style_list[Fix_Style.color])" ng-click="action.sendMsg()">Send</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

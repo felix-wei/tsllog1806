@@ -1,0 +1,28 @@
+﻿<ion-view title="Login" hide-nav-bar="true">
+    <ion-content >
+        <form name="myForm" ng-submit="action.login()">
+            <div class="card list f-login-list">
+                <div class="item f-login-item" style="text-align:center;">
+                    <img class="col-34 full-image" src="img/move-app-logo-600.png">
+                </div>
+
+                <!--<div class="item item-input item-select">
+                    <label class="input-label">Company:</label>
+                    <select ng-model="vm.user.company_code" ng-options="row.Code as row.Name for row in company.list|orderBy:'Name'" required></select>
+                </div>-->
+                <div class="item item-input">
+                    <input type="text" ng-model="vm.user.company_code" placeholder="Company Code:" required />
+                </div>
+                <label class="item item-input">
+                    <input type="text" ng-model="vm.user.mobile_no" placeholder="MobileNo/UserName:" required>
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model="vm.user.user_password" placeholder="Password:" required>
+                </label>
+                <label class="item f-login-item">
+                    <button nav-clear class="button button-full button-positive" type="submit" ng-disabled="myForm.$invalid">Login</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

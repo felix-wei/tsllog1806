@@ -1,0 +1,30 @@
+﻿<ion-view title="" >
+    <ion-nav-buttons side="left">
+        <!--<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>-->
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="action.style();">Style</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <div class="item f-menu_user_div">
+                <img class="f-menu_user_img" src="img/jay.jpg" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">User:</label>
+                <h2>{{User.user.Name}}</h2>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Company:</label>
+                <h2>{{Company.company.Name}}</h2>
+            </div>
+            <div>
+                <button class="button button-block button-positive" ng-click="action.layout();">Logout</button>
+            </div>
+            <div>
+                <button class="button button-block button-assertive" ng-click="action.exit();">Exit</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

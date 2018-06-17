@@ -1,0 +1,44 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <div class="buttons">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="container.closeModal();"></button>
+        </div>
+        <h1 class="title">Container</h1>
+        <div class="buttons">
+            <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="container.save();"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input item-select" ng-click="container.container_select();">
+                <label class="input-label">Container:</label>
+                {{container.data.ContainerNo}}
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">ContainerType:</label>
+                <select ng-model="container.data.ContainerType" ng-options="row.ContainerType as row.ContainerType for row in Fix_MasterData.containerType.data.list|orderBy:'ContainerType'"></select>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">SealNo:</label>
+                <input type="text" ng-model="container.data.SealNo" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Weight:</label>
+                <input type="number" min="0" ng-model="container.data.Weight" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Volume:</label>
+                <input type="number" min="0" ng-model="container.data.Volume" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Qty:</label>
+                <input type="number" min="0" ng-model="container.data.QTY" />
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">PackageType:</label>
+                <select ng-model="container.data.PackageType" ng-options="row.Code as row.Code for row in Fix_MasterData.packageType.data.list|orderBy:'Code'"></select>
+            </div>
+        </div>
+
+    </ion-content>
+</div>

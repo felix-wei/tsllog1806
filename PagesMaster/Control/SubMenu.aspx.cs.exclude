@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using DevExpress.Web.ASPxEditors;
+using System.Collections.Generic;
+
+public partial class PagesMaster_Control_SubMenu : BasePage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            string masterId = SafeValue.SafeString(Request.QueryString["masterId"], "");
+            string sql = "select SequenceId,Name,Link,IsActive,SortIndex from MenuSub where MasterId='" + masterId + "'";
+            DataTable tab = C2.Manager.ORManager.GetDataSet(sql).Tables[0];
+            this.ASPxGridView1.DataSource = tab;
+            this.ASPxGridView1.DataBind();
+        }
+        OnLoad();
+    }
+    protected void ASPxGridView1_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+    {
+    }
+    protected void ASPxGridView1_CustomDataCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomDataCallbackEventArgs e)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            try
+            {
+                int docId = list[i].docId;
+                string name = list[i].name;
+                string img = list[i].img;
+                bool isActive = list[i].isActive;
+                int sortIndex = list[i].sortIndex;
+
+                string sql = string.Format("Update MenuSub set Name='{1}',Link='{2}',IsActive='{3}',SortIndex='{4}' where SequenceId='{0}'", docId, name, img, isActive, sortIndex);
+                C2.Manager.ORManager.ExecuteCommand(sql);
+                e.Result = "";
+            }
+            catch (Exception ex) { e.Result = ex.Message; }
+        }
+    }
+    List<Record> list = new List<Record>();
+    internal class Record
+    {
+        public int docId = 0;
+        public string name;
+        public string img;
+        public bool isActive= false;
+        public int sortIndex= 0;
+        public Record(int _docId, string _name,string _img,bool _isActive,int _sortIndex)
+        {
+            docId = _docId;
+            name = _name;
+            img = _img;
+            isActive = _isActive;
+            sortIndex = _sortIndex;
+        }
+
+    }
+    private void OnLoad()
+    {
+        int start = 0;// this.ASPxGridView1.PageIndex * ASPxGridView1.SettingsPager.PageSize;
+        int end = 10000;// (ASPxGridView1.PageIndex + 1) * ASPxGridView1.SettingsPager.PageSize;
+        for (int i = start; i < end; i++)
+        {
+            ASPxTextBox docId = this.ASPxGridView1.FindRowTemplateControl(i, "txt_docId") as ASPxTextBox;
+            ASPxTextBox name = this.ASPxGridView1.FindRowTemplateControl(i, "txt_name") as ASPxTextBox;
+            ASPxTextBox img = this.ASPxGridView1.FindRowTemplateControl(i, "txt_img") as ASPxTextBox;
+            ASPxSpinEdit sortIndex = this.ASPxGridView1.FindRowTemplateControl(i, "spin_sortIndex") as ASPxSpinEdit;
+            ASPxCheckBox isActive = this.ASPxGridView1.FindRowTemplateControl(i, "ck_isActive") as ASPxCheckBox;
+            if (docId != null)
+            {
+                list.Add(new Record(SafeValue.SafeInt(docId.Text, 0),name.Text,img.Text,isActive.Checked,SafeValue.SafeInt(sortIndex.Number,1)));
+            }
+        }
+    }
+}

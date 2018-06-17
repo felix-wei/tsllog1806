@@ -1,0 +1,77 @@
+﻿<ion-view title="Schedule Trip">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="item button-bar">
+                <input type="button" class="button " ng-class="{true:'button-balanced',false:''}[vm.trip.Statuscode_index>=1]" value="Use" ng-disabled="vm.trip.Statuscode_index>=1" ng-click="action.Status_Change('U',$event);" />
+                <input type="button" class="button " ng-class="{true:'button-balanced',false:''}[vm.trip.Statuscode_index>=2]" value="Start" ng-disabled="vm.trip.Statuscode_index>=2" ng-click="action.Status_Change('S',$event);" />
+                <input type="button" class="button " ng-class="{true:'button-balanced',false:''}[vm.trip.Statuscode_index>=6]" value="End" ng-disabled="vm.trip.Statuscode_index>=6" ng-click="action.Status_Change('C',$event);" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Container:</label>
+                {{vm.trip.ContainerNo}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Driver:</label>
+                {{vm.trip.DriverCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Towhead:</label>
+                {{vm.trip.TowheadCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Trail:</label>
+                {{vm.trip.ChessisCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Status:</label>
+                {{vm.trip.Statuscode_show}}
+            </div>
+            <div class="item item-divider">
+                From:
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Address:</label>
+                {{vm.trip.FromCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Date:</label>
+                {{vm.trip.FromDate}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Time:</label>
+                {{vm.trip.FromTime}}
+            </div>
+            <div class="item item-divider">
+                To:
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Address:</label>
+                {{vm.trip.ToCode}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Date:</label>
+                {{vm.trip.ToDate}}
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Time:</label>
+                {{vm.trip.ToTime}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<script id="popover_schedule_tirp_status_changed.html" type="text/ng-template">
+    <ion-popover-view>
+        <ion-content>
+            <div class="list">
+                <div class="item item-divider">Choose Trail</div>
+                <div class="item" ng-repeat="row in action.actionList" ng-click="action.popover_action(row);">
+                    {{row.text}}
+                </div>
+            </div>
+        </ion-content>
+    </ion-popover-view>
+</script>

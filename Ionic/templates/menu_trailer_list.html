@@ -1,0 +1,19 @@
+﻿<ion-view title="Trailer">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-search" ng-click="search.openModal();"></button>
+        <button class="button button-icon icon ion-ios7-plus-empty" ng-click="action.addNew();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="row in vm.trailer.list|filter:search.data.search">
+                <div class="item job_list_item" ng-click="action.openDetail(row);">
+                    {{row.Code}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

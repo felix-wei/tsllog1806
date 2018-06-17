@@ -1,0 +1,555 @@
+﻿<ion-view title="Job Detail">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="info.save();"></button>
+    </ion-nav-buttons>
+    <ion-tabs class="tabs-top" ng-class="'tabs-'+(Fix_Style.style_list[Fix_Style.color])" delegate-handle="handle_job_detail">
+        <ion-tab title="Job">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item button-bar">
+                            <input type="button" class="button" value="Confirmed" ng-disabled="vm.job.info.JobProgress_index!=1" ng-class="{true:'button-balanced',false:''}[vm.job.info.JobProgress_index>1]" ng-click="info.trip_status_change();" />
+                            <input type="button" class="button" value="Picked" ng-disabled="vm.job.info.JobProgress_index!=2" ng-class="{true:'button-balanced',false:''}[vm.job.info.JobProgress_index>2]" ng-click="info.trip_status_change();" />
+                            <input type="button" class="button" value="Delivered" ng-disabled="vm.job.info.JobProgress_index!=3" ng-class="{true:'button-balanced',false:''}[vm.job.info.JobProgress_index>3]" ng-click="info.trip_status_change();" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">JobNo:</label>
+                            {{vm.job.info.JobNo}}
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">JobType:</label>
+                            <select ng-model="vm.job.info.JobType">
+                                <option value="IMP">IMP</option>
+                                <option value="EXP">EXP</option>
+                                <option value="TSP">TSP</option>
+                                <option value="LOC">LOC</option>
+                            </select>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.party_select('Cust')">
+                            <label class="input-label">Customer:</label>
+                            <label>{{vm.job.info.Cust}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.pol_select();">
+                            <label class="input-label">Pol:</label>
+                            <label>{{vm.job.info.Pol}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.pod_select();">
+                            <label class="input-label">Pod:</label>
+                            <label>{{vm.job.info.Pod}}</label>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Vessel:</label>
+                            <input type="text" ng-model="vm.job.info.Vessel" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Voyage:</label>
+                            <input type="text" ng-model="vm.job.info.Voyage" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Etd Date:</label>
+                            <input type="date" ng-model="vm.job.info.Etd" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Eta Date:</label>
+                            <input type="date" ng-model="vm.job.info.Eta" />
+                        </div>
+
+                        <div class="item item-divider">Fee:</div>
+                        <div class="item item-input">
+                            <label class="input-label">TPT:</label>
+                            <input type="number" ng-model="vm.job.info.FeeTpt" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Labour:</label>
+                            <input type="number" ng-model="vm.job.info.FeeLabour" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">OT:</label>
+                            <input type="number" ng-model="vm.job.info.FeeOt" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Admin:</label>
+                            <input type="number" ng-model="vm.job.info.FeeAdmin" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Reimberse:</label>
+                            <input type="number" ng-model="vm.job.info.FeeReimberse" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">MISC:</label>
+                            <input type="number" ng-model="vm.job.info.FeeMisc" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Remark:</label>
+                            <input type="text" ng-model="vm.job.info.FeeRemark" />
+                        </div>
+
+
+                        <div class="item item-divider">Booking:</div>
+                        <div class="item item-input">
+                            <label class="input-label">Date:</label>
+                            <input type="date" ng-model="vm.job.info.BkgDate" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Time:</label>
+                            <input type="time" ng-model="vm.job.info.BkgTime" placeholder="HH:mm" min="00:00" max="23:59" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Remark:</label>
+                            <input type="text" ng-model="vm.job.info.JobRmk" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Weight:</label>
+                            <input type="number" ng-model="vm.job.info.BkgWt" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Volume:</label>
+                            <input type="number" ng-model="vm.job.info.BkgM3" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Qty:</label>
+                            <input type="number" ng-model="vm.job.info.BkgQty" min="0" />
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">PackageType:</label>
+                            <select ng-model="vm.job.info.BkgPkgType" ng-options="row.Code as row.Code for row in Fix_MasterData.packageType.data.list|orderBy:'Code'"></select>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Pick From:</label>
+                            <input type="text" ng-model="vm.job.info.PickFrm1" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Delivery To:</label>
+                            <input type="text" ng-model="vm.job.info.DeliveryTo1" />
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <!--<ion-tab title="Booking">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-input">
+                            <label class="input-label">Date:</label>
+                            <input type="date" ng-model="vm.job.info.BkgDate" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Time:</label>
+                            <input type="time" ng-model="vm.job.info.BkgTime" placeholder="HH:mm" min="00:00" max="23:59" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Remark:</label>
+                            <input type="text" ng-model="vm.job.info.JobRmk" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Weight:</label>
+                            <input type="number" ng-model="vm.job.info.BkgWt" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Volume:</label>
+                            <input type="number" ng-model="vm.job.info.BkgM3" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Qty:</label>
+                            <input type="number" ng-model="vm.job.info.BkgQty" min="0" />
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">PackageType:</label>
+                            <select ng-model="vm.job.info.BkgPkgType" ng-options="row.Code as row.Code for row in Fix_MasterData.packageType.data.list|orderBy:'Code'"></select>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Pick From:</label>
+                            <input type="text" ng-model="vm.job.info.PickFrm1" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Delivery To:</label>
+                            <input type="text" ng-model="vm.job.info.DeliveryTo1" />
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Item">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Item List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="stock.addNew();"></button>
+                        </div>
+
+                        <div ng-repeat="row in vm.job.stock">
+                            <div class="item" ng-click="stock.openDetail(row);">
+                                {{row.StockStatus}}
+                                <p>Qty:{{row.StockQty}},Weight:{{row.Weight}},Volume:{{row.Volume}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>-->
+
+        <ion-tab title="Trip">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item" ng-click="footerMore.trip.open();">
+                            <h2>{{vm.job.info.TptDate}}</h2>
+                            <p>{{vm.job.info.Driver}}</p>
+                        </div>
+                        <!--<div class="item item-input">
+                            <label class="input-label">Date:</label>
+                            <input type="date" ng-model="vm.job.info.TptDate" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Time:</label>
+                            <input type="time" ng-model="vm.job.info.TptTime" placeholder="HH:mm" min="00:00" max="23:59" />
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">Status:</label>
+                            <select ng-model="vm.job.info.JobProgress">
+                                <option value="Assigned">Assigned</option>
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Picked">Picked</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Canceled">Canceled</option>
+                            </select>
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">Type:</label>
+                            <select ng-model="vm.job.info.TptType">
+                                <option value="PUP">PUP</option>
+                                <option value="DEL">DEL</option>
+                                <option value="LOC">LOC</option>
+                            </select>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.tripcode_select();">
+                            <label class="input-label">Trip Code:</label>
+                            <label>{{vm.job.info.TripCode}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.driver_select();">
+                            <label class="input-label">Driver:</label>
+                            <label>{{vm.job.info.Driver}}</label>
+                        </div>
+                        <div class="item item-input item-select" ng-click="info.towhead_select();">
+                            <label class="input-label">VehicleNo:</label>
+                            <label>{{vm.job.info.VehicleNo}}</label>
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Weight:</label>
+                            <input type="number" ng-model="vm.job.info.Wt" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Volume:</label>
+                            <input type="number" ng-model="vm.job.info.M3" min="0" />
+                        </div>
+                        <div class="item item-input">
+                            <label class="input-label">Qty:</label>
+                            <input type="number" ng-model="vm.job.info.Qty" min="0" />
+                        </div>
+                        <div class="item item-input item-select">
+                            <label class="input-label">PackageType:</label>
+                            <select ng-model="vm.job.info.PkgType" ng-options="row.Code as row.Code for row in Fix_MasterData.packageType.data.list|orderBy:'Code'"></select>
+                        </div>-->
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <!--<ion-tab title="Billing">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider item-button-right">
+                            Billing List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="billing.addNew();"></button>
+                        </div>
+
+                        <div ng-repeat="row in vm.job.billing">
+                            <div ng-if="row.DocType!=vm.job.billing[$index-1].DocType" class="item item-divider">
+                                {{row.DocType}}
+                            </div>
+                            <div class="item" ng-click="billing.openDetail(row);">
+                                {{row.DocNo}}
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>-->
+
+
+        <ion-tab title="Attach">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <!--<div class="item item-divider item-button-right">
+                            Attachment List:
+                            <button class="button icon button-icon button-positive button-clear ion-ios7-plus-empty f-margin-top-8" ng-click="attachment.openPopover($event);"></button>
+                        </div>-->
+                        <div class="item item-thumbnail-left" ng-repeat="row in vm.job.attachment">
+
+                            <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.FileType)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.FileType),row.FileName)" ng-if="row.FileType=='Image'||row.FileType=='Signature'" />
+                            <img ng-src="{{Modal_FullScreen_Image.Icon_Local(row.FileType)}}" ng-click="Modal_FullScreen_Image.openAttachFile(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.FileType))" ng-if="row.FileType=='excel'||row.FileType=='pdf'||row.FileType=='file'" />
+                            <h2>{{row.FileName}}</h2>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Event">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item f-item-noborder f-historylog-item f-historylog-item-right" ng-repeat="row in vm.job.activity">
+                            <div class="f-historylog-verticalbox">
+                                <hr class="f-verticalbar0" ng-class="{true:'',false:'f-verticalbar-show'}[$index==0]" />
+                                <i class="icon f-historylog-icon" ng-class="{true:'ion-ios7-star-outline',false:'ion-ios7-circle-outline'}[historyLog.isOwn(row)]"></i>
+                                <hr class="f-verticalbar1" ng-class="{true:'',false:'f-verticalbar-show'}[$index==(vm.job.activity.length-1)]" />
+                            </div>
+                            <div class="f-message-textbox f-message-textbox-left f-message-textbox-full">
+                                <div ng-if="row.type=='Image'||row.type=='Signature'">
+                                    <img ng-src="{{Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type)}}" ng-click="Modal_FullScreen_Image.openModal(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type),row.Remark)" />
+                                </div>
+                                <div ng-if="row.type=='excel'||row.type=='pdf'||row.type=='file'">
+                                    <img ng-src="{{Modal_FullScreen_Image.Icon_Local(row.type)}}" ng-click="Modal_FullScreen_Image.openAttachFile(Modal_FullScreen_Image.ImageUrl_Remote(row.FilePath,row.type))" />
+                                </div>
+                                <p>{{row.Remark}}</p>
+                                <div class="f-message-textbox-fromleft"></div>
+                            </div>
+                            <div class="f-historylog-part">
+                                <!--{{row.CreateDateTime1}}-->
+                                {{row.CreateDate}}
+                                <br />
+                                {{row.CreateTime}}
+                            </div>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <!--<ion-tab title="Watch">
+            <ion-view>
+                <ion-content>
+                    <div class="list">
+                        <div class="item item-divider">
+                            Watch List
+                        </div>
+                        <div class="item item-input" ng-repeat="row in vm.job.watch" ng-click="watch.openContact(row);">
+                            <label class="input-label">{{row.name}}:</label>
+                            {{row.value}}
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>-->
+
+    </ion-tabs>
+    <ion-footer-bar class="f-top-auto" ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <button class="button button-clear" ng-click="footerMore.openPopover($event);">More</button>
+        <button class="button button-clear pull-right icon button-icon ion-ios7-plus-empty" ng-click="attachment.openPopover($event);"></button>
+    </ion-footer-bar>
+</ion-view>
+
+
+
+<script id="popover_attachments.html" type="text/ng-template">
+    <ion-popover-view>
+        <ion-content>
+            <div class="list">
+                <div class="item item-icon-left" ng-click="attachment.openCamera();">
+                    <i class="icon ion-camera"></i>
+                    Take Photo
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.AddAttach();">
+                    <i class="icon ion-document"></i>
+                    Attach File
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.drawing();">
+                    <i class="icon ion-edit"></i>
+                    Signature
+                </div>
+                <div class="item item-icon-left" ng-click="attachment.Message.openModal();">
+                    <i class="icon ion-ios7-paper-outline"></i>
+                    Message
+                </div>
+            </div>
+        </ion-content>
+    </ion-popover-view>
+</script>
+
+
+
+
+<script id="popover_local_job_more.html" type="text/ng-template">
+    <ion-popover-view>
+        <ion-content>
+            <div class="list">
+                <div class="item item-icon-left" ng-click="footerMore.items.open();">
+                    <i class="icon ion-ios7-information-outline"></i>
+                    Items
+                </div>
+                <div class="item item-icon-left" ng-click="footerMore.billing.open();">
+                    <i class="icon ion-ios7-information-outline"></i>
+                    Billing
+                </div>
+                <div class="item item-icon-left" ng-click="footerMore.watch.open();">
+                    <i class="icon ion-ios7-information-outline"></i>
+                    Watch
+                </div>
+            </div>
+        </ion-content>
+    </ion-popover-view>
+</script>
+
+
+<!--   **************************  modal   **********************   -->
+
+<script id="modal_local_job_item_list" type="text/ng-template">
+    <ion-modal-view class="modal">
+        <ion-header-bar class="bar-positive">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="footerMore.items.closeModal();"></button>
+            <h1 class=" title">
+                Items
+            </h1>
+            <button class="button button-clear" ng-click="footerMore.items.addNew();">New</button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+
+                <div ng-repeat="row in vm.job.stock">
+                    <div class="item" ng-click="footerMore.items.openDetail(row);">
+                        {{row.StockStatus}}
+                        <p>Qty:{{row.StockQty}},Weight:{{row.Weight}},Volume:{{row.Volume}}</p>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+
+<script id="modal_local_job_billing_list" type="text/ng-template">
+    <ion-modal-view class="modal">
+        <ion-header-bar class="bar-positive">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="footerMore.billing.closeModal();"></button>
+            <h1 class=" title">
+                Billing
+            </h1>
+            <button class="button button-clear" ng-click="footerMore.billing.addNew();">New</button>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+
+                <div ng-repeat="row in vm.job.billing">
+                    <div ng-if="row.DocType!=vm.job.billing[$index-1].DocType" class="item item-divider">
+                        {{row.DocType}}
+                    </div>
+                    <div class="item" ng-click="footerMore.billing.openDetail(row);">
+                        {{row.DocNo}}
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+
+<script id="modal_local_job_watch_list" type="text/ng-template">
+    <ion-modal-view class="modal">
+        <ion-header-bar class="bar-positive">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="footerMore.watch.closeModal();"></button>
+            <h1 class=" title">
+                Watch List
+            </h1>
+            <!--<button class="icon button button-icon icon-right ion-checkmark-round" ng-click="new.closeModal_OK();"></button>-->
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="item item-divider">
+                    Watch List
+                </div>
+                <div class="item item-input" ng-repeat="row in vm.job.watch" ng-click="footerMore.watch.openContact(row);">
+                    <label class="input-label">{{row.name}}:</label>
+                    {{row.value}}
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
+
+
+<script id="modal_local_job_trip_detail" type="text/ng-template">
+    <ion-modal-view class="modal">
+        <ion-header-bar class="bar-positive">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="footerMore.trip.closeModal();"></button>
+            <h1 class=" title">
+                Trip Detail
+            </h1>
+            <!--<button class="icon button button-icon icon-right ion-checkmark-round" ng-click="new.closeModal_OK();"></button>-->
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="item item-input">
+                    <label class="input-label">Date:</label>
+                    <input type="date" ng-model="vm.job.info.TptDate" />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Time:</label>
+                    <input type="time" ng-model="vm.job.info.TptTime" placeholder="HH:mm" min="00:00" max="23:59" />
+                </div>
+                <div class="item item-input item-select">
+                    <label class="input-label">Status:</label>
+                    <select ng-model="vm.job.info.JobProgress">
+                        <option value="Assigned">Assigned</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Picked">Picked</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Canceled">Canceled</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select">
+                    <label class="input-label">Type:</label>
+                    <select ng-model="vm.job.info.TptType">
+                        <option value="PUP">PUP</option>
+                        <option value="DEL">DEL</option>
+                        <option value="LOC">LOC</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select" ng-click="info.tripcode_select();">
+                    <label class="input-label">Trip Code:</label>
+                    <label>{{vm.job.info.TripCode}}</label>
+                </div>
+                <div class="item item-input item-select" ng-click="info.driver_select();">
+                    <label class="input-label">Driver:</label>
+                    <label>{{vm.job.info.Driver}}</label>
+                </div>
+                <div class="item item-input item-select" ng-click="info.towhead_select();">
+                    <label class="input-label">VehicleNo:</label>
+                    <label>{{vm.job.info.VehicleNo}}</label>
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Weight:</label>
+                    <input type="number" ng-model="vm.job.info.Wt" min="0" />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Volume:</label>
+                    <input type="number" ng-model="vm.job.info.M3" min="0" />
+                </div>
+                <div class="item item-input">
+                    <label class="input-label">Qty:</label>
+                    <input type="number" ng-model="vm.job.info.Qty" min="0" />
+                </div>
+                <div class="item item-input item-select">
+                    <label class="input-label">PackageType:</label>
+                    <select ng-model="vm.job.info.PkgType" ng-options="row.Code as row.Code for row in Fix_MasterData.packageType.data.list|orderBy:'Code'"></select>
+                </div>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

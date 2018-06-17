@@ -1,0 +1,62 @@
+﻿<ion-view title="Stock Detail">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="info.save();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <label class="input-label">JobNo:</label>
+                {{vm.info.JobNo}}
+            </div>
+            <div class="item item-input item-select">
+                <label class="input-label">Status:</label>
+                <select ng-model="vm.info.StockStatus">
+                    <option value="IN">IN</option>
+                    <option value="OUT">OUT</option>
+                </select>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Description:</label>
+                <input type="text" ng-model="vm.info.StockDescription" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Marking:</label>
+                <input type="text" ng-model="vm.info.StockMarking" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Weight:</label>
+                <input type="number" min="0" ng-model="vm.info.Weight" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Volume:</label>
+                <input type="number" min="0" ng-model="vm.info.Volume" />
+            </div>
+            <div class="item item-divider">Stock</div>
+            <div class="item item-input">
+                <label class="input-label">Qty:</label>
+                <input type="number" min="0" ng-model="vm.info.StockQty" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Unit:</label>
+                <input type="text" ng-model="vm.info.StockUnit" />
+            </div>
+            <div class="item item-divider">Packing</div>
+            <div class="item item-input">
+                <label class="input-label">Qty:</label>
+                <input type="number" min="0" ng-model="vm.info.PackingQty" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Unit:</label>
+                <input type="text" ng-model="vm.info.PackingUnit" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Dimention:</label>
+                <input type="text" ng-model="vm.info.PackingDimention" />
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

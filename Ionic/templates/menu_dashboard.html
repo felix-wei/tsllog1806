@@ -1,0 +1,84 @@
+﻿<ion-view title="Dashboard">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="f-menu_dashboard_div">
+            <div class="f-menu_dashboard_background_div"></div>
+            <img class="f-menu_dashboard_img" src="img/jay.jpg" ng-click="action.GoPage('user')" />
+            <p class="f-menu_dashboard_title">{{User.user.Name}}</p>
+        </div>
+        <div class="list">
+            <div ng-if="action.permis('Shipment','LeftMenu')">
+                <div class="item item-divider" ng-click="action.test();">Shipment</div>
+                <div class="item item-icon-right" ng-click="action.GoPage('local_schedule_1')">
+                    LCL Jobs
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('schedule1')">
+                    FCL Jobs
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('daily_job_fcl')">
+                    FCL Jobs Daily
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('container_schedule')">
+                    Containers
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+            </div>
+
+            <div ng-if="action.permis('Stock','LeftMenu')">
+                <div class="item item-divider">Stock</div>
+                <div class="item item-icon-right" ng-click="action.GoPage('stock_balance_list')">
+                    Stock Balance
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('stock_movement_list')">
+                    Stock Movement
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+            </div>
+
+            <div ng-if="action.permis('Billing','LeftMenu')">
+                <div class="item item-divider">Billing</div>
+                <div class="item item-icon-right" ng-click="action.GoPage('quotationlist')">
+                    Quotation List
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('invoicelist')">
+                    Invoice List
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('payment_list')">
+                    Payment List
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+            </div>
+            <div ng-if="action.permis('Setup','LeftMenu')">
+                <div class="item item-divider" >Setup</div>
+                <div class="item item-icon-right" ng-click="action.GoPage('contactlist')" >
+                    Contact
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('customer_list')">
+                    Customer
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('driver_list')" >
+                    Driver
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('vehicle_list')" >
+                    Vehicle
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-click="action.GoPage('trailer_list')">
+                    Trailer
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

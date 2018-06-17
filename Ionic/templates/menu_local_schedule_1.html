@@ -1,0 +1,89 @@
+﻿<ion-view title="Local Jobs">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-search" ng-click="search.openModal();"></button>
+        <button class="button button-icon icon ion-ios7-plus-empty" ng-click="action.addNew();"></button>
+    </ion-nav-buttons>
+
+
+    <ion-tabs class="tabs-top" ng-class="'tabs-'+(Fix_Style.style_list[Fix_Style.color])" delegate-handle="handle_local_schedule1">
+        <ion-tab title="Today" on-select="action.onTabSelected('Today')" >
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Today')">
+                    </ion-refresher>
+                    <div class="list">
+                        <!--<div class="item item-input-inset">
+                        <label class="item-input-wrapper">
+                            <input type="search" placeholder="Search" ng-model="job.search">
+                        </label>
+                    </div>-->
+                        <div class="item" ng-repeat="row in vm.schedule[0].list" ng-click="action.openJob(row);">
+                            <h2>{{row.TptTime}}<span class="f-schedule-time-date">({{row.TptDate1}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}</p>
+                            <p class="f-margin-bottom0">From:{{row.PickFrm1}}</p>
+                            <p>To:{{row.DeliveryTo1}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="This week" on-select="action.onTabSelected('This week')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('This week')">
+                    </ion-refresher>
+                    <div class="list">
+                        <div class="item" ng-repeat="row in vm.schedule[1].list" ng-click="action.openJob(row);">
+                            <h2>{{row.TptTime}}<span class="f-schedule-time-date">({{row.TptDate1}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}</p>
+                            <p class="f-margin-bottom0">From:{{row.PickFrm1}}</p>
+                            <p>To:{{row.DeliveryTo1}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Later" on-select="action.onTabSelected('Later')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Later')">
+                    </ion-refresher>
+                    <div class="list">
+                        <div class="item" ng-repeat="row in vm.schedule[2].list" ng-click="action.openJob(row);">
+                            <h2>{{row.TptTime}}<span class="f-schedule-time-date">({{row.TptDate1}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}</p>
+                            <p class="f-margin-bottom0">From:{{row.PickFrm1}}</p>
+                            <p>To:{{row.DeliveryTo1}}</p>
+                        </div>
+                    </div>
+
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Past" on-select="action.onTabSelected('Past')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Past')">
+                    </ion-refresher>
+                    <div class="list">
+                        <div class="item" ng-repeat="row in vm.schedule[3].list" ng-click="action.openJob(row);">
+                            <h2>{{row.TptTime}}<span class="f-schedule-time-date">({{row.TptDate1}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}</p>
+                            <p class="f-margin-bottom0">From:{{row.PickFrm1}}</p>
+                            <p>To:{{row.DeliveryTo1}}</p>
+                        </div>
+                    </div>
+
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+    </ion-tabs>
+
+</ion-view>

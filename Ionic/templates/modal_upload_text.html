@@ -1,0 +1,18 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <h1 class="title">Upload Text</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="attachment.Message.closeModal();">Back</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <input type="text" placeholder="Input:" ng-model="attachment.Message.data" />
+            </div>
+            <div class="item">
+                <button class="button button-block button-positive" ng-click="attachment.Message.upload();">Upload</button>
+            </div>
+        </div>
+    </ion-content>
+</div>

@@ -1,0 +1,88 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SubMenu.aspx.cs" Inherits="PagesMaster_Control_SubMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+        function OnCallback(v) {
+            if (v != null && v.length > 0)
+                alert(v)
+            else
+                btn_sch.DoClick();
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td width="150">
+                    Name
+                </td>
+                <td width="280">
+                    Link URL
+                </td>
+                <td width="80">
+                    Is Active
+                </td>
+                <td width="30">
+                    SortIndex
+                </td>
+            </tr>
+        </table>
+        <dxwgv:ASPxGridView ID="ASPxGridView1" runat="server"
+            ClientInstanceName="grid" Width="660" KeyFieldName="SequenceId" OnCustomDataCallback="ASPxGridView1_CustomDataCallback"
+            OnCustomCallback="ASPxGridView1_CustomCallback">
+            <SettingsPager Mode="ShowAllRecords">
+            </SettingsPager>
+            <SettingsCustomizationWindow Enabled="True" />
+            <SettingsBehavior AllowFocusedRow="True" />
+            <Columns>
+            </Columns>
+            <Settings ShowColumnHeaders="false" />
+            <Templates>
+                <DataRow>
+                    <table border="0" style="border-bottom: solid 1px BLACK; width: 100%">
+                        <td width="80" valign="top">
+                            <div style="display: none">
+                                <dxe:ASPxTextBox ID="txt_docId" BackColor="Control" ReadOnly="true" runat="server"
+                                    Text='<%# Eval("SequenceId") %>' Width="100%">
+                                </dxe:ASPxTextBox>
+                            </div>
+                            <dxe:ASPxTextBox ID="txt_name"  runat="server"
+                                Text='<%# Eval("Name") %>' Width="100%">
+                            </dxe:ASPxTextBox>
+                        </td>
+                        <td width="150" valign="top">
+                            <dxe:ASPxTextBox ID="txt_img" runat="server"
+                                Text='<%# Eval("Link") %>' Width="100%">
+                            </dxe:ASPxTextBox>
+                        </td>
+                        <td width="50" valign="top">
+                            <dxe:ASPxCheckBox ID="ck_isActive" runat="server" Checked='<%# Eval("IsActive")%>' Width="10">
+                            </dxe:ASPxCheckBox>
+                        </td>
+                        <td width="20" valign="top">
+                            <dxe:ASPxSpinEdit Width="100%" ID="spin_sortIndex" DisplayFormatString="0"
+                                runat="server" Value='<%# Eval("SortIndex")%>'>
+                                <SpinButtons ShowIncrementButtons="false" />
+                            </dxe:ASPxSpinEdit>
+                        </td>
+                        </tr>
+                    </table>
+                </DataRow>
+            </Templates>
+        </dxwgv:ASPxGridView>
+                    <dxe:ASPxButton ID="ASPxButton1" runat="server" Text="Save" AutoPostBack="false" UseSubmitBehavior="false">
+                        <ClientSideEvents Click="function(s,e) {
+                        grid.GetValuesOnCustomCallback('OK',OnCallback);
+                        }" />
+                    </dxe:ASPxButton>
+
+    </div>
+    </form>
+</body>
+</html>

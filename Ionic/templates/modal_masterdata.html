@@ -1,0 +1,28 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <div class="buttons">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="Fix_MasterData.MasterData.closeModal();"></button>
+        </div>
+        <h1 class="title">{{Fix_MasterData.MasterData.dataType}}</h1>
+        <div class="buttons">
+            <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="Fix_MasterData.MasterData.selected();"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="Fix_MasterData.MasterData.data.search">
+            </label>
+        </div>
+        <ul class="list">
+            <li class="item item-checkbox" ng-repeat="row in Fix_MasterData.MasterData.data.list|filter:Fix_MasterData.MasterData.data.search|limitTo:50">
+                <label class="checkbox">
+                    <input type="radio" ng-model="Fix_MasterData.MasterData.data.model" name="group" value="{{row}}" />
+                </label>
+                <h2>{{row.Code}}</h2>
+                <p>{{row.Name}}</p>
+            </li>
+        </ul>
+    </ion-content>
+</div>

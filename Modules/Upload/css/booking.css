@@ -1,0 +1,173 @@
+﻿.show {
+    display: block;
+}
+.show_row {
+ display:table-row;
+}
+.hide {
+    display: none;
+}
+
+select {
+    width: 60px;
+}
+
+.a_ltrip .P {
+    background-color: orange;
+}
+
+.div_amt {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    color: white;
+    padding-top: 2px;
+}
+
+.div_add {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    float: left;
+    margin-left: 10px;
+}
+
+    .div_add .left {
+        margin: 0px;
+        float: left;
+        width: 70%;
+    }
+
+    .div_add .right {
+        margin: 0px;
+        float: right;
+        width: 30%;
+    }
+
+.control {
+    display: block;
+    width: 100%;
+    height:  30px;
+    padding: 2px;
+    font-size: 12px;
+    margin:0px;
+    line-height: 1.12857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .control .onlyread {
+        background-color: #ccc;
+    }
+
+.select {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    font-size: 12px;
+    line-height: inherit;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    min-width: 70px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.control:focus {
+    border-color: #f00;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.width-10-pen {
+    width: 10%;
+}
+.width-20-pen {
+    width: 20%;
+}
+.width-30-pen {
+    width: 30%;
+}
+.width-40-pen {
+    width: 40%;
+}
+.width-50-pen {
+    width:50%;
+}
+.width-60-pen {
+    width: 60%;
+}
+.width-70-pen {
+    width: 70%;
+}
+.width-80-pen {
+    width: 80%;
+}
+.width-90-pen {
+    width: 90%;
+}
+.width-100-pen {
+    width: 100%;
+}
+.width-40 {
+    width: 40px;
+}
+
+.width-50 {
+    width: 50px;
+}
+
+.width-60 {
+    width: 60px;
+}
+
+.width-70 {
+    width: 70px;
+}
+
+.width-80 {
+    width: 80px;
+}
+
+.width-90 {
+    width: 90px;
+}
+
+.width-100 {
+    width: 100px;
+}
+
+.width-110 {
+    width: 110px;
+}
+
+.width-120 {
+    width: 120px;
+}
+
+.width-140 {
+    width: 140px;
+}
+
+.width-160 {
+    width: 160px;
+}

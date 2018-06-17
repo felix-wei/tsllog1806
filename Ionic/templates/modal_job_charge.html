@@ -1,0 +1,24 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <div class="buttons">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="charge.closeModal();"></button>
+        </div>
+        <h1 class="title">Charge</h1>
+        <div class="buttons">
+            <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="charge.save();"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <label class="input-label">Item Name:</label>
+                {{charge.data.ItemName}}
+            </div>
+            <div class="item item-input" >
+                <label class="input-label">Cost:</label>
+                <input type="number" min="0" ng-model="charge.data.Cost" />
+            </div>
+        </div>
+
+    </ion-content>
+</div>

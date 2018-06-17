@@ -1,0 +1,228 @@
+﻿.show {
+    display:block;
+}
+
+.hide {
+    display:none;
+}
+.show1 {
+    display:table-cell;
+}
+.a_ltrip .P {
+    background-color: orange;
+}
+
+.div_amt {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    color: white;
+    padding-top: 2px;
+}
+
+td.lblcn {
+    font-size: 12px;
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.content a:after,a:hover {
+ color:red;
+}
+div.ctl_unit_80 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 80px;
+    min-height: 50px;
+}
+div.ctl_unit_100 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 100px;
+    min-height: 50px;
+}
+div.ctl_unit_110 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 110px;
+    min-height: 50px;
+}
+div.ctl_unit_120 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 110px;
+    min-height: 50px;
+}
+div.ctl_unit_120 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 120px;
+    min-height: 50px;
+}
+div.ctl_unit_140 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 140px;
+    min-height: 50px;
+}
+div.ctl_unit_170 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 170px;
+    min-height: 50px;
+}
+div.ctl_unit_200 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 180px;
+    min-height: 50px;
+}
+div.ctl_unit_250 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 220px;
+    min-height: 50px;
+}
+div.ctl_unit_270 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 200px;
+    min-height: 50px;
+}
+div.ctl_unit_300 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 260px;
+    min-height: 50px;
+}
+div.ctl_unit_350 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 295px;
+    min-height: 50px;
+}
+div.ctl_unit_370 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 300px;
+    min-height: 50px;
+}
+div.ctl_unit_400 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 375px;
+    min-height: 50px;
+}
+div.ctl_unit_500 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 480px;
+    min-height: 50px;
+}
+div.ctl_unit_600 {
+    float: left;
+    overflow: hidden;
+    padding-right: 4px;
+    border-right: solid 1px #888888;
+    margin-right: 10px;
+    width: 530px;
+    min-height: 50px;
+}
+div.ctl_lbl {
+    overflow: hidden;
+    font-weight: bold;
+    color: #336699;
+    font-size: 12px;
+    font-family: tahoma;
+    padding-bottom: 2px;
+}
+div.ctl_ctl .ctl_ctl_left {
+    overflow: hidden;
+    font-weight: bold;
+    color: #336699;
+    font-size: 12px;
+    font-family: tahoma;
+    padding-bottom: 2px;
+    float:left;
+    margin:0px;
+    width:60%;
+}
+div.ctl_ctl .ctl_ctl_right {
+    overflow: hidden;
+    font-weight: bold;
+    color: #336699;
+    font-size: 12px;
+    font-family: tahoma;
+    padding-bottom: 2px;
+    float:left;
+    margin:0px;
+    width:40%;
+}
+div.ctl_ctl .ctl_ctl_left1 {
+    overflow: hidden;
+    font-weight: bold;
+    color: #336699;
+    font-size: 12px;
+    font-family: tahoma;
+    padding-bottom: 2px;
+    float:left;
+    margin:0px;
+    width:40%;
+}
+div.ctl_ctl .ctl_ctl_right1 {
+    overflow: hidden;
+    font-weight: bold;
+    color: #336699;
+    font-size: 12px;
+    font-family: tahoma;
+    padding-bottom: 2px;
+    float:left;
+    margin:0px;
+    width:60%;
+}

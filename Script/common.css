@@ -1,0 +1,18 @@
+﻿        body { background:white;overflow:hidden;font-size:10px;font-family:Verdana; margin:0px;}
+        .tabs {border:solid 0px red;margin-top:2px;}
+        .pages {border:solid 0px blue}
+        #main {margin:0px auto; overflow:hidden;background-color:white; margin-top:0px;
+             -moz-border-radius:0px;  -webkit-border-radius:0px; padding:0px;}
+        #divPage, #divMenu { float:left; margin:0px;}
+        #divPage {overflow:hidden;}
+        #divMenu { width:200px; border-right:solid 0px #dcdcdc; overflow:auto }
+        #divMenu ul { margin:0; list-style:none;}
+        #divMenu li { margin:0; padding:0;}
+        #documents { margin:0; padding:0;}
+        
+        .menuGroup {cursor:pointer;background:#cccccc;font-weight:bold;margin-top:4px;padding:2px;}
+        .menuBox {padding:2px;padding-left:10px;}
+        .menuItem {margin-top:2px;}
+        .menuItem a {text-decoration:none;width:150px;background:transparent;}        
+        .menuItem a:hover {text-decoration:none;width:150px;background:#cccccc;}    
+        .zone {padding:2px}    

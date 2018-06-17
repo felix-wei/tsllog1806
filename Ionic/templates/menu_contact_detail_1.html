@@ -1,0 +1,33 @@
+﻿<ion-view title="Contact">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="GoBack();">Back</button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header">
+        <div class="list">
+            <div class="item item-input item-button-right">
+                <label class="input-label">User Name:</label>
+                {{contact.data.Name}}
+
+                <button class="button button-icon icon ion-ios7-chatbubble positive" ng-click="action.chat()" ng-hide="contact.data.Name==contact.UserName"></button>
+            </div>
+            <div class="item item-input">
+                <label class="input-label">User Role:</label>
+                {{contact.data.Role}}
+            </div>
+            <div class="item item-input item-button-right">
+                <label class="input-label">Tel:</label>
+                {{contact.data.Tel}}
+                <a class="button button-icon icon ion-ios7-telephone positive" href="tel:{{contact.data.Tel}}"></a>
+            </div>
+            <div class="item item-input item-button-right">
+                <label class="input-label">Email:</label>
+                {{contact.data.Email}}
+                <a class="button button-icon icon ion-ios7-email positive" href="mailto:{{contact.data.Email}}"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

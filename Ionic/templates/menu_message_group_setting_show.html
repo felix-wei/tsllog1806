@@ -1,0 +1,13 @@
+﻿<ion-view title="Mombers">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div class="item" ng-repeat="row in vm.mombers">
+                <h2>{{row.username}}</h2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

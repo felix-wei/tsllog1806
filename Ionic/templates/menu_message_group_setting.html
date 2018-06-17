@@ -1,0 +1,33 @@
+﻿<ion-view title="Group Setting">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="right">
+        <button class="icon button button-icon ion-person-stalker" ng-click="GoBack();"></button>
+    </ion-nav-buttons>-->
+
+    <ion-content>
+        <form name="f">
+            <div class="list">
+                <div class="item item-input">
+                    <label class="input-label">Group:</label>
+                    <input type="text" ng-model="vm.group.group_name" ng-readonly="!vm.group.isNew" required />
+                </div>
+                <div class="item" ng-show="vm.group.isNew">
+                    <input type="button" class="button button-block button-positive" value="OK" ng-disabled="f.$invalid" ng-click="action.AddGroup();" />
+                </div>
+                <div class="item item-icon-right" ng-hide="vm.group.isNew" ng-click="action.showMombers();">
+                    <h2>Show Group Members</h2>
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item item-icon-right" ng-hide="vm.group.isNew" ng-click="action.addMombers();">
+                    <h2>Add Group Members</h2>
+                    <i class="icon ion-ios7-arrow-forward"></i>
+                </div>
+                <div class="item" ng-hide="vm.group.isNew">
+                    <input type="button" class="button button-block button-assertive" value="Exit This Group" ng-click="action.ExitGroup();">
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

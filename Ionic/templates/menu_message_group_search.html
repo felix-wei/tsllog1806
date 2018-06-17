@@ -1,0 +1,19 @@
+﻿<ion-view title="Search Group">
+    <ion-nav-buttons side="left">
+        <button class="icon button button-icon ion-ios7-arrow-back " ng-click="GoBack();"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="search" placeholder="Search" ng-model="vm.search">
+                </label>
+                <button class="button icon button-icon button-clear button-positive ion-ios7-search" ng-click="action.search()"></button>
+            </div>
+            <div class="item" ng-repeat="row in vm.list" ng-click="action.join(row);">
+                {{row.group_name}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

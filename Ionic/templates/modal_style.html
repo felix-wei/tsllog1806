@@ -1,0 +1,25 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <h1 class="title">Style</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="style.closeModal()">Back</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="card list" >
+            <!--<label ng-repeat="row in Fix_Style.color_list" class="item item-radio">
+                <input type="radio" ng-model="Fix_Style.color" name="group" value="{{row.name}}" />
+                <div class="item-content {{'item-'+row.name}}">
+                    {{row.name}}
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>-->
+            <li class="item item-checkbox {{'item-'+row.name}}" ng-repeat="row in Fix_Style.color_list">
+                <label class="checkbox">
+                    <input type="radio" ng-model="Fix_Style.color" name="group" value="{{row.name}}" />
+                </label>
+                {{row.name}}
+            </li>
+        </ul>
+    </ion-content>
+</div>

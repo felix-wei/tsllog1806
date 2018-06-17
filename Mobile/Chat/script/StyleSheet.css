@@ -1,0 +1,157 @@
+﻿body {
+}
+
+.f-scorll {
+    overflow: scroll;
+    height: 100%;
+}
+
+.f-scorll-has-header {
+    padding-top: 44px;
+}
+
+.f-scorll-has-footer {
+    padding-bottom: 44px;
+}
+
+.f-full-row {
+    width: 100%;
+}
+
+.f-padding-0 {
+    padding: 0;
+}
+
+.f-messagechat_to_view_more {
+    text-align: center;
+    color: #ffd800;
+    font-weight: 500;
+}
+
+/*************************    message   ************************/
+.f-item-message {
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.f-message-textbox {
+    position: relative;
+    padding: 8px;
+    margin: 8px;
+    background-color: #aaa;
+    /*border: 2px solid #aaa;*/
+    border-radius: 3px;
+}
+
+.f-message-textbox-full {
+    width: 100%;
+}
+
+.f-message-textbox-right {
+    float: right;
+    text-align: left;
+}
+
+.f-message-textbox-left {
+    float: left;
+    text-align: left;
+}
+
+.f-message-textbox p {
+    white-space: normal;
+    /*word-break:break-all;*/
+    margin: 0px;
+    color: #fff;
+}
+
+.f-message-textbox img {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    width: 100%;
+}
+
+.f-message-textbox .f-message-textbox-fromright {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: -8px;
+    top: 40%;
+}
+
+.f-message-textbox .f-message-textbox-fromleft {
+    width: 0px;
+    height: 0px;
+    border-right: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: -8px;
+    top: 40%;
+}
+
+/***********************    message 20150211  *****************************/
+
+.f-message-usericon {
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    width: 100%;
+    border-radius:5px;
+}
+
+.f-item-message-left {
+    padding-left:68px;
+}
+.f-item-message-left .f-message-usericon-side{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+.f-item-message-left .f-message-textbox-side {
+    float: left;
+    text-align: left;
+}
+
+.f-item-message-left .f-message-textbox-from-side {
+    width: 0px;
+    height: 0px;
+    border-right: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    left: -8px;
+    top: 10%;
+}
+
+
+.f-item-message-right {
+    padding-right:68px;
+}
+
+.f-item-message-right .f-message-usericon-side{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.f-item-message-right .f-message-textbox-side {
+    float: right;
+    text-align: left;
+}
+
+.f-item-message-right .f-message-textbox-from-side {
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid #aaa;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: -8px;
+    top: 10%;
+}

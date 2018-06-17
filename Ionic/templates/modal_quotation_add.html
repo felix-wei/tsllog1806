@@ -1,0 +1,21 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <div class="buttons">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="new.closeModal();"></button>
+        </div>
+        <h1 class="title">Quotation New</h1>
+        <div class="buttons">
+            <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="new.save();"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input item-select">
+                <label class="input-label">Type:</label>
+                <select ng-model="new.data.DocType">
+                    <option value="QT">QT</option>
+                </select>
+            </div>
+        </div>
+    </ion-content>
+</div>

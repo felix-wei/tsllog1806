@@ -1,0 +1,74 @@
+﻿<div class="modal">
+    <ion-header-bar ng-class="Fix_Style.bar_list[Fix_Style.color]">
+        <div class="buttons">
+            <button class="icon button button-icon ion-ios7-arrow-back " ng-click="trip.closeModal();"></button>
+        </div>
+        <h1 class="title">Trip</h1>
+        <div class="buttons">
+            <button class="icon button button-icon icon-right ion-checkmark-round" ng-click="trip.save();"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-input item-select">
+                <label class="input-label">Container:</label>
+                <select ng-model="trip.data.ContainerNo" ng-options="row.ContainerNo as row.ContainerNo for row in vm.job.container|orderBy:'ContainerNo'" ng-change="trip.container_changed();"></select>
+            </div>
+            <div class="item item-input item-select" ng-click="trip.driver_select();">
+                <label class="input-label">Driver:</label>
+                {{trip.data.DriverCode}}
+            </div>
+            <div class="item item-input item-select" ng-click="trip.towhead_select();">
+                <label class="input-label">Towhead:</label>
+                {{trip.data.TowheadCode}}
+            </div>
+            <div class="item item-input item-select" ng-click="trip.trail_select();">
+                <label class="input-label">Trail:</label>
+                {{trip.data.ChessisCode}}
+            </div>
+            <div class="item item-input item-select" >
+                <label class="input-label">Status:</label>
+                <select ng-model="trip.data.Statuscode" >
+                    <option value="U">Use</option>
+                    <option value="S">Start</option>
+                    <option value="D">Doing</option>
+                    <option value="W">Waiting</option>
+                    <option value="P">Pending</option>
+                    <option value="C">Completed</option>
+                    <option value="X">Cancel</option>
+                </select>
+            </div>
+            <div class="item item-divider">
+                From:
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Address:</label>
+                <input type="text" ng-model="trip.data.FromCode" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Date:</label>
+                <input type="date" ng-model="trip.data.FromDate" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Time:</label>
+                <input type="time" ng-model="trip.data.FromTime" />
+            </div>
+            <div class="item item-divider">
+                To:
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Address:</label>
+                <input type="text" ng-model="trip.data.ToCode" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Date:</label>
+                <input type="date" ng-model="trip.data.ToDate" />
+            </div>
+            <div class="item item-input">
+                <label class="input-label">Time:</label>
+                <input type="time" ng-model="trip.data.ToTime" />
+            </div>
+        </div>
+
+    </ion-content>
+</div>

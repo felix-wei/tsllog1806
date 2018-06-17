@@ -1,0 +1,71 @@
+﻿<ion-view title="Haulier Jobs Daily">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-search" ng-click="search.openModal();"></button>
+        <button class="button button-icon icon ion-ios7-plus-empty" ng-click="action.addNew();"></button>
+    </ion-nav-buttons>
+
+
+    <ion-tabs class="tabs-top" ng-class="'tabs-'+(Fix_Style.style_list[Fix_Style.color])" delegate-handle="handle_local_schedule1">
+        <ion-tab title="Undelivered" on-select="action.onTabSelected('Undelivered')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Undelivered')">
+                    </ion-refresher>
+                    <div class="list">
+                        <!--<div class="item item-input-inset">
+                        <label class="item-input-wrapper">
+                            <input type="search" placeholder="Search" ng-model="job.search">
+                        </label>
+                    </div>-->
+                        <div class="item" ng-repeat="row in vm.schedule[0].list" ng-click="action.openTrip(row);">
+                            <h2>{{row.FromTime}}<span class="f-schedule-time-date">({{row.show_fromdate}})</span>&nbsp;-&nbsp;{{row.ToTime}}<span class="f-schedule-time-date">({{row.show_todate}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}&nbsp;&nbsp;({{row.ContainerNo}})</p>
+                            <p class="f-margin-bottom0">From:{{row.FromCode}}</p>
+                            <p>To:{{row.ToCode}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Completed" on-select="action.onTabSelected('Completed')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Completed')">
+                    </ion-refresher>
+                    <div class="list">
+                        <div class="item" ng-repeat="row in vm.schedule[1].list" ng-click="action.openTrip(row);">
+                            <h2>{{row.FromTime}}<span class="f-schedule-time-date">({{row.show_fromdate}})</span>&nbsp;-&nbsp;{{row.ToTime}}<span class="f-schedule-time-date">({{row.show_todate}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}&nbsp;&nbsp;({{row.ContainerNo}})</p>
+                            <p class="f-margin-bottom0">From:{{row.FromCode}}</p>
+                            <p>To:{{row.ToCode}}</p>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+        <ion-tab title="Failed" on-select="action.onTabSelected('Failed')">
+            <ion-view>
+                <ion-content>
+                    <ion-refresher pulling-text="Pull to refresh..."
+                                   on-refresh="action.Refresh_DropDown('Failed')">
+                    </ion-refresher>
+                    <div class="list">
+                        <div class="item" ng-repeat="row in vm.schedule[2].list" ng-click="action.openTrip(row);">
+                            <h2>{{row.FromTime}}<span class="f-schedule-time-date">({{row.show_fromdate}})</span>&nbsp;-&nbsp;{{row.ToTime}}<span class="f-schedule-time-date">({{row.show_todate}})</span></h2>
+                            <p class="f-margin-bottom0">{{row.JobNo}}&nbsp;&nbsp;({{row.ContainerNo}})</p>
+                            <p class="f-margin-bottom0">From:{{row.FromCode}}</p>
+                            <p>To:{{row.ToCode}}</p>
+                        </div>
+                    </div>
+
+                </ion-content>
+            </ion-view>
+        </ion-tab>
+    </ion-tabs>
+
+</ion-view>

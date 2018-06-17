@@ -1,0 +1,12 @@
+﻿
+<ion-modal-view class="f-modal_schedule_search">
+    <div class="f-modal_schedule_search_background" ng-click="search.closeModal();"></div>
+    <ion-content class="f-modal_schedule_search_content">
+        <div class="item item-input-inset f-modal_schedule_search_title">
+            <label class="item-input-wrapper">
+                <input type="search" placeholder="Search" ng-model="search.data.search">
+            </label>
+            <button class="button icon button-icon button-clear button-small button-positive ion-search" ng-click="search.search();"></button>
+        </div>
+    </ion-content>
+</ion-modal-view>
