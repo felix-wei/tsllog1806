@@ -10,7 +10,7 @@
             grid.GetValuesOnCustomCallback(partyId, onCallback)
         }
         function onCallback(v) {
-            grid.Refresh();
+            grid.Refresh(); 
         }
     </script>
 </head>
