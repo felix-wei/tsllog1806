@@ -13,10 +13,10 @@ namespace DAL.DataBase
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class db_booxl_tsl_acEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public db_booxl_tsl_acEntities()
+            : base("name=db_booxl_tsl_acEntities")
         {
         }
     

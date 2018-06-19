@@ -11,3 +11,6 @@ D:\GitHub\tsllog1806\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.dll
 D:\GitHub\tsllog1806\DAL\obj\Debug\DAL.pdb
+D:\GitHub\tsllog1806\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\tsllog1806\DAL\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\tsllog1806\DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

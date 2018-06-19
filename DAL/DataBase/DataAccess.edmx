@@ -20259,7 +20259,7 @@
           <Property Name="info_group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="info_desc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_booxl_tsl_acEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="access_level" EntityType="Self.access_level" />
           <EntitySet Name="air_attachment" EntityType="Self.air_attachment" />
           <EntitySet Name="air_costing" EntityType="Self.air_costing" />
@@ -20571,7 +20571,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_booxl_tsl_acModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="db_booxl_tsl_acModelStoreContainer" CdmEntityContainer="db_booxl_tsl_acEntities">
           <EntitySetMapping Name="access_level">
             <EntityTypeMapping TypeName="db_booxl_tsl_acModel.access_level">
               <MappingFragment StoreEntitySet="access_level">

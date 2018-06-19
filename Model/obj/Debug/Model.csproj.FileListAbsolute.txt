@@ -8,3 +8,7 @@ D:\GitHub\tsllog1806\Model\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\tsllog1806\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\GitHub\tsllog1806\Model\obj\Debug\Model.dll
 D:\GitHub\tsllog1806\Model\obj\Debug\Model.pdb
+D:\GitHub\tsllog1806\tsllog\bin\Model.dll.config
+D:\GitHub\tsllog1806\tsllog\bin\Model.dll
+D:\GitHub\tsllog1806\tsllog\bin\Model.pdb
+D:\GitHub\tsllog1806\Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

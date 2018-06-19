@@ -10,3 +10,5 @@ D:\GitHub\tsllog1806\BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.dll
 D:\GitHub\tsllog1806\BLL\obj\Debug\BLL.pdb
+D:\GitHub\tsllog1806\tsllog\bin\BLL.dll
+D:\GitHub\tsllog1806\tsllog\bin\BLL.pdb

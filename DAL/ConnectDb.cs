@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ConnectDb:DataBase.Entities
+    public class ConnectDb:DataBase.db_booxl_tsl_acEntities
     {
         public ConnectDb()
         {
