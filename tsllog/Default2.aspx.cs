@@ -11,6 +11,7 @@ public partial class Default2 : System.Web.UI.Page
     {
         Model.CTM_JobEventLog ev = new Model.CTM_JobEventLog();
         ev.JobNo = "wwww";
+        ev.CreateDateTime = DateTime.Now;
         BLL.Class1 c = new BLL.Class1();
         c.show(ev);
     }

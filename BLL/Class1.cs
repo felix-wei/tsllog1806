@@ -10,7 +10,7 @@ namespace BLL
     {
         public void show(Model.CTM_JobEventLog par)
         {
-            DAL.CTM_JobEventLog ev = DAL.Tool.Convert.To<DAL.CTM_JobEventLog>(par);
+            DAL.DataBase.CTM_JobEventLog ev = DAL.Tool.Convert.DeserializeByJson<DAL.DataBase.CTM_JobEventLog>(par);
             DAL.ConnectDb.Instance.CTM_JobEventLog.Add(ev);
             DAL.ConnectDb.Instance.SaveChanges();
         }

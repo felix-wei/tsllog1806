@@ -38,6 +38,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -51,965 +55,950 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="access_level.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirAttachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirExport.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirExportBkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirExportCont.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirExportMkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirExportRef.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirImport.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirImportCont.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirImportMkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirImportRef.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirQuote1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirQuoteDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AirQuoteTitle.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="air_attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="air_costing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="air_job.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="air_ref.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="bill_doc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="bill_line.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="cms_menu.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
     <Compile Include="ConnectDb.cs" />
-    <Compile Include="Cont_Asset.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\access_level.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cont_AssetEvent.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirAttachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cost.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirExport.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CostDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirExportBkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Costing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirExportCont.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirExportMkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Costing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirExportRef.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_DispatchPlanner_Stage.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirImport.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="ctm_driver.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirImportCont.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_DriverLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirImportMkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_DriverMessage.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirImportRef.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Ctm_Gps.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirQuote1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Job.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirQuoteDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_JobCharge.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\AirQuoteTitle.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_JobDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\air_attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_JobDet2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\air_costing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_JobEventLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\air_job.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Job_Recover.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\air_ref.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Job_Stock.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\bill_doc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_Location.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\bill_line.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_MastData.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\cms_menu.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_MastDataLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Cont_Asset.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_ParkingZone.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Cont_AssetEvent.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CTM_TripLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Cost.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CurrencyRate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\CostDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess.Context.cs">
+    <Compile Include="DataAccess\Costing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Costing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_DispatchPlanner_Stage.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ctm_driver.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_DriverLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_DriverMessage.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ctm_Gps.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Job.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_JobCharge.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_JobDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_JobDet2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_JobEventLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Job_Recover.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Job_Stock.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_Location.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_MastData.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_MastDataLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_ParkingZone.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CTM_TripLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CurrencyRate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataAccess.Context.tt</DependentUpon>
+      <DependentUpon>DataBase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess.cs">
+    <Compile Include="DataAccess\DataBase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataAccess.tt</DependentUpon>
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess.Designer.cs">
+    <Compile Include="DataAccess\DataBase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataAccess.edmx</DependentUpon>
+      <DependentUpon>DataBase.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Dimension.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Dimension.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="HelperLog_Page.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\HelperLog_Page.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Helper_Authority.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Helper_Authority.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Contract.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Contract.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_cpf.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_cpf.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_File.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_File.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Interview.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Interview.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Leave.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Leave.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_LeaveTmp.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_LeaveTmp.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_MastData.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_MastData.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Overtime.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Overtime.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PayItem.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PayItem.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Payroll.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Payroll.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PayrollDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PayrollDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Person.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Person.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonComment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonComment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet4.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet4.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet5.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet5.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonDet6.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonDet6.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonNews.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonNews.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_PersonTrans.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_PersonTrans.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Process.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Process.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Quote.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Quote.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Rate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Rate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Recruitment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Recruitment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hr_Task.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Hr_Task.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="jnl_doc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\jnl_doc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="jnl_line.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\jnl_line.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobCargo.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobCargo.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobCost.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobCost.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobCosting.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobCosting.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobCount.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobCount.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobCrews.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobCrews.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobInfo.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobInfo.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobInventory.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobInventory.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobItem.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobItem.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobItemList.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobItemList.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobMCST.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobMCST.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobOrder.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobOrder.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobSchedule.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobSchedule.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobStorage.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobStorage.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobTask.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobTask.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobTemp.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobTemp.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="JobWorkOrder.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\JobWorkOrder.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Job_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Job_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Job_Charge.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Job_Charge.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_cost.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_cost.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_house.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_house.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Job_Message.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Job_Message.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_process.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_process.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_quote.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_quote.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_rate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_rate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_receipt.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_receipt.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_stock.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_stock.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="job_text.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\job_text.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="LogEvent.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\LogEvent.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="MastertRate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\MastertRate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Materials.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Materials.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mb_Message.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mb_Message.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menu1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Menu1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menu2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Menu2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menu3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Menu3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="MenuBasicMast.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\MenuBasicMast.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="MenuBasicSub.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\MenuBasicSub.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="MenuMast.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\MenuMast.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Menus.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Menus.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="MenuSub.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\MenuSub.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mobile_Chat.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mobile_Chat.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mobile_ChatGroup.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mobile_ChatGroup.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mobile_ChatGroup_Det.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mobile_ChatGroup_Det.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mobile_Control.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mobile_Control.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mobile_Control_Default.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Mobile_Control_Default.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="PackingLot.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\PackingLot.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="PackingLotItem.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\PackingLotItem.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pass_Certificate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\Pass_Certificate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="pay_bank.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\pay_bank.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="pay_doc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\pay_doc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="pay_line.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
+    <Compile Include="DataAccess\pay_line.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\psa_bill.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_attendance.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_case.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_case_user.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_category.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_item.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_record.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\pts_type.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\RateType.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\rate_doc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\rate_line.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_address.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_contact.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_Container.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_ContainerType.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_Contract.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_Driver.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_DriverCash.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_language.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_LC.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_location.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_Material.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_PartyLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_permit.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_PersonInfo.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_product.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_productClass.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Ref_ProductPrice.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_Vehicle.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_VehicleFuel.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_VehicleLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_vessel.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ref_warehouse.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Role.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\RoleObject.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuotation.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuotationDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuotationDet2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuote1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuoteDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaApQuoteTitle.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaAttachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaCertificate.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaCertificateDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaCommercial.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaCosting.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaDn.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExport.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExportBkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExportCont.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExportDetail.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExportMkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaExportRef.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaImport.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaImportCont.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaImportMkg.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaImportRef.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaPacking.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuotation.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuotationDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuotationDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuotationDet2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuote.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuote1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuoteDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuoteDet1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SeaQuoteTitle.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\StockCount.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\StockCountDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sysdiagrams.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_AcType.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_alert.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_alert_rule.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_bookmark.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_CompanyInfo.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_parameter.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\sys_rpt.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Tasks.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\tmp_ar_open.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\tmp_psa_tariff.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Tpt_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Tpt_Costing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TPT_Job.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Tpt_Job1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Tpt_Job2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\User.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserClient.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UserObject.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\user_assign.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\user_right.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Vehicle_FuelLog.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Vehicle_IssueReport.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Vehicle_Mileage.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Vehicle_Reporting_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_Contract.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_ContractDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_Costing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_DO.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_DoDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_DoDet2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_DoDet3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_Inventory.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_InventoryDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_LotNo.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_MastData.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_Packing.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_PO.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_PODet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_POReceipt.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_POReceiptDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_PORequest.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_PutAway.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_Schedule.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_So.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_SoDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_SORelease.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_SoReleaseDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_Trans.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Wh_TransDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_Transfer.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\wh_TransferDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X0.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X6.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X7.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X8.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\X9.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAApPayable.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAApPayableDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAApPayment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAApPaymentDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAArInvoice.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAArInvoiceDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAArInvoice_Attachment.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAArReceipt.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAArReceiptDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAGlEntry.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAGlEntryDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAJournalEntry.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XAJournalEntryDet.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXAccPeriod.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXAccStatus.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXBank.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXChartAcc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXChartGroup.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXChgCode.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXCity.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXCountry.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXCurrency.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXCustVendor.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXGenCode.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXGstAccount.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXGstType.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXMastData.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXParty.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXPartyAcc.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXPartyGroup.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXPartySales.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXPort.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXSalesman.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXSetup.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXSetup1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXSetup2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXSetup3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXTerm.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\XXUom.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data1.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data2.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data2_new.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data3.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data_mita_code.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data_stock.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\z_data_trip.cs">
+      <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="psa_bill.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_attendance.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_case.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_case_user.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_category.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_item.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_record.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pts_type.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RateType.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="rate_doc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="rate_line.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_address.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_contact.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_Container.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_ContainerType.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_Contract.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_Driver.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_DriverCash.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_language.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_LC.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_location.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_Material.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_PartyLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_permit.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_PersonInfo.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_product.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_productClass.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ref_ProductPrice.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_Vehicle.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_VehicleFuel.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_VehicleLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_vessel.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ref_warehouse.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Role.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RoleObject.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuotation.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuotationDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuotationDet2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuote1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuoteDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaApQuoteTitle.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaAttachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaCertificate.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaCertificateDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaCommercial.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaCosting.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaDn.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExport.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExportBkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExportCont.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExportDetail.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExportMkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaExportRef.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaImport.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaImportCont.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaImportMkg.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaImportRef.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaPacking.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuotation.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuotationDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuotationDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuotationDet2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuote.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuote1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuoteDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuoteDet1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeaQuoteTitle.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockCount.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StockCountDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_AcType.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_alert.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_alert_rule.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_bookmark.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_CompanyInfo.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_parameter.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sys_rpt.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tasks.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmp_ar_open.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmp_psa_tariff.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tool\Convert.cs" />
-    <Compile Include="Tpt_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tpt_Costing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TPT_Job.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tpt_Job1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tpt_Job2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserClient.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserObject.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="user_assign.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="user_right.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vehicle_FuelLog.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vehicle_IssueReport.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vehicle_Mileage.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vehicle_Reporting_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_Contract.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_ContractDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_Costing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_DO.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_DoDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_DoDet2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_DoDet3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_Inventory.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_InventoryDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_LotNo.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_MastData.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_Packing.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_PO.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_PODet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_POReceipt.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_POReceiptDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_PORequest.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_PutAway.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_Schedule.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_So.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_SoDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_SORelease.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_SoReleaseDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_Trans.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Wh_TransDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_Transfer.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="wh_TransferDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X0.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X6.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X7.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X8.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="X9.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAApPayable.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAApPayableDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAApPayment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAApPaymentDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAArInvoice.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAArInvoiceDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAArInvoice_Attachment.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAArReceipt.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAArReceiptDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAGlEntry.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAGlEntryDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAJournalEntry.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XAJournalEntryDet.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXAccPeriod.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXAccStatus.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXBank.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXChartAcc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXChartGroup.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXChgCode.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXCity.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXCountry.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXCurrency.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXCustVendor.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXGenCode.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXGstAccount.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXGstType.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXMastData.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXParty.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXPartyAcc.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXPartyGroup.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXPartySales.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXPort.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXSalesman.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXSetup.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXSetup1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXSetup2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXSetup3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXTerm.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="XXUom.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data1.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data2.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data2_new.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data3.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data_mita_code.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data_stock.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-    <Compile Include="z_data_trip.cs">
-      <DependentUpon>DataAccess.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="DataAccess.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataAccess.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="DataAccess.edmx.diagram">
-      <DependentUpon>DataAccess.edmx</DependentUpon>
+    <EntityDeploy Include="DataAccess\DataBase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataBase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccess\DataBase.edmx.diagram">
+      <DependentUpon>DataBase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataAccess.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataAccess.Context.cs</LastGenOutput>
-      <DependentUpon>DataAccess.edmx</DependentUpon>
-    </Content>
-    <Content Include="DataAccess.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataAccess.edmx</DependentUpon>
-      <LastGenOutput>DataAccess.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -1019,6 +1008,21 @@
       <Project>{649d4bc2-c7f1-43c2-87c6-4d07f71be977}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\DataBase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataBase.edmx</DependentUpon>
+      <LastGenOutput>DataBase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccess\DataBase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataBase.edmx</DependentUpon>
+      <LastGenOutput>DataBase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
